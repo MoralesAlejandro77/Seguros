@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+
+		<item
+        android:id="@+id/mn_act"
+        android:title="Actualizar Precios"
+        android:icon="@drawable/act_update"
+            android:showAsAction="withText|always"/>
+
+	<item
+		android:id="@+id/mn_adm"
+		android:title="Administración"
+		android:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/mn_salir"
+        android:title="Salir"
+        android:showAsAction="ifRoom|withText"/>
+
+	<item
+		android:id="@+id/mn_cierre"
+		android:title="Cerrar Sesion"
+		android:showAsAction="withText|always"/>
+
+</menu>

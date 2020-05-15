@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seguros.presupuestos"
+    android:versionCode="1"
+    android:versionName="4.3">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Prelogin"></activity>
+        <!-- Samsung multi-window support -->
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false" />
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_compania" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/tresprov" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/canal_notify" />
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Activacion"
+            android:label="Activar Aplicacion" />
+        <activity
+            android:name=".Activacion2"
+            android:label="Activar Aplicacion" />
+        <activity
+            android:name=".LoginApp"
+            android:label="Login User">
+            <intent-filter>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Sepelio"
+            android:label="Presupuesto Seguro Sepelio" />
+        <activity
+            android:name="com.seguros.Actualizacion.MenuActual"
+            android:label="Actualización de Precios" />
+        <activity
+            android:name=".ListServicios"
+            android:label="Presupuesto Seguro Vida" />
+        <activity
+            android:name=".NuevoSepelio"
+            android:label="Nuevo Integrante Seguro Sepelio"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".NuevoVida"
+            android:label="Integrantes Seguro de Vida"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name="com.seguros.pdf.GenerarPDFActivity"
+            android:label="Compartir Presupuesto"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name="com.seguros.pdf.GenerarPDFActivitySep"
+            android:label="Compartir Presupuesto"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".MenuContactos"
+            android:label="Contactenos...." />
+
+        <service
+            android:name=".Publicaciones"
+            android:enabled="true"
+            android:process=":ServiceVerifyState" />
+
+        <receiver android:name=".VerificarWifi">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ActivityAyuda"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".ActivityVendedor"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ListaVendedores" />
+        <activity android:name="com.seguros.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+                />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Adicionales" />
+        <activity
+            android:name=".SepelioCalc"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name="com.seguros.Cocherias.BuscaxDni"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name="com.seguros.Cocherias.FamiliaActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+        <activity android:name="com.seguros.Cocherias.DatosAsegurados" />
+        <activity android:name=".MenuAsegurado" />
+        <activity
+            android:name="com.seguros.Cocherias.BuscarAsegurado"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Calendario" />
+        <activity android:name=".OtrosServicios" />
+        <activity android:name=".Login_Asegurado" />
+        <activity android:name=".Registro_Asegurado" />
+        <activity android:name=".Modifica_Asegurado" />
+        <activity android:name=".Modifica_CBU" />
+        <activity android:name=".InfoPushActivity" />
+        <activity android:name=".Clave_adm" />
+        <activity android:name=".Blanqueo_Asegurado" />
+        <activity
+            android:name=".MostrarInfo"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+
+        <service
+            android:name="com.seguros.fcm.CustomFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.seguros.fcm.CustomFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

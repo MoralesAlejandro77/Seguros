@@ -1,0 +1,142 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/tresprov"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView34"
+                android:layout_width="180dp"
+                android:layout_height="65dp"
+                android:background="@drawable/logo1" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/menu_contacto"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/boton_foreground"
+                        android:drawableLeft="@mipmap/ic_info_1"
+                        android:elevation="2dp"
+                        android:text="DATOS DE CONTACTO"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+
+                        android:textSize="16dp"
+                        android:textStyle="bold|italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/menu_mail"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/boton_foreground"
+                        android:drawableLeft="@mipmap/ic_mail55"
+                        android:elevation="2dp"
+                        android:text="ENVIANOS UN EMAIL"
+                        android:textAlignment="center"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold|italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/menu_telefono"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/boton_foreground"
+                        android:drawableLeft="@mipmap/ic_contactenos"
+                        android:elevation="2dp"
+                        android:text="LLAMANOS POR TELEFONO"
+                        android:textAlignment="center"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold|italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/menu_watsapp"
+                        android:layout_width="300dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/boton_foreground"
+                        android:drawableLeft="@drawable/whatsapp1"
+                        android:elevation="2dp"
+                        android:text="ENVIANOS UN WHATSAPP"
+                        android:textAlignment="center"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold|italic" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView3"
+        android:layout_gravity="right" />
+
+</LinearLayout>

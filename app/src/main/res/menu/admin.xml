@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+	<item
+        android:id="@+id/mn_log"
+        android:title="Log de Asegurados"
+        android:icon="@drawable/login3"
+        android:showAsAction="withText|always"/>
+    
+		<item
+        android:id="@+id/mn_mensaje"
+        android:title="Enviar Mensajes a Asegurados"
+        android:icon="@drawable/act_update"
+            android:showAsAction="withText|always"/>
+
+
+</menu>

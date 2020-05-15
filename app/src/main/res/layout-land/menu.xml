@@ -1,0 +1,92 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/tresprov"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="213dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo1" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar1"
+            android:indeterminate="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/ImageButton01"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:alpha="95"
+                android:background="@drawable/boton_foreground"
+                android:drawableLeft="@mipmap/ic_poliza"
+                android:elevation="2dp"
+                android:onClick="segvida"
+                android:text="SEGURO DE VIDA"
+                android:textAlignment="center"
+
+                android:textColor="@color/White"
+                android:textSize="16dp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ImageButton02"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:alpha="95"
+                android:background="@drawable/boton_foreground"
+                android:drawableLeft="@mipmap/ic_poliza"
+                android:elevation="2dp"
+                android:onClick="segsepelio"
+                android:text="SEGURO DE SEPELIO"
+                android:textAlignment="center"
+
+                android:textColor="@color/White"
+                android:textSize="16dp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

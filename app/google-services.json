@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "626599979359",
+    "firebase_url": "https://notificacionesappseguros.firebaseio.com",
+    "project_id": "notificacionesappseguros",
+    "storage_bucket": "notificacionesappseguros.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626599979359:android:02c7344fbae1621e48eeea",
+        "android_client_info": {
+          "package_name": "com.seguros.presupuestos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626599979359-gqbg9asetun6o963a25oubp214jsqceu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhX14NHL1_hqmkCswnK4VdHxQiXdevrFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626599979359-gqbg9asetun6o963a25oubp214jsqceu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
