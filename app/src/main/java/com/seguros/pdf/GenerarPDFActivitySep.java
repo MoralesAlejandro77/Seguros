@@ -142,6 +142,22 @@ public class GenerarPDFActivitySep extends Activity  {
 		} catch (Exception e) {
 		}
 
+		boolean Sluto = false, Sparcela = false;
+
+		try {
+			if (this.getIntent().getExtras().getBoolean("luto"))
+				Sluto = true;
+		} catch (Exception e) {
+		}
+
+		try {
+			if (this.getIntent().getExtras().getBoolean("parcela"))
+				Sparcela = true;
+		} catch (Exception e) {
+		}
+
+
+
 		// * * * * * * * * * * * * * * * *
 		Bitmap bitmap = null;
 		Bitmap bitmap2 = null;
@@ -209,33 +225,48 @@ public class GenerarPDFActivitySep extends Activity  {
 			//**************************************
 
 			document.add(new Paragraph(" "));
+			document.add(new Paragraph("Datos de la Propuesta: ",TituloFont));
 
-			document.add(new Paragraph("TARIFA : " + tarifa,sentenciasFont));
-			document.add(new Paragraph("PLAN : " + plan ,sentenciasFont));
-			document.add(new Paragraph("GRUPO FAMILIAR: " + gf ,sentenciasFont));
+			document.add(new Paragraph("PLAN : " + plan + " - TARIFA : " + tarifa,sentenciasFont));
+//			document.add(new Paragraph("GRUPO FAMILIAR: " + gf ,sentenciasFont));
 
 			document.add(new Paragraph(" "));
 			document.add(new Paragraph(" "));
 
-			PdfPTable tabla = new PdfPTable(5);
-			tabla.setWidthPercentage(80); //Width 100%
-			tabla.setSpacingBefore(10f); //Space before table
+			document.add(new Paragraph("Servicios : ",TituloFont));
+			document.add(new Paragraph("- Sepelio. ",sentenciasFont));
+			if (Sparcela)
+  			   document.add(new Paragraph("- Parcela. ",sentenciasFont));
+
+			if (Sluto)
+				document.add(new Paragraph("- Luto. ",sentenciasFont));
+
+
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("Edades de los Asegurados : ",TituloFont));
+			document.add(new Paragraph(" "));
+
+			PdfPTable tabla = new PdfPTable(1);
+			tabla.setWidthPercentage(20); //Width 100%
+			//tabla.setSpacingBefore(10f); //Space before table
 			tabla.setSpacingAfter(10f); //Space after table
+			tabla.setHorizontalAlignment(Element.ALIGN_LEFT);
 
 			//Set Column widths
-			float[] columnWidths = {1f, 1f, 1f, 1f, 1f};
+			float[] columnWidths = {1f};
 			tabla.setWidths(columnWidths);
 
 
 
-			PdfPCell tcell2 = new PdfPCell(new Paragraph("Edad"));
+			PdfPCell tcell2 = new PdfPCell(new Paragraph(" "));
 			tcell2.setBorderColor(BaseColor.BLACK);
 			tcell2.setPaddingLeft(10);
 			tcell2.setHorizontalAlignment(Element.ALIGN_CENTER);
 			tcell2.setVerticalAlignment(Element.ALIGN_MIDDLE);
 			tcell2.setBackgroundColor(BaseColor.LIGHT_GRAY);
 
-			PdfPCell tcell3 = new PdfPCell(new Paragraph("Sepelio"));
+	/*		PdfPCell tcell3 = new PdfPCell(new Paragraph("Sepelio"));
 			tcell3.setBorderColor(BaseColor.BLACK);
 			tcell3.setPaddingLeft(10);
 			tcell3.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -261,13 +292,13 @@ public class GenerarPDFActivitySep extends Activity  {
 			tcell6.setPaddingLeft(10);
 			tcell6.setHorizontalAlignment(Element.ALIGN_CENTER);
 			tcell6.setVerticalAlignment(Element.ALIGN_MIDDLE);
-			tcell6.setBackgroundColor(BaseColor.LIGHT_GRAY);
+			tcell6.setBackgroundColor(BaseColor.LIGHT_GRAY);*/
 
 			tabla.addCell(tcell2);
-			tabla.addCell(tcell3);
+		/*	tabla.addCell(tcell3);
 			tabla.addCell(tcell4);
 			tabla.addCell(tcell5);
-			tabla.addCell(tcell6);
+			tabla.addCell(tcell6);*/
 
 
 			PdfPCell celdaedad, celdasepelio, celdaparcela, celdaluto, celdapremio;
@@ -278,13 +309,13 @@ public class GenerarPDFActivitySep extends Activity  {
 			if (Vecdatos.size()>0) {
 				for (int i = 0; i < Vecdatos.size(); i++) {
 
-					celdaedad = new PdfPCell(new Paragraph(String.valueOf(Vecdatos.get(i).getEdad())));
+					celdaedad = new PdfPCell(new Paragraph(String.valueOf(Vecdatos.get(i).getEdad()) + " Años"));
 					celdaedad.setBorderColor(BaseColor.BLACK);
 					celdaedad.setPaddingLeft(10);
 					celdaedad.setHorizontalAlignment(Element.ALIGN_CENTER);
 					celdaedad.setVerticalAlignment(Element.ALIGN_MIDDLE);
 
-					celdasepelio = new PdfPCell(new Paragraph(String.format("%.02f", Vecdatos.get(i).getSepelio())));
+			/*		celdasepelio = new PdfPCell(new Paragraph(String.format("%.02f", Vecdatos.get(i).getSepelio())));
 					celdasepelio.setBorderColor(BaseColor.BLACK);
 					celdasepelio.setPaddingLeft(10);
 					celdasepelio.setHorizontalAlignment(Element.ALIGN_RIGHT);
@@ -307,18 +338,18 @@ public class GenerarPDFActivitySep extends Activity  {
 					celdapremio.setBorderColor(BaseColor.BLACK);
 					celdapremio.setPaddingLeft(10);
 					celdapremio.setHorizontalAlignment(Element.ALIGN_RIGHT);
-					celdapremio.setVerticalAlignment(Element.ALIGN_MIDDLE);
+					celdapremio.setVerticalAlignment(Element.ALIGN_MIDDLE);*/
 
 
 //					tabla.addCell(Vecdatos.get(i).getFechanac());
 					tabla.addCell(celdaedad);
-					tabla.addCell(celdasepelio);
+				/*	tabla.addCell(celdasepelio);
 					tabla.addCell(celdaparcela);
 					tabla.addCell(celdaluto);
-					tabla.addCell(celdapremio);
+					tabla.addCell(celdapremio);*/
 				}
 				tabla.addCell("");
-				tabla.addCell("");
+			/*	tabla.addCell("");
 				tabla.addCell("");
 				tabla.addCell("");
 				tabla.addCell("");
@@ -335,7 +366,7 @@ public class GenerarPDFActivitySep extends Activity  {
 				celdatotal.setVerticalAlignment(Element.ALIGN_MIDDLE);
 
 
-				tabla.addCell(celdatotal);
+				tabla.addCell(celdatotal);*/
 			}
 
 			document.add(tabla);

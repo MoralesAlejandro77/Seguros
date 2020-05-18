@@ -543,9 +543,9 @@ ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:159:9-56
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:159:19-53
 activity#com.seguros.presupuestos.MostrarInfo
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:160:9-162:72
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:160:9-162:70
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:162:13-69
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:162:13-67
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:161:13-40
 service#com.seguros.fcm.CustomFirebaseMessagingService

@@ -169,7 +169,7 @@
         <activity android:name="com.seguros.presupuestos.Blanqueo_Asegurado" />
         <activity
             android:name="com.seguros.presupuestos.MostrarInfo"
-            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"
