@@ -26,6 +26,7 @@ RadioButton masc, fem;
         masc      = (RadioButton) findViewById(R.id.masc);
         fem       = (RadioButton) findViewById(R.id.fem);
 
+
         bbuscarok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

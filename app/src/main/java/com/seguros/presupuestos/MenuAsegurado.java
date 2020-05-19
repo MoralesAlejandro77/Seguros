@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.seguros.MainActivity;
 
@@ -19,7 +18,6 @@ public class MenuAsegurado extends AppCompatActivity {
 			opcion_cambiarpago, opcion_productores, opcion_pagoenlinea,
 			opcion_vencimientos, opcion_poliza,opcion_compania, opcion_pagodia,
 			opcion_contrato, opcion_premio, opcion_pago_online;
-	boolean datoscargados = false;
 
 //******************************************************************************************************************************* 
     @Override
@@ -153,16 +151,13 @@ public class MenuAsegurado extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),Activity_Premios.class);
-//				i.putExtra("titulo", "SOLICITUD DE PREMIO TOTAL");
-				startActivity(i);			}
+				startActivity(i);
+			}
 		});
 
     }
-    
 
 
-
-  /**************************************************************************************/
 //*******************************************************************************************************************************
   public boolean onCreateOptionsMenu(android.view.Menu menu) {
 	  // Inflate the menu; this adds items to the action bar if it is present.

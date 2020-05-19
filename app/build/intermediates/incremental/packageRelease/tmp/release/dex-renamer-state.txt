@@ -1,4 +1,4 @@
-#Tue May 19 00:14:48 ART 2020
+#Tue May 19 18:13:35 ART 2020
 base.0=C\:\\proyectos\\Seguros\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
 path.0=classes.dex
 renamed.0=classes.dex

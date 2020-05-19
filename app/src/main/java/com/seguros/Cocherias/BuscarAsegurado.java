@@ -59,7 +59,7 @@ public class BuscarAsegurado extends AppCompatActivity {
         recyclerlist  = (RecyclerView) findViewById(R.id.recyclerlist);
         bfamilia      = (ImageButton) findViewById(R.id.bfamilia);
 
-
+        this.setTitle("");
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);

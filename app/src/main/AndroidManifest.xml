@@ -25,6 +25,7 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
         <activity android:name=".Activity_Premios"></activity>
         <activity android:name=".Prelogin" /> <!-- Samsung multi-window support -->
         <uses-library
@@ -62,7 +63,7 @@
         </activity>
         <activity
             android:name=".Menu"
-            android:label="@string/app_name" />
+            android:label="@string/Nombre_app" />
         <activity
             android:name=".Activacion"
             android:label="Activar Aplicacion" />
@@ -146,7 +147,7 @@
         <activity android:name=".MenuAsegurado" />
         <activity
             android:name="com.seguros.Cocherias.BuscarAsegurado"
-            android:label="@string/app_name"
+            android:label="@string/Nombre_app"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Calendario" />
         <activity android:name=".OtrosServicios" />

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seguros.presupuestos"
-    android:versionCode="16"
-    android:versionName="4.08" >
+    android:versionCode="17"
+    android:versionName="4.09" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -72,7 +72,7 @@
         </activity>
         <activity
             android:name="com.seguros.presupuestos.Menu"
-            android:label="@string/app_name" />
+            android:label="@string/Nombre_app" />
         <activity
             android:name="com.seguros.presupuestos.Activacion"
             android:label="Activar Aplicacion" />
@@ -156,7 +156,7 @@
         <activity android:name="com.seguros.presupuestos.MenuAsegurado" />
         <activity
             android:name="com.seguros.Cocherias.BuscarAsegurado"
-            android:label="@string/app_name"
+            android:label="@string/Nombre_app"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.seguros.presupuestos.Calendario" />
         <activity android:name="com.seguros.presupuestos.OtrosServicios" />

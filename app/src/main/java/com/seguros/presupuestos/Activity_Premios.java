@@ -32,6 +32,8 @@ public class Activity_Premios extends AppCompatActivity {
     EditText nro_doc;
     TextView premio;
     int Aplicacion_activa;
+    String titulo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,9 @@ public class Activity_Premios extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
         premio.setText("0,00");
         this.setTitle("");
+        Aplicacion_activa = 0;
+        titulo = "";
+
         bbuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,10 +63,114 @@ public class Activity_Premios extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
                 i.putExtra("ayuda", "9");
                 startActivity(i);
+                titulo = "SOLICITUD DE PREMIO TOTAL";
+                Informa_Novedad();
+
+
             }
         });
 
     }
+//*******************************************************************************
+
+    /*************************************************************************************************************/
+    private void Informa_Novedad(){
+
+        preparar();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL20,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),error.toString(), Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        bpago.setEnabled(true);
+                        bbuscar.setEnabled(true);
+                    }
+                }){
+
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = preparar_Parametros();
+                return params;
+            }
+
+
+        };
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+    /*************************************************************************************************************/
+    public void preparar() {
+        progressBar.setIndeterminate(true);
+        progressBar.setVisibility(View.VISIBLE);
+        Aplicacion_activa = 0;
+        bpago.setEnabled(false);
+        bbuscar.setEnabled(false);
+    }
+    /*************************************************************************************************************/
+    public Map<String,String> preparar_Parametros() {
+        Map<String,String> params = new HashMap<String, String>();
+        params.put("tag"           ,"3P197792S");
+        params.put("tipodoc"       , "0");
+        params.put("dni"           , nro_doc.getText().toString());
+        params.put("comentario"    , "Premio Total por Sistema : " + premio.getText().toString());
+        params.put("titulo"        , titulo);
+        return params;
+    }
+    /*************************************************************************************************************/
+    public void finalizar(String response) {
+        Aplicacion_activa = 0;
+
+        try {
+            JSONArray jsonObject = new JSONArray(response);
+            JSONObject valor     = new JSONObject(jsonObject.get(0).toString());
+            Aplicacion_activa    = valor.getInt("status");
+
+            try
+            {
+    /*            if (Aplicacion_activa == 1) // Exitoso
+                {
+
+                    Librerias.mostrar_error(Activity_Premios.this,1, "Su solicitud esta siendo procesada!!, nos pondremos en contacto a la brevedad!!");
+                    finish();
+
+                }
+                else
+                {
+                    Librerias.mostrar_error(Activity_Premios.this,2,"SE HA PRODUCIDO UN ERROR  ");
+                }
+
+*/
+
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        progressBar.setVisibility(View.GONE);
+        bpago.setEnabled(true);
+        bbuscar.setEnabled(true);
+
+    }
+//*******************************************************************************************************************************
 
     private void Buscar_Premios() {
         progressBar.setIndeterminate(true);
