@@ -308,12 +308,12 @@
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\drawable\\ic_mtrl_chip_checked_circle.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_edita1.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_edita1.png"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_edita1.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_edita1.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_rating_star_on_tiny.png.flat",
@@ -816,6 +816,10 @@
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable-xhdpi\\fondo_g2.jpg"
     },
     {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_buscar.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-mdpi\\ic_buscar.png"
+    },
+    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\d1fb58a9eb935e842bbb3c5f767e3f7d\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
@@ -1130,6 +1134,10 @@
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_ic_email_black_24dp.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-ldpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_activity__premios.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\activity__premios.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -2356,6 +2364,10 @@
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xhdpi\\ic_terminos.png"
     },
     {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_buscar.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xhdpi\\ic_buscar.png"
+    },
+    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\menu_admin.xml.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\menu\\admin.xml"
     },
@@ -3336,6 +3348,10 @@
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable\\logopdf.png"
     },
     {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_buscar.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_buscar.png"
+    },
+    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_eventos.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xhdpi\\ic_eventos.png"
     },
@@ -3802,6 +3818,10 @@
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_buscar.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_buscar.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout-land_activity_buscar_asegurado_c.xml.flat",
@@ -4642,6 +4662,10 @@
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_buscar.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-hdpi\\ic_buscar.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_location.png.flat",

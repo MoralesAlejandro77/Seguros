@@ -290,10 +290,14 @@ MERGED from [com.google.android.gms:play-services-measurement-base:15.0.2] C:\Us
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:26:9-40
 	android:usesCleartextTraffic
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:27:9-44
-activity#com.seguros.presupuestos.Prelogin
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:28:9-55
+activity#com.seguros.presupuestos.Activity_Premios
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:28:9-63
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:28:19-43
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:28:19-51
+activity#com.seguros.presupuestos.Prelogin
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:29:9-46
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:29:19-43
 uses-library#com.sec.android.app.multiwindow
 ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:30:9-32:40
 	android:required
@@ -445,11 +449,11 @@ ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:115:17-79
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:115:25-76
 activity#com.seguros.presupuestos.ActivityAyuda
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:119:9-121:15
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:119:9-121:59
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:120:13-56
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:121:13-56
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:119:19-48
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:120:13-42
 activity#com.seguros.presupuestos.ActivityVendedor
 ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:122:9-125:57
 	android:windowSoftInputMode
