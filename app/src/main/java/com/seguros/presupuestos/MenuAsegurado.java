@@ -152,8 +152,8 @@ public class MenuAsegurado extends AppCompatActivity {
 		opcion_premio.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
-				i.putExtra("titulo", "SOLICITUD DE PREMIO TOTAL");
+				Intent i = new Intent(getApplicationContext(),Activity_Premios.class);
+//				i.putExtra("titulo", "SOLICITUD DE PREMIO TOTAL");
 				startActivity(i);			}
 		});
 

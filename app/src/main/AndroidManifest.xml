@@ -25,8 +25,8 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Prelogin"></activity>
-        <!-- Samsung multi-window support -->
+        <activity android:name=".Activity_Premios"></activity>
+        <activity android:name=".Prelogin" /> <!-- Samsung multi-window support -->
         <uses-library
             android:name="com.sec.android.app.multiwindow"
             android:required="false" />
@@ -116,9 +116,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".ActivityAyuda"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+        <activity
+            android:name=".ActivityAyuda"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ActivityVendedor"
             android:theme="@style/AppTheme"
