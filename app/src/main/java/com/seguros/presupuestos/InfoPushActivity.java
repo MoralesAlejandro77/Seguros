@@ -1,10 +1,8 @@
 package com.seguros.presupuestos;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.widget.TextView;
 
 public class InfoPushActivity extends AppCompatActivity {

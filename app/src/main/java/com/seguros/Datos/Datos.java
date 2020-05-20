@@ -10,17 +10,16 @@ package com.seguros.Datos;
  * Empresa : TRES PROVINCIAS SEGUROS - MENDOZA
  * 
  */
-/***********************************************************************************************************************/	
-import java.util.ArrayList;
+/***********************************************************************************************************************/
 
 import android.content.Context;
 import android.database.Cursor;
-import android.widget.Toast;
 
 import com.seguros.presupuestos.Integrantes;
 import com.seguros.presupuestos.Librerias;
-import com.seguros.presupuestos.Sepelio;
 import com.seguros.presupuestos.Servicios;
+
+import java.util.ArrayList;
 
 public class Datos {
 	private static final float GASTO_5000 = 5000;

@@ -4,12 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.CheckBox;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.prefs.Preferences;
+import com.seguros.Cuentas.Cuentas;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -23,13 +19,9 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 
-import Seguridad.Encriptar;
-import Seguridad.MCrypt;
-
-import com.seguros.Cuentas.Cuentas;
-import com.seguros.Datos.Datos;
-import com.seguros.MainActivity;
-import com.seguros.presupuestos.R;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserFunctions {
 

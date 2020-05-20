@@ -1,21 +1,17 @@
 package com.seguros.presupuestos;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.os.IBinder;
 
-import com.seguros.Actualizacion.MenuActual;
 import com.seguros.Actualizacion.UserFunctions;
 import com.seguros.Cuentas.Cuentas;
 import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
 
-import android.app.Service;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.os.IBinder;
-import android.util.Log;
-import android.widget.Toast;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 	public class Publicaciones extends Service {
 	String ruta;		 

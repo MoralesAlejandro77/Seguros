@@ -1,14 +1,10 @@
 package com.seguros.presupuestos;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,9 +20,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.seguros.Actualizacion.UserFunctions;
-import com.seguros.Cocherias.BuscarAsegurado;
-import com.seguros.Cuentas.Cuentas;
-import com.seguros.Datos.Datos;
 
 import org.json.JSONArray;
 import org.json.JSONException;

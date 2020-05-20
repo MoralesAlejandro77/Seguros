@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-
 import com.seguros.Actualizacion.UserFunctions;
 import com.seguros.fcm.MySharedPreference;
 

@@ -2,37 +2,24 @@ package com.seguros;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.seguros.Actualizacion.UserFunctions;
 import com.seguros.Cocherias.BuscarAsegurado;
 import com.seguros.Datos.Datos;
-import com.seguros.Datos.DatosBDTablas;
 import com.seguros.presupuestos.ActivityAyuda;
 import com.seguros.presupuestos.Librerias;
 import com.seguros.presupuestos.LoginApp;
-import com.seguros.presupuestos.Login_Asegurado;
 import com.seguros.presupuestos.Menu;
 import com.seguros.presupuestos.MenuAsegurado;
 import com.seguros.presupuestos.MenuContactos;
 import com.seguros.presupuestos.Prelogin;
 import com.seguros.presupuestos.R;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_OVERLAY_PERMISSION = 88;

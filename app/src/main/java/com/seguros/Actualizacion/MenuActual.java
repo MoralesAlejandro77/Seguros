@@ -1,12 +1,18 @@
 //******************************************************************************************************************************* 
 package com.seguros.Actualizacion;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -17,33 +23,20 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
-import com.seguros.presupuestos.Activacion;
 import com.seguros.presupuestos.Librerias;
-import com.seguros.presupuestos.LoginApp;
-import com.seguros.presupuestos.Menu;
 import com.seguros.presupuestos.R;
-import com.seguros.presupuestos.R.id;
-import com.seguros.presupuestos.R.layout;
 
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MenuActual extends FragmentActivity {
     ProgressBar progressBar, progressBarv;
-    Button boton_vida, boton_sepelio;
+    Button boton_vida;
     ArrayList<DatosSepelio> Vecdatos;
     ArrayList<DatosVida> VecdatosVida;
     TextView fechaactsep, vigenciasep, vigenciavida, fechaactvida;
@@ -57,7 +50,6 @@ public class MenuActual extends FragmentActivity {
         progressBar    = (ProgressBar) findViewById(R.id.progressBar1);
         progressBarv   = (ProgressBar) findViewById(R.id.progressBarv);
         boton_vida     = (Button) findViewById(R.id.button1);
-        boton_sepelio  = (Button) findViewById(R.id.Button2);
         vigenciasep    = (TextView) findViewById(R.id.vigencia_sep);
         fechaactsep    = (TextView) findViewById(R.id.actualiza_sep);
         vigenciavida   = (TextView) findViewById(R.id.vigencia_vida);
@@ -73,25 +65,12 @@ public class MenuActual extends FragmentActivity {
             @Override
             public void onClick(View arg0) {
                 if (Librerias.verificaConexion(MenuActual.this)) {
-
                     Actualizar_precios_vida();
-                } else
-                    Toast.makeText(getBaseContext(), "No es posible establecer la conexion con el Servidor!", Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-
-        boton_sepelio.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                if (Librerias.verificaConexion(MenuActual.this)) {
-
                     Actualizar_precios_sepelio();
 
                 } else
                     Toast.makeText(getBaseContext(), "No es posible establecer la conexion con el Servidor!", Toast.LENGTH_LONG).show();
+
 
             }
         });
@@ -187,7 +166,6 @@ public class MenuActual extends FragmentActivity {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                         boton_vida.setEnabled(true);
-                        boton_sepelio.setEnabled(true);
 
                     }
                 }) {
@@ -214,7 +192,6 @@ public class MenuActual extends FragmentActivity {
         progressBar.setVisibility(View.VISIBLE);
         Aplicacion_activa = 0;
         boton_vida.setEnabled(false);
-        boton_sepelio.setEnabled(false);
     }
 
     /*************************************************************************************************************/
@@ -263,7 +240,6 @@ public class MenuActual extends FragmentActivity {
         }
         progressBar.setVisibility(View.GONE);
         boton_vida.setEnabled(true);
-        boton_sepelio.setEnabled(true);
 
     }
 
@@ -355,7 +331,6 @@ public class MenuActual extends FragmentActivity {
         }
         progressBar.setVisibility(View.GONE);
         boton_vida.setEnabled(true);
-        boton_sepelio.setEnabled(true);
 
     }
 
@@ -438,12 +413,12 @@ public class MenuActual extends FragmentActivity {
             if (producto.equals("1"))
                 leer_ultima_act_Vida();
 
+
         } catch (Exception e) {
             e.printStackTrace();
         }
         progressBar.setVisibility(View.GONE);
         boton_vida.setEnabled(true);
-        boton_sepelio.setEnabled(true);
 
     }
 
@@ -537,7 +512,6 @@ public class MenuActual extends FragmentActivity {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                         boton_vida.setEnabled(true);
-                        boton_sepelio.setEnabled(true);
 
                     }
                 }) {
@@ -590,7 +564,6 @@ public class MenuActual extends FragmentActivity {
         }
         progressBar.setVisibility(View.GONE);
         boton_vida.setEnabled(true);
-        boton_sepelio.setEnabled(true);
 
     }
 //*******************************************************************************************************************************
@@ -666,7 +639,6 @@ private void ObtenerGastos() {
                     Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                     boton_vida.setEnabled(true);
-                    boton_sepelio.setEnabled(true);
 
                 }
             }) {
@@ -712,7 +684,6 @@ private void ObtenerGastos() {
         }
         progressBar.setVisibility(View.GONE);
         boton_vida.setEnabled(true);
-        boton_sepelio.setEnabled(true);
 
     }
 
@@ -780,7 +751,6 @@ private void ObtenerGastos() {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                         boton_vida.setEnabled(true);
-                        boton_sepelio.setEnabled(true);
 
                     }
                 }) {
@@ -809,6 +779,8 @@ private void ObtenerGastos() {
                 {
                     Toast.makeText(getApplicationContext(), "La Tabla de Capital fue Actualizada con Exito!, " +total + " filas afectadas en la actualizacion!", Toast.LENGTH_LONG).show();
                     ObtenerControl("1");
+
+
                 } else {
                     Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : ");
                 }
@@ -825,7 +797,6 @@ private void ObtenerGastos() {
         }
         progressBar.setVisibility(View.GONE);
         boton_vida.setEnabled(true);
-        boton_sepelio.setEnabled(true);
 
     }
 

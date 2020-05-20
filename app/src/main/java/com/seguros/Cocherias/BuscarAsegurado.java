@@ -2,10 +2,7 @@ package com.seguros.Cocherias;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,7 +15,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,13 +31,9 @@ import com.seguros.Actualizacion.UserFunctions;
 import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
 import com.seguros.Datos.DatosBDTablas_tmp;
-import com.seguros.MainActivity;
 import com.seguros.presupuestos.Librerias;
-import com.seguros.presupuestos.Login_Asegurado;
-import com.seguros.presupuestos.MenuAsegurado;
 import com.seguros.presupuestos.R;
 
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -99,8 +91,6 @@ public class BuscarAsegurado extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),BuscaxDni.class);
                 startActivityForResult(i, 10);
-    //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-     //                   .setAction("Action", null).show();
             }
         });
         bfamilia.setOnClickListener(new View.OnClickListener() {
@@ -417,7 +407,7 @@ public class BuscarAsegurado extends AppCompatActivity {
         try
         {
             if (errores)
-                Librerias.mostrar_error(BuscarAsegurado.this,2,"!No es posible consultar los Datos!");
+                Librerias.mostrar_error(BuscarAsegurado.this,2,"!!No Hay Datos registrados!!");
 
             else
             {
@@ -449,30 +439,6 @@ public class BuscarAsegurado extends AppCompatActivity {
         }
     }
 
-    /****************************************************************************************/
-    public void mostrar_error(int tipo, String mensaje) {
-
-        LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.customtoast, (ViewGroup) findViewById(R.id.toast_layout_root));
-
-        TextView text     = (TextView) layout.findViewById(R.id.toastText);
-        ImageView iconimag = (ImageView) layout.findViewById(R.id.toastImage);
-        text.setText(mensaje);
-        iconimag.setImageResource(0);
-
-        if (tipo==1) //info
-            iconimag.setImageResource(R.drawable.info);
-
-        if (tipo==2) //error
-            iconimag.setImageResource(R.drawable.error);
-
-        Toast t = new Toast(getApplicationContext());
-        t.setDuration(Toast.LENGTH_LONG);
-        t.setView(layout);
-        t.show();
-    }
-    /*************************************************************************************************************/
-
     private void Limpiartablas() {
         DatosBDTablas_tmp db = new DatosBDTablas_tmp(getApplicationContext());
         db.open();
@@ -500,192 +466,10 @@ public class BuscarAsegurado extends AppCompatActivity {
             permiso = true;
         if (permiso){
             Buscar_Info2(sexo,dni);
-        //    BuscarDCocheria itesmsrutas = new BuscarDCocheria(BuscarAsegurado.this,progressBar,sexo,dni);
-        //    itesmsrutas.execute();
-
         }
 
     }
 
-    /*************************************************************************************************************/
-    private class BuscarDCocheria extends AsyncTask<String, Integer, Void> {
-        Context c;
-        boolean errores = false;
-        String lsexo, ldni, status, lnombre, ledad, lfechanac, lbeneficiario;
-        int cantidad = 0;
-        ArrayList<Polizas> MiLista  = new ArrayList<Polizas>();
-
-        public BuscarDCocheria(Context c, ProgressBar progressBar, String sexo, String dni) {
-            this.c = c;
-            progressBar.setIndeterminate(true);
-            this.lsexo = sexo;
-            this.ldni  = dni;
-            cantidad = 0;
-            status = "";
-            lnombre = "";
-            ledad   = "";
-            lfechanac   = "";
-            lbeneficiario   = "";
-
-
-        }
-
-
-        @Override
-        protected void onPreExecute()
-        {
-            progressBar.setVisibility(View.VISIBLE);
-            errores = false;
-            Limpiartablas();
-
-        }
-
-        @Override
-        protected Void doInBackground(String... urls)
-        {
-            try
-            {
-                String identi = Datos.Obtener_id_login(BuscarAsegurado.this);
-                UserFunctions userFunction = new UserFunctions();
-                JSONArray arreglo = userFunction.BuscarDatosCocheria("3P197792S",lsexo,ldni,identi);
-
-                if (arreglo == null)
-                {
-                    errores = true;
-
-                }
-                else
-                {
-
-
-                    cantidad = arreglo.length();
-                    int j = 0;
-
-                    if (cantidad > 0) {
-                        JSONObject json = new JSONObject(arreglo.getJSONObject(j).toString());
-                        status         = json.getString("status");
-                        lnombre        = json.getString("nombre");
-                        ldni           = json.getString("dni");
-                        lbeneficiario  = json.getString("beneficiario");
-                        lfechanac      = json.getString("fechanac");
-                        ledad          = json.getString("edad");
-
-                        JSONArray arreglo_polizas = new JSONArray(json.getString("polizas").toString());
-                        for (int i = 0; i < arreglo_polizas.length(); i++) {
-
-                            MiLista.add(new Polizas());
-                            try
-                            {
-                                JSONObject objet_poliza = new JSONObject(arreglo_polizas.getJSONObject(i).toString());
-                                MiLista.get(i).setNropoliza(Integer.valueOf(objet_poliza.getString("nropoliza")));
-                                MiLista.get(i).setPlan(objet_poliza.getString("plan"));
-                                MiLista.get(i).setTieneg(objet_poliza.getInt("tienegf"));
-                                MiLista.get(i).setUltimop(objet_poliza.getString("ultimopago"));
-                                MiLista.get(i).setCodserv(objet_poliza.getInt("servicio"));
-                                MiLista.get(i).setServicio(objet_poliza.getString("descripcion"));
-                                MiLista.get(i).setMotivob(objet_poliza.getString("motivob"));
-                                MiLista.get(i).setFechaa(objet_poliza.getString("fechaa"));
-                                MiLista.get(i).setFechab(objet_poliza.getString("fechab"));
-                                if (objet_poliza.getString("fechab").equals("00/00/0000"))
-                                    MiLista.get(i).setFechab("");
-                            }
-                            catch (Exception e)
-                            {
-                                e.printStackTrace();
-                                break;
-                            }
-
-                        }
-/****************************************************************************************************/
-                        DatosBDTablas_tmp db = new DatosBDTablas_tmp(getApplicationContext());
-                        db.open();
-
-                        JSONArray arreglo_flia = new JSONArray(json.getString("familia").toString());
-                        for (int i = 0; i < arreglo_flia.length(); i++) {
-
-
-                     //       lfamilia.add(new Familia());
-                            try
-                            {
-                                JSONObject objet_flia = new JSONObject(arreglo_flia.getJSONObject(i).toString());
-                                db.AgregarFamilia(objet_flia.getString("dnimiemb"),"",objet_flia.getString("fechanac"),objet_flia.getString("nombre"));
-
-
-                     //           lfamilia.get(i).setDnimiemb(objet_flia.getString("dnimiemb"));
-                     //           lfamilia.get(i).setDnititular(objet_flia.getString("dnititular"));
-                     //           lfamilia.get(i).setNombre(objet_flia.getString("nombre"));
-                     //           lfamilia.get(i).setFechanac(objet_flia.getString("fechanac"));
-
-                            }
-                            catch (Exception e)
-                            {
-                                e.printStackTrace();
-                                break;
-                            }
-
-                        }
-
-                        db.close();
-
-                    }
-
-
-                }
-        }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-                errores = true;
-            }
-            return null;
-
-        }
-
-        @Override
-        protected void onPostExecute(Void unused)
-        {
-            try
-            {
-                if (errores)
-                   Toast.makeText(getBaseContext(),"!No es posible consultar los Datos!" , Toast.LENGTH_LONG).show();
-                else
-                {
-                   if (cantidad == 0)
-                       Toast.makeText(getBaseContext(),"!No Hay Datos registrados!" , Toast.LENGTH_LONG).show();
-                    else
-                     {
-                         if (status.equals("1")){
-                             Toast.makeText(getBaseContext(),"!Datos Identificados! ", Toast.LENGTH_LONG).show();
-                             nombre.setText(lnombre);
-                             dni.setText(ldni);
-                             beneficiario.setText(lbeneficiario);
-                             fechanac.setText(lfechanac);
-                             edad.setText(ledad);
-                             RecyclerAdapterNovedades adapter=new RecyclerAdapterNovedades(BuscarAsegurado.this,MiLista);
-                             recyclerlist.setAdapter(adapter);
-
-                         }
-                         else
-                             Toast.makeText(getBaseContext(),"Problemas al identificar : " + lnombre , Toast.LENGTH_LONG).show();
-
-
-
-                     }
-                }
-                //   Toast.makeText(c, "Los datos han sido Actualizados con Exito!, " + Vecdatos.size() + " filas afectadas en la actualizacion!", Toast.LENGTH_LONG).show() ;
-            
-                progressBar.setVisibility(View.GONE);
-
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-            progressBar.setVisibility(View.GONE);
-
-        }
-
-    }
 
 /*************************************************************************************************************/
 class RecyclerAdapterNovedades extends  RecyclerView.Adapter<RecyclerAdapterNovedades.RecyclerViewHolder> {

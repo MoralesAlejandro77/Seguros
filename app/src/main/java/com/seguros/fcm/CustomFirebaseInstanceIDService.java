@@ -3,7 +3,6 @@ package com.seguros.fcm;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -18,11 +17,8 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.seguros.Actualizacion.UserFunctions;
 import com.seguros.presupuestos.Librerias;
-import com.seguros.presupuestos.PublicarToken;
 import com.seguros.presupuestos.R;
 
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;

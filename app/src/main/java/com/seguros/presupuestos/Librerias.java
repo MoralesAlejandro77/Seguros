@@ -9,22 +9,7 @@ package com.seguros.presupuestos;
  * Empresa : TRES PROVINCIAS SEGUROS - MENDOZA
  * 
  */
-/***********************************************************************************************************************/	
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import com.seguros.Cuentas.Cuentas;
-import com.seguros.Datos.DatosBDTablas;
-
+/***********************************************************************************************************************/
 
 import android.Manifest;
 import android.accounts.Account;
@@ -42,7 +27,6 @@ import android.os.Environment;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
-import android.text.method.HideReturnsTransformationMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +34,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.seguros.Cuentas.Cuentas;
+import com.seguros.Datos.DatosBDTablas;
+
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 

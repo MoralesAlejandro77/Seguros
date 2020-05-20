@@ -1,13 +1,11 @@
 //******************************************************************************************************************************* 
 package com.seguros.presupuestos;
-import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -17,11 +15,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.Button;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -33,8 +31,9 @@ import android.widget.Toast;
 import com.seguros.Actualizacion.MenuActual;
 import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
-import com.seguros.pdf.GenerarPDFActivity;
 import com.seguros.pdf.GenerarPDFActivitySep;
+
+import java.util.ArrayList;
 
 public class Sepelio extends FragmentActivity  {
 Spinner planes, btarifa;

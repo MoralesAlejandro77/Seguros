@@ -1,9 +1,5 @@
 //******************************************************************************************************************************* 
 package com.seguros.presupuestos;
-import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -20,10 +16,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.seguros.Actualizacion.MenuActual;
 import com.seguros.Actualizacion.UserFunctions;
-import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Activacion extends FragmentActivity  {
 	EditText pass;

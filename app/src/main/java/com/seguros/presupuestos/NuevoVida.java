@@ -10,50 +10,28 @@ package com.seguros.presupuestos;
  * Empresa : TRES PROVINCIAS SEGUROS - MENDOZA
  * 
  */
-/***********************************************************************************************************************/	
-import java.util.ArrayList;
-import java.util.Calendar;
+/***********************************************************************************************************************/
 
-import com.seguros.Datos.Datos;
-import com.seguros.Datos.DatosBDTablas;
-
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.View.OnKeyListener;
-import android.view.ViewParent;
+import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ArrayAdapter;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.TextView;
-//******************************************************************************************************************************* 
 import android.widget.Toast;
+
+//*******************************************************************************************************************************
 
 public class NuevoVida extends FragmentActivity  {
 ProgressBar progressBar;

@@ -1,23 +1,14 @@
 //******************************************************************************************************************************* 
 package com.seguros.presupuestos;
-import java.util.Calendar;
 
-import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnKeyListener;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-//******************************************************************************************************************************* 
-import android.widget.Toast;
+
+//*******************************************************************************************************************************
 
 public class NuevoSepelio extends FragmentActivity  {
 	EditText edad_titular;
