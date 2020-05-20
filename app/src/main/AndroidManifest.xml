@@ -26,7 +26,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".Activity_Premios"></activity>
+        <activity android:name=".Activity_Premios"  android:screenOrientation="portrait"></activity>
         <activity android:name=".Prelogin" /> <!-- Samsung multi-window support -->
         <uses-library
             android:name="com.sec.android.app.multiwindow"
@@ -54,7 +54,8 @@
 
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,48 +64,60 @@
         </activity>
         <activity
             android:name=".Menu"
-            android:label="@string/Nombre_app" />
+            android:label="@string/Nombre_app"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activacion"
-            android:label="Activar Aplicacion" />
+            android:label="Activar Aplicacion"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activacion2"
-            android:label="Activar Aplicacion" />
+            android:label="Activar Aplicacion"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".LoginApp"
-            android:label="Login User">
+            android:label="Login User"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Sepelio"
-            android:label="Presupuesto Seguro Sepelio" />
+            android:label="Presupuesto Seguro Sepelio"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.seguros.Actualizacion.MenuActual"
-            android:label="Actualización de Precios" />
+            android:label="Actualización de Precios"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ListServicios"
-            android:label="Presupuesto Seguro Vida" />
+            android:label="Presupuesto Seguro Vida"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".NuevoSepelio"
             android:label="Nuevo Integrante Seguro Sepelio"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".NuevoVida"
             android:label="Integrantes Seguro de Vida"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.seguros.pdf.GenerarPDFActivity"
             android:label="Compartir Presupuesto"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.seguros.pdf.GenerarPDFActivitySep"
             android:label="Compartir Presupuesto"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MenuContactos"
-            android:label="Contactenos...." />
+            android:label="Contactenos...."
+            android:screenOrientation="portrait"/>
 
         <service
             android:name=".Publicaciones"
@@ -119,13 +132,17 @@
 
         <activity
             android:name=".ActivityAyuda"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ActivityVendedor"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".ListaVendedores" />
-        <activity android:name="com.seguros.MainActivity">
+            android:theme="@style/AppTheme"            android:windowSoftInputMode="stateHidden"
+
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ListaVendedores"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.seguros.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -133,34 +150,63 @@
                 />
             </intent-filter>
         </activity>
-        <activity android:name=".Adicionales" />
+        <activity android:name=".Adicionales"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SepelioCalc"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.seguros.Cocherias.BuscaxDni"
-            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.seguros.Cocherias.FamiliaActivity"
-            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
-        <activity android:name="com.seguros.Cocherias.DatosAsegurados" />
-        <activity android:name=".MenuAsegurado" />
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.seguros.Cocherias.DatosAsegurados"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MenuAsegurado"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.seguros.Cocherias.BuscarAsegurado"
             android:label="@string/Nombre_app"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Calendario" />
-        <activity android:name=".OtrosServicios" />
-        <activity android:name=".Login_Asegurado" />
-        <activity android:name=".Registro_Asegurado" />
-        <activity android:name=".Modifica_Asegurado" />
-        <activity android:name=".Modifica_CBU" />
-        <activity android:name=".InfoPushActivity" />
-        <activity android:name=".Clave_adm" />
-        <activity android:name=".Blanqueo_Asegurado" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Calendario"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OtrosServicios"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".Login_Asegurado"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".Registro_Asegurado"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".Modifica_Asegurado"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".Modifica_CBU"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".InfoPushActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Clave_adm"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Blanqueo_Asegurado"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
         <activity
             android:name=".MostrarInfo"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:screenOrientation="portrait"/>
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"

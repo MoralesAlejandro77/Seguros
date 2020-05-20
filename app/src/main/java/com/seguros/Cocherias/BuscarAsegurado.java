@@ -2,8 +2,10 @@ package com.seguros.Cocherias;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,19 +23,32 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.seguros.Actualizacion.Familia;
 import com.seguros.Actualizacion.UserFunctions;
 import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
 import com.seguros.Datos.DatosBDTablas_tmp;
 import com.seguros.MainActivity;
+import com.seguros.presupuestos.Librerias;
+import com.seguros.presupuestos.Login_Asegurado;
+import com.seguros.presupuestos.MenuAsegurado;
 import com.seguros.presupuestos.R;
 
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class BuscarAsegurado extends AppCompatActivity {
@@ -41,8 +56,16 @@ public class BuscarAsegurado extends AppCompatActivity {
     TextView nombre, dni, fechanac, edad, beneficiario;
     RecyclerView recyclerlist;
     ImageButton bfamilia;
+    int Aplicacion_activa;
+    ArrayList<Polizas> MiLista  = new ArrayList<Polizas>();
+
+
     ArrayList<Familia> lfamilia = new ArrayList<Familia>();
     private static final int MY_PERMISSIONS_REQUEST_INTERNET = 101;
+
+    String lsexo, ldni, status, lnombre, ledad, lfechanac, lbeneficiario;
+    int cantidad = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +83,7 @@ public class BuscarAsegurado extends AppCompatActivity {
         bfamilia      = (ImageButton) findViewById(R.id.bfamilia);
 
         this.setTitle("");
+        Aplicacion_activa = 0;
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -89,106 +113,343 @@ public class BuscarAsegurado extends AppCompatActivity {
 
         AccesoEmpresas();
     }
+    /*************************************************************************************************************/
+    private void Buscar_Info(){
+
+        preparar();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL14,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        bfamilia.setEnabled(true);
+                    }
+                }){
+
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = preparar_Parametros();
+                return params;
+            }
+
+        };
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
+    }
+    /*************************************************************************************************************/
+    public void preparar() {
+        progressBar.setIndeterminate(true);
+        progressBar.setVisibility(View.VISIBLE);
+        Aplicacion_activa = 0;
+        bfamilia.setEnabled(false);
+    }
+    /*************************************************************************************************************/
+    public Map<String,String> preparar_Parametros() {
+
+        Map<String,String> params = new HashMap<String, String>();
+        String id = Datos.Obtener_id_login(BuscarAsegurado.this);
+        params.put("id"         , id);
+        params.put("tags"         ,"3P197792S");
+        return params;
+    }
+    /*************************************************************************************************************/
+    public void finalizar(String response) {
+        Aplicacion_activa = 0;
+        int pperfil = 0;
+
+        try {
+            JSONArray arreglo = new JSONArray(response);
+
+            if (arreglo != null)
+            {
+                int cantidad = arreglo.length();
+                int j = 0;
+                if (cantidad > 0) {
+                    JSONObject json     = new JSONObject(arreglo.get(0).toString());
+
+                    String resultado = json.getString("status");
+                    if (resultado.equals("1"))
+                        Aplicacion_activa = 1;
+
+                    pperfil   = Integer.valueOf(json.getString("perfil"));
+                }
+
+
+            }
+
+
+            try
+            {
+                if (Aplicacion_activa == 1)
+                {
+                    if (pperfil == 2){
+                        String identi = Datos.Obtener_id_login(BuscarAsegurado.this);
+                        DatosBDTablas db = new DatosBDTablas(BuscarAsegurado.this);
+                        db.open();
+                        db.RegistraEmpresa(Integer.valueOf(identi));
+                        db.close();
+                    }
+
+                }
+                else
+                {
+                    Librerias.mostrar_error(BuscarAsegurado.this,2,"No tiene permisos para acceder a esta opcion..!!");
+                }
+
+
+
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        progressBar.setVisibility(View.GONE);
+        bfamilia.setEnabled(true);
+
+    }
     /****************************************************************************************/
 
     public void AccesoEmpresas(){
         if (Datos.Esta_Logueadaemp(getApplicationContext()))
         {
-
-            VerificaEmp verif = new VerificaEmp(BuscarAsegurado.this,progressBar);
-            verif.execute();
+            Buscar_Info();
+         //   VerificaEmp verif = new VerificaEmp(BuscarAsegurado.this,progressBar);
+         //   verif.execute();
 
         }
     }
-    /****************************************************************************************/
-    public class VerificaEmp extends AsyncTask<String, Integer, Void> {
-        Context c;
+    /*************************************************************************************************************/
+    /**
+     * @param sexo
+     * @param dni***********************************************************************************************************/
+    private void Buscar_Info2(String sexo, String dni){
+
+        preparar2(sexo, dni);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL13,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar2(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        bfamilia.setEnabled(true);
+                    }
+                }){
+
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = preparar_Parametros2();
+                return params;
+            }
+
+        };
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
+    }
+    /*************************************************************************************************************/
+    public void preparar2(String sexo, String dni) {
+        progressBar.setIndeterminate(true);
+        progressBar.setVisibility(View.VISIBLE);
+        Aplicacion_activa = 0;
+        bfamilia.setEnabled(false);
+
+        lsexo = sexo;
+        ldni  = dni;
+        cantidad = 0;
+        status = "";
+        lnombre = "";
+        ledad   = "";
+        lfechanac   = "";
+        lbeneficiario   = "";
+
+        progressBar.setVisibility(View.VISIBLE);
+        Limpiartablas();
+
+    }
+    /*************************************************************************************************************/
+    public Map<String,String> preparar_Parametros2() {
+        String identi = Datos.Obtener_id_login(BuscarAsegurado.this);
+
+        Map<String,String> params = new HashMap<String, String>();
+        params.put("id"         , identi);
+        params.put("tags"         ,"3P197792S");
+        params.put("sexo"         ,lsexo);
+        params.put("dni"         ,ldni);
+        return params;
+    }
+    /*************************************************************************************************************/
+    public void finalizar2(String response) {
+        Aplicacion_activa = 0;
         boolean errores = false;
-        boolean Aplicacion_activa = false;
-        public VerificaEmp(Context c, ProgressBar progressBar) {
-            this.c = c;
-            progressBar.setIndeterminate(true);
-            Aplicacion_activa = false;
-        }
 
-
-        @Override
-        protected void onPreExecute()
+        try
         {
-            progressBar.setVisibility(View.VISIBLE);
-            errores = false;
-
-
-        }
-
-        @Override
-        protected Void doInBackground(String... urls)
-        {
-            try
+            JSONArray arreglo = new JSONArray(response);
+            if (arreglo == null)
             {
-                String id = Datos.Obtener_id_login(BuscarAsegurado.this);
+                errores = true;
 
-                UserFunctions userFunction = new UserFunctions();
-                JSONArray arreglo = userFunction.verifemp(id,"3P197792S");
+            }
+            else
+            {
 
-                if (arreglo != null)
-                {
-                    int cantidad = arreglo.length();
-                    int j = 0;
-                    if (cantidad > 0) {
-                        JSONObject json = new JSONObject(arreglo.getJSONObject(j).toString());
-                        String resultado = json.getString("status");
-                        if (resultado.equals("1"))
-                            Aplicacion_activa = true;
 
-                        int pperfil   = Integer.valueOf(json.getString("perfil"));
-                        if (pperfil == 2){
-                            String identi = Datos.Obtener_id_login(BuscarAsegurado.this);
-                            DatosBDTablas db = new DatosBDTablas(BuscarAsegurado.this);
-                            db.open();
-                            db.RegistraEmpresa(Integer.valueOf(identi));
-                            db.close();
+                cantidad = arreglo.length();
+                int j = 0;
+
+                if (cantidad > 0) {
+                    JSONObject json     = new JSONObject(arreglo.get(0).toString());
+                    status         = json.getString("status");
+                    lnombre        = json.getString("nombre");
+                    ldni           = json.getString("dni");
+                    lbeneficiario  = json.getString("beneficiario");
+                    lfechanac      = json.getString("fechanac");
+                    ledad          = json.getString("edad");
+
+                    JSONArray arreglo_polizas = new JSONArray(json.getString("polizas").toString());
+                    for (int i = 0; i < arreglo_polizas.length(); i++) {
+
+                        MiLista.add(new Polizas());
+                        try
+                        {
+                            JSONObject objet_poliza = new JSONObject(arreglo_polizas.getJSONObject(i).toString());
+                            MiLista.get(i).setNropoliza(Integer.valueOf(objet_poliza.getString("nropoliza")));
+                            MiLista.get(i).setPlan(objet_poliza.getString("plan"));
+                            MiLista.get(i).setTieneg(objet_poliza.getInt("tienegf"));
+                            MiLista.get(i).setUltimop(objet_poliza.getString("ultimopago"));
+                            MiLista.get(i).setCodserv(objet_poliza.getInt("servicio"));
+                            MiLista.get(i).setServicio(objet_poliza.getString("descripcion"));
+                            MiLista.get(i).setMotivob(objet_poliza.getString("motivob"));
+                            MiLista.get(i).setFechaa(objet_poliza.getString("fechaa"));
+                            MiLista.get(i).setFechab(objet_poliza.getString("fechab"));
+                            if (objet_poliza.getString("fechab").equals("00/00/0000"))
+                                MiLista.get(i).setFechab("");
                         }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                            break;
+                        }
+
+                    }
+/****************************************************************************************************/
+                    DatosBDTablas_tmp db = new DatosBDTablas_tmp(getApplicationContext());
+                    db.open();
+
+                    JSONArray arreglo_flia = new JSONArray(json.getString("familia").toString());
+                    for (int i = 0; i < arreglo_flia.length(); i++) {
+
+
+                        //       lfamilia.add(new Familia());
+                        try
+                        {
+                            JSONObject objet_flia = new JSONObject(arreglo_flia.getJSONObject(i).toString());
+                            db.AgregarFamilia(objet_flia.getString("dnimiemb"),"",objet_flia.getString("fechanac"),objet_flia.getString("nombre"));
+
+
+                            //           lfamilia.get(i).setDnimiemb(objet_flia.getString("dnimiemb"));
+                            //           lfamilia.get(i).setDnititular(objet_flia.getString("dnititular"));
+                            //           lfamilia.get(i).setNombre(objet_flia.getString("nombre"));
+                            //           lfamilia.get(i).setFechanac(objet_flia.getString("fechanac"));
+
+                        }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                            break;
+                        }
+
                     }
 
+                    db.close();
 
                 }
 
 
             }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-                errores = true;
-            }
-            return null;
-
         }
-
-        @Override
-        protected void onPostExecute(Void unused)
+        catch (Exception e)
         {
-            try
-            {
-
-                if (!Aplicacion_activa)
-                {
-                    mostrar_error(2,"No tiene permisos para acceder a esta opcion..!");
-                    finish();
-                }
-
-
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-            progressBar.setVisibility(View.GONE);
+            e.printStackTrace();
+            errores = true;
         }
+        mostrar_datos2(errores);
+        progressBar.setVisibility(View.GONE);
+        bfamilia.setEnabled(true);
 
     }
+/***********************************************************************/
+    private void mostrar_datos2(boolean errores) {
+        try
+        {
+            if (errores)
+                Librerias.mostrar_error(BuscarAsegurado.this,2,"!No es posible consultar los Datos!");
 
-    /*************************************************************************************************************/
+            else
+            {
+                if (cantidad == 0)
+                    Librerias.mostrar_error(BuscarAsegurado.this,2,"!No Hay Datos registrados!");
+                else
+                {
+                    if (status.equals("1")){
+                        nombre.setText(lnombre);
+                        dni.setText(ldni);
+                        beneficiario.setText(lbeneficiario);
+                        fechanac.setText(lfechanac);
+                        edad.setText(ledad);
+                        RecyclerAdapterNovedades adapter=new RecyclerAdapterNovedades(BuscarAsegurado.this,MiLista);
+                        recyclerlist.setAdapter(adapter);
+
+                    }
+                    else
+                        Librerias.mostrar_error(BuscarAsegurado.this,2,"Problemas al identificar : " + lnombre);
+                }
+            }
+
+            progressBar.setVisibility(View.GONE);
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    /****************************************************************************************/
     public void mostrar_error(int tipo, String mensaje) {
 
         LayoutInflater inflater = getLayoutInflater();
@@ -232,34 +493,15 @@ public class BuscarAsegurado extends AppCompatActivity {
         }
 
     }
-
+//*******************************************************************************
     private void Buscardatos(String sexo, String dni) {
-        boolean permiso = false;/*
-         //   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-        if (Build.VERSION.SDK_INT >= 23)
-        {
-            if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_PHONE_STATE)!= PackageManager.PERMISSION_GRANTED) {
+        boolean permiso = false;
 
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_PHONE_STATE)) {
-                    /*********************************************************/
-            /*        Toast.makeText(getBaseContext(),"Se necesita este permiso para poder completar la operacion!" ,Toast.LENGTH_LONG).show();
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, MY_PERMISSIONS_REQUEST_INTERNET);
-                    /*************************************************************/
-        /*        } else {
-
-                    Toast.makeText(getBaseContext(),"Se necesita este permiso para poder completar la operacion!" ,Toast.LENGTH_LONG).show();
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, MY_PERMISSIONS_REQUEST_INTERNET);
-
-                }
-            }
-            else
-                permiso = true;
-        }
-        else*/
             permiso = true;
         if (permiso){
-            BuscarDCocheria itesmsrutas = new BuscarDCocheria(BuscarAsegurado.this,progressBar,sexo,dni);
-            itesmsrutas.execute();
+            Buscar_Info2(sexo,dni);
+        //    BuscarDCocheria itesmsrutas = new BuscarDCocheria(BuscarAsegurado.this,progressBar,sexo,dni);
+        //    itesmsrutas.execute();
 
         }
 
