@@ -86,8 +86,8 @@ public final class R {
         public static final int chronometer = 0x7f09007e;
         public static final int end = 0x7f0900b0;
         public static final int forever = 0x7f0900c4;
-        public static final int icon = 0x7f0900cc;
-        public static final int icon_group = 0x7f0900cd;
+        public static final int icon = 0x7f0900cd;
+        public static final int icon_group = 0x7f0900ce;
         public static final int info = 0x7f09010b;
         public static final int italic = 0x7f09010d;
         public static final int left = 0x7f090111;

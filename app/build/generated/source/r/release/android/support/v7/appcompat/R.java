@@ -643,9 +643,9 @@ public final class R {
         public static final int forever = 0x7f0900c4;
         public static final int group_divider = 0x7f0900c8;
         public static final int home = 0x7f0900ca;
-        public static final int icon = 0x7f0900cc;
-        public static final int icon_group = 0x7f0900cd;
-        public static final int image = 0x7f0900e2;
+        public static final int icon = 0x7f0900cd;
+        public static final int icon_group = 0x7f0900ce;
+        public static final int image = 0x7f0900e3;
         public static final int info = 0x7f09010b;
         public static final int italic = 0x7f09010d;
         public static final int left = 0x7f090111;

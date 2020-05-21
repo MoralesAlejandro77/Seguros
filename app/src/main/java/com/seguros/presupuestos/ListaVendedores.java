@@ -5,15 +5,23 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +33,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.seguros.Actualizacion.UserFunctions;
+import com.seguros.Cocherias.BuscarAsegurado;
+import com.seguros.Cocherias.Polizas;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,24 +42,35 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ListaVendedores extends AppCompatActivity {
     ProgressBar barra;
-    ListView lista;
+    RecyclerView lista;
     ArrayList<Vendedor> arraydir;
     ImageButton bvendedor;
     int Aplicacion_activa = 0;
+    RecyclerAdapterNovedades adapter;
+    SearchView buscar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_vendedores);
-        lista  = (ListView)    findViewById(R.id.listView1);
+        lista      = (RecyclerView)  findViewById(R.id.listView1);
         bvendedor  = (ImageButton) findViewById(R.id.bvendedor);
-        barra  = (ProgressBar) findViewById(R.id.barra);
+        barra      = (ProgressBar) findViewById(R.id.barra);
+        buscar     = (SearchView)  findViewById(R.id.ibuscar);
 
         barra.setVisibility(View.GONE);
+
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        lista.setLayoutManager(layoutManager);
+
         arraydir = new ArrayList<Vendedor>();
+        arraydir.clear();
 
         if (Librerias.verificaConexion(this.getApplicationContext()))
         {
@@ -67,83 +88,22 @@ public class ListaVendedores extends AppCompatActivity {
             }
         });
 
+        buscar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
 
-    }
-/****************************************************************************************************************/
-    public class AdapterVendedores extends BaseAdapter {
-
-        protected Activity activity;
-        protected ArrayList<Vendedor> items;
-
-        public AdapterVendedores(Activity activity, ArrayList<Vendedor> items) {
-            this.activity = activity;
-            this.items = items;
-        }
-
-        @Override
-        public int getCount() {
-            return items.size();
-        }
-
-        @Override
-        public Object getItem(int arg0) {
-            return items.get(arg0);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return Long.parseLong(items.get(position).getId());
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            // Generamos una convertView por motivos de eficiencia
-            View v = convertView;
-
-            //Asociamos el layout de la lista que hemos creado
-            if(convertView == null){
-                LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = inf.inflate(R.layout.lista_vendedores, null);
             }
 
-            Vendedor dir = items.get(position);
-            final TextView nombre = (TextView) v.findViewById(R.id.vnombre);
-            nombre.setText(dir.getNombre());
-            final TextView id = (TextView) v.findViewById(R.id.vid);
-            id.setText(dir.getId());
-            final TextView estado = (TextView) v.findViewById(R.id.vestado);
-            estado.setText("Activo");
-            if (Integer.valueOf(dir.getEstado())==0)
-                estado.setText("Bloqueado");
-            final TextView vcarga = (TextView) v.findViewById(R.id.vcarga);
-            vcarga.setText(dir.getFecha());
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (arraydir.size()>0)
+                    adapter.getFilter().filter(newText);
+                return true;
+            }
+        });
 
-
-            final ImageButton bedit = (ImageButton) v.findViewById(R.id.bedit);
-            bedit.setTag(position);
-            bedit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i = new Intent(ListaVendedores.this,ActivityVendedor.class);
-                    i.putExtra("accion","2");
-                    i.putExtra("id",arraydir.get(Integer.valueOf(bedit.getTag().toString())).getId());
-                    i.putExtra("nombre",arraydir.get(Integer.valueOf(bedit.getTag().toString())).getNombre());
-                    i.putExtra("estado",arraydir.get(Integer.valueOf(bedit.getTag().toString())).getEstado());
-                    i.putExtra("clave",arraydir.get(Integer.valueOf(bedit.getTag().toString())).getClave());
-                    i.putExtra("perfil",arraydir.get(Integer.valueOf(bedit.getTag().toString())).getPerfil());
-                    startActivityForResult(i,200);
-
-              //      Toast.makeText(ListaVendedores.this, "position " + arraydir.get(Integer.valueOf(bedit.getTag().toString())).getNombre(), Toast.LENGTH_SHORT).show();
-
-                }
-            });
-
-
-            return v;
-        }
     }
-
     /*************************************************************************************************************/
     private void Lista_de_Vendedores(){
 
@@ -205,12 +165,14 @@ public class ListaVendedores extends AppCompatActivity {
 
             arraydir = getItems_ListVendedores(response);
 
+
             try
             {
                 if (Aplicacion_activa == 1) // Exitoso
                 {
-                    AdapterVendedores adapter = new AdapterVendedores(ListaVendedores.this, arraydir);
+                    adapter=new RecyclerAdapterNovedades(getApplicationContext(),arraydir);
                     lista.setAdapter(adapter);
+
                 }
                 else
                 {
@@ -222,6 +184,7 @@ public class ListaVendedores extends AppCompatActivity {
             catch (Exception e)
             {
                 e.printStackTrace();
+                Librerias.mostrar_error(ListaVendedores.this,2,e.toString() );
             }
 
         } catch (Exception e) {
@@ -284,28 +247,6 @@ public class ListaVendedores extends AppCompatActivity {
         return MiLista;
     }
 //*******************************************************************************************************************************
-    public void mostrar_error(int tipo, String mensaje) {
-
-        LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.customtoast, (ViewGroup) findViewById(R.id.toast_layout_root));
-
-        TextView  text     = (TextView) layout.findViewById(R.id.toastText);
-        ImageView iconimag = (ImageView) layout.findViewById(R.id.toastImage);
-        text.setText(mensaje);
-        iconimag.setImageResource(0);
-
-        if (tipo==1) //info
-            iconimag.setImageResource(R.drawable.info);
-
-        if (tipo==2) //error
-            iconimag.setImageResource(R.drawable.error);
-
-        Toast t = new Toast(getApplicationContext());
-        t.setDuration(Toast.LENGTH_LONG);
-        t.setView(layout);
-        t.show();
-    }
-/*************************************************************************************************************/
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
@@ -314,12 +255,13 @@ public class ListaVendedores extends AppCompatActivity {
             Lista_de_Vendedores();
         }
     }
-//*******************************************************************
+//*********************************************************************************
 public boolean onCreateOptionsMenu(android.view.Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.admin, menu);
     return true;
 }
+//*********************************************************************************
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -333,13 +275,14 @@ public boolean onCreateOptionsMenu(android.view.Menu menu) {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+//*********************************************************************************
     private void mensajes_fcm() {
         Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
         i.putExtra("ayuda", "7");
         startActivity(i);
 
     }
+//*********************************************************************************
 
     private void log_asegurados() {
         Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
@@ -347,5 +290,153 @@ public boolean onCreateOptionsMenu(android.view.Menu menu) {
         startActivity(i);
 
     }
+
+//*********************************************************************************
+    class RecyclerAdapterNovedades extends  RecyclerView.Adapter<RecyclerAdapterNovedades.RecyclerViewHolder> implements Filterable {
+
+        Context context;
+        LayoutInflater inflater;
+        ArrayList<Vendedor> datos;
+    ArrayList<Vendedor> arrayList    = new ArrayList<>();
+    ArrayList<Vendedor> originalList = new ArrayList<>();
+
+    Filter myFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Vendedor> filteredList = new ArrayList<>();
+            String query = constraint.toString();
+
+            if (query.isEmpty()) {
+                filteredList.addAll(originalList);
+            }
+            if (constraint == null || constraint.length() == 0) {
+
+                filteredList.addAll(originalList);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (Vendedor item : originalList) {
+                    if (item.getNombre().toLowerCase().contains(filterPattern))
+                    {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            arrayList.clear();
+            arrayList.addAll((List) filterResults.values);
+            adapter.notifyDataSetChanged();
+        }
+
+    };
+
+    public RecyclerAdapterNovedades(Context c, ArrayList<Vendedor> v) {
+        this.context = c;
+        this.datos   = v;
+        inflater     = LayoutInflater.from(c);
+        this.arrayList = v;
+        originalList.addAll(v);
+
+    }
+
+        @Override
+        public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View v= inflater.inflate(R.layout.lista_vendedores, parent, false);
+
+            RecyclerViewHolder viewHolder=new RecyclerViewHolder(v);
+
+            return viewHolder;
+        }
+
+
+        @Override
+        public void onBindViewHolder(final RecyclerViewHolder holder, int position) {
+            //      setAnimation(holder.container, position);
+
+
+            holder.nombre.setText(datos.get(position).getNombre());
+            holder.id.setText(datos.get(position).getId());
+            holder.estado.setText("Activo");
+            if (Integer.valueOf(datos.get(position).getEstado())==0)
+                holder.estado.setText("Bloqueado");
+            holder.vcarga.setText(datos.get(position).getFecha());
+
+
+            holder.bedit.setTag(position);
+            holder.bedit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(ListaVendedores.this,ActivityVendedor.class);
+                    i.putExtra("accion","2");
+                    i.putExtra("id"    ,datos.get(Integer.valueOf(holder.bedit.getTag().toString())).getId());
+                    i.putExtra("nombre",datos.get(Integer.valueOf(holder.bedit.getTag().toString())).getNombre());
+                    i.putExtra("estado",datos.get(Integer.valueOf(holder.bedit.getTag().toString())).getEstado());
+                    i.putExtra("clave" ,datos.get(Integer.valueOf(holder.bedit.getTag().toString())).getClave());
+                    i.putExtra("perfil",datos.get(Integer.valueOf(holder.bedit.getTag().toString())).getPerfil());
+                    startActivityForResult(i,200);
+
+                }
+            });
+
+
+
+        }
+        private void setAnimation(FrameLayout container, int position) {
+            Animation animation = AnimationUtils.loadAnimation( this.context, android.R.anim.slide_in_left);
+            container.startAnimation(animation);
+        }
+
+        @Override
+        public int getItemCount() {
+            return datos.size();
+        }
+
+    @Override
+    public Filter getFilter() {
+        return myFilter;
+    }
+
+    /**********************************************************************************************/
+
+        public class RecyclerViewHolder extends RecyclerView.ViewHolder{
+            FrameLayout container;
+            TextView nombre, id, estado, vcarga;
+            ImageButton bedit;
+
+            public RecyclerViewHolder(View i) {
+                super(i);
+
+                // Generamos una convertView por motivos de eficiencia
+                View v = i;
+
+                //Asociamos el layout de la lista que hemos creado
+                if(i == null){
+                    LayoutInflater inf = (LayoutInflater) ListaVendedores.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    v = inf.inflate(R.layout.lista_vendedores, null);
+                }
+
+                nombre    = (TextView) v.findViewById(R.id.vnombre);
+                id        = (TextView) v.findViewById(R.id.vid);
+                estado    = (TextView) v.findViewById(R.id.vestado);
+                vcarga    = (TextView) v.findViewById(R.id.vcarga);
+                bedit     = (ImageButton) v.findViewById(R.id.bedit);
+
+
+            }
+
+
+
+        }
+/************************************/
+    }
+/*************************************************************************************************************/
 
 }
