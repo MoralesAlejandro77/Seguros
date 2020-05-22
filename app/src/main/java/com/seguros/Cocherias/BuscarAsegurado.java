@@ -178,16 +178,6 @@ public class BuscarAsegurado extends AppCompatActivity {
                         Aplicacion_activa = 1;
 
                     pperfil   = Integer.valueOf(json.getString("perfil"));
-                }
-
-
-            }
-
-
-            try
-            {
-                if (Aplicacion_activa == 1)
-                {
                     if (pperfil == 2){
                         String identi = Datos.Obtener_id_login(BuscarAsegurado.this);
                         DatosBDTablas db = new DatosBDTablas(BuscarAsegurado.this);
@@ -197,17 +187,14 @@ public class BuscarAsegurado extends AppCompatActivity {
                     }
 
                 }
-                else
-                {
-                    Librerias.mostrar_error(BuscarAsegurado.this,2,"No tiene permisos para acceder a esta opcion..!!");
-                }
-
 
 
             }
-            catch (Exception e)
+            else
+            if (Aplicacion_activa == 0)
             {
-                e.printStackTrace();
+                Librerias.mostrar_error(BuscarAsegurado.this,2,"No tiene permisos para acceder a esta opcion..!!");
+                finish();
             }
 
         } catch (JSONException e) {

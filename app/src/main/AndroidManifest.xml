@@ -208,6 +208,11 @@
             android:theme="@android:style/Theme.Holo.Light.Dialog"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".MenuAdmin"
+            android:screenOrientation="portrait"
+            />
+
+
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"
             android:exported="false">

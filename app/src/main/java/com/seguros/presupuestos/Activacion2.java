@@ -143,7 +143,7 @@ protected void Verifica_clave() {
 				if (Aplicacion_activa == 1) // Exitoso
 				{
 					finish();
-					Intent i = new Intent(Activacion2.this,ListaVendedores.class);
+					Intent i = new Intent(Activacion2.this,MenuAdmin.class);
 					startActivity(i);
 
 				}

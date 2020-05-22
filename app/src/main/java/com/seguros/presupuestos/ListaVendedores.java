@@ -99,8 +99,9 @@ public class ListaVendedores extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 if (arraydir.size()>0)
                     adapter.getFilter().filter(newText);
-                return true;
+                return false;
             }
+
         });
 
     }
@@ -403,6 +404,8 @@ public boolean onCreateOptionsMenu(android.view.Menu menu) {
     public Filter getFilter() {
         return myFilter;
     }
+
+
 
     /**********************************************************************************************/
 

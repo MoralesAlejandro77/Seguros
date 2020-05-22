@@ -390,7 +390,14 @@ public class Datos {
 public static boolean Esta_Logueadaemp(Context c) {
 	boolean resultado = false;
 	int perfil = 0;
-	perfil = Integer.valueOf(Librerias.Leer_Perfil(c));
+	try {
+		perfil = Integer.valueOf(Librerias.Leer_Perfil(c));
+
+	}
+	catch (Exception e)
+	{
+		e.printStackTrace();
+	}
     if (perfil > 0)
     	resultado = true;
 	return resultado;

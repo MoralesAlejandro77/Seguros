@@ -72,7 +72,9 @@ public class Menu extends AppCompatActivity {
 		db.open();
 		db.AgregarClave("");
 		db.LimpiarLogin();
+		db.BlanquearLogin();
 		db.close();
+		Librerias.Grabar_Perfil(getApplication(),"0");
 		finish();
 	}
 

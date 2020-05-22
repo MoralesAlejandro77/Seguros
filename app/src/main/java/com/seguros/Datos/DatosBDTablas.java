@@ -819,7 +819,7 @@ public long RegistraLogin(Integer id)
 public long LimpiarLogin()
 {
 	ContentValues registro = new ContentValues();
-	registro.put("login", 0);
+	registro.put("login", 1);
 	registro.put("id", 0);
 	registro.put("fecha_login", "");
 	return db.update(BaseDatos.TABLA_PARAMETROS, registro,  "codigo = 1", null);
