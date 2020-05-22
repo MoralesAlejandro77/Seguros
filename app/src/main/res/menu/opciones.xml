@@ -15,10 +15,7 @@
 		android:title="Administración"
 		android:showAsAction="ifRoom|withText"/>
 
-    <item
-        android:id="@+id/mn_salir"
-        android:title="Salir"
-        android:showAsAction="ifRoom|withText"/>
+
 
 	<item
 		android:id="@+id/mn_cierre"

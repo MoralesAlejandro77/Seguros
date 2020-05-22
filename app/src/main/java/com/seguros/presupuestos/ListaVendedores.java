@@ -72,6 +72,8 @@ public class ListaVendedores extends AppCompatActivity {
         arraydir = new ArrayList<Vendedor>();
         arraydir.clear();
 
+
+
         if (Librerias.verificaConexion(this.getApplicationContext()))
         {
             Lista_de_Vendedores();
@@ -97,8 +99,10 @@ public class ListaVendedores extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if (arraydir.size()>0)
+
                     adapter.getFilter().filter(newText);
+
+
                 return false;
             }
 
@@ -198,7 +202,7 @@ public class ListaVendedores extends AppCompatActivity {
     /*************************************************************************************************************/
     public  ArrayList<Vendedor>  getItems_ListVendedores(String response) {
         ArrayList<Vendedor> MiLista = new ArrayList<Vendedor>();
-
+        MiLista.clear();
         JSONArray arreglo = null;
         try {
             arreglo = new JSONArray(response);

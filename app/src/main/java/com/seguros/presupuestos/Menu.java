@@ -59,9 +59,9 @@ public class Menu extends AppCompatActivity {
 			case R.id.mn_adm:
 				adm();
 				return true;
-	        case R.id.mn_salir:
-	        	salir();
-	            return true;
+	 //       case R.id.mn_salir:
+	//        	salir();
+	//            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
