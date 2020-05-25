@@ -118,4 +118,10 @@
 
 </string-array>
 
+        <string-array name="estados">
+                <item >ACTIVO</item>
+                <item >BLOQUEADO</item>
+                <item >NO CONFIRMADO</item>
+        </string-array>
+
 </resources>

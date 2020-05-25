@@ -266,35 +266,6 @@ public boolean onCreateOptionsMenu(android.view.Menu menu) {
     getMenuInflater().inflate(R.menu.admin, menu);
     return true;
 }
-//*********************************************************************************
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.mn_log:
-                log_asegurados();
-                return true;
-            case R.id.mn_mensaje:
-                mensajes_fcm();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-//*********************************************************************************
-    private void mensajes_fcm() {
-        Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
-        i.putExtra("ayuda", "7");
-        startActivity(i);
-
-    }
-//*********************************************************************************
-
-    private void log_asegurados() {
-        Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
-        i.putExtra("ayuda", "8");
-        startActivity(i);
-
-    }
 
 //*********************************************************************************
     class RecyclerAdapterNovedades extends  RecyclerView.Adapter<RecyclerAdapterNovedades.RecyclerViewHolder> implements Filterable {

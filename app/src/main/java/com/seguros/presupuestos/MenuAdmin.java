@@ -63,6 +63,8 @@ public class MenuAdmin extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 
+				Intent i = new Intent(MenuAdmin.this,ListaAsegurados.class);
+				startActivity(i);
 
 			}
 		});

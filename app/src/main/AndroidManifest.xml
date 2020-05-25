@@ -211,6 +211,12 @@
         <activity android:name=".MenuAdmin"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".ListaAsegurados"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Consulta_Asegurado"
+            android:screenOrientation="portrait"
+            />
 
 
         <service

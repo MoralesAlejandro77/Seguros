@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
 MERGED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-core:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-core-15.0.2.aar\460c947c23105e16d6c54275242140e6\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\9ebeb6330b66183851f29cc4e7905b28\AndroidManifest.xml:17:1-24:12
@@ -53,9 +53,9 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\XENIX-ENVY1\.gradle
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\468049e943c22377c1d4edd2ca95aa69\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fa1bfbd43a050a7dc88eb8fa7fd41867\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-15.0.2.aar\6f257cd16394926ecda8b5692bd30839\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-230:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-236:12
 	package
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml
@@ -235,7 +235,7 @@ ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:19:5-72
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:19:22-69
 application
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:21:5-228:19
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:21:5-234:19
 MERGED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.firebase:firebase-core:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-core-15.0.2.aar\460c947c23105e16d6c54275242140e6\AndroidManifest.xml:7:5-20
@@ -640,28 +640,40 @@ ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:211:9-213:15
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:212:13-49
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:211:19-44
+activity#com.seguros.presupuestos.ListaAsegurados
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:214:9-216:15
+	android:screenOrientation
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:215:13-49
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:214:19-50
+activity#com.seguros.presupuestos.Consulta_Asegurado
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:217:9-219:15
+	android:screenOrientation
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:218:13-49
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:217:19-53
 service#com.seguros.fcm.CustomFirebaseMessagingService
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:216:9-222:19
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:222:9-228:19
 	android:exported
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:218:13-37
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:224:13-37
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:217:13-74
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:223:13-74
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:219:13-221:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:225:13-227:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:220:17-78
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:226:17-78
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:220:25-75
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:226:25-75
 service#com.seguros.fcm.CustomFirebaseInstanceIDService
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:223:9-227:19
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:229:9-233:19
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:223:18-80
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:229:18-80
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:224:13-226:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:230:13-232:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:225:17-80
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:231:17-80
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:225:25-77
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:231:25-77
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:28:9-34:19
 	android:exported

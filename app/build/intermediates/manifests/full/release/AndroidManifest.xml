@@ -229,6 +229,12 @@
         <activity
             android:name="com.seguros.presupuestos.MenuAdmin"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.seguros.presupuestos.ListaAsegurados"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.seguros.presupuestos.Consulta_Asegurado"
+            android:screenOrientation="portrait" />
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"
