@@ -64,7 +64,18 @@ public class Activity_Premios extends AppCompatActivity {
                 i.putExtra("ayuda", "9");
                 startActivity(i);
                 titulo = "SOLICITUD DE PREMIO TOTAL";
-                Informa_Novedad();
+                int nro = 0;
+                try {
+                    nro = Integer.valueOf(nro_doc.getText().toString());
+
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+
+                if (nro > 0)
+                  Informa_Novedad();
 
 
             }

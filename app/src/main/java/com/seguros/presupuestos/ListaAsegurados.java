@@ -261,6 +261,7 @@ public class ListaAsegurados extends AppCompatActivity {
         if (resultCode == 200)
         {
             Lista_de_Asegurados();
+            buscar.setQuery("",true);
         }
     }
 

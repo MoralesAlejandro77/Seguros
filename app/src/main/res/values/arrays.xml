@@ -122,6 +122,7 @@
                 <item >ACTIVO</item>
                 <item >BLOQUEADO</item>
                 <item >NO CONFIRMADO</item>
+                <item >ELIMINAR REGISTRO</item>
         </string-array>
 
 </resources>

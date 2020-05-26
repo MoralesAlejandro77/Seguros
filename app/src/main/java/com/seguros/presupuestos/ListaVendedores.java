@@ -260,12 +260,6 @@ public class ListaVendedores extends AppCompatActivity {
             Lista_de_Vendedores();
         }
     }
-//*********************************************************************************
-public boolean onCreateOptionsMenu(android.view.Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.admin, menu);
-    return true;
-}
 
 //*********************************************************************************
     class RecyclerAdapterNovedades extends  RecyclerView.Adapter<RecyclerAdapterNovedades.RecyclerViewHolder> implements Filterable {
