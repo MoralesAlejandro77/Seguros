@@ -291,7 +291,8 @@ public class ListaAsegurados extends AppCompatActivity {
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
                 for (Asegurado item : originalList) {
-                    if (item.getApellido().toLowerCase().contains(filterPattern))
+                    if ((item.getApellido().toLowerCase().contains(filterPattern)) ||
+                        (item.getDni().toString().contains(filterPattern)))
                     {
                         filteredList.add(item);
                     }
