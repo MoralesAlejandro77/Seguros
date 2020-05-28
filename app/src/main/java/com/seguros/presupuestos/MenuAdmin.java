@@ -5,12 +5,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import java.net.URLEncoder;
+import com.seguros.MainActivity;
 
 public class MenuAdmin extends AppCompatActivity {
 	ProgressBar progressBar;
@@ -72,6 +73,24 @@ public class MenuAdmin extends AppCompatActivity {
 }
 
 //******************************************************************************
+public boolean onCreateOptionsMenu(android.view.Menu menu) {
+	// Inflate the menu; this adds items to the action bar if it is present.
+	getMenuInflater().inflate(R.menu.opciones2, menu);
+	return true;
+}
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.mn_scanners:
+				Intent i = new Intent(getApplicationContext(), TicketActivity.class);
+				startActivity(i);
+				return true;
+
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+
 
 
 

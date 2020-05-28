@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -35,6 +36,9 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.seguros.presupuestos.TicketActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.presupuestos.Activity_Premios"
             android:screenOrientation="portrait" />
@@ -235,6 +239,8 @@
         <activity
             android:name="com.seguros.presupuestos.Consulta_Asegurado"
             android:screenOrientation="portrait" />
+        <activity android:name="com.seguros.Scanner.SimpleScannerActivity" />
+        <activity android:name="com.seguros.Scanner.BaseScannerActivity" />
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"
