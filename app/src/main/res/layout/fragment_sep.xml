@@ -62,101 +62,126 @@
       </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="fill_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@color/color1"
+        android:elevation="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
       <LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent">
+          android:layout_width="fill_parent"
+          android:layout_height="30dp"
+          android:layout_marginTop="5dp"
+          android:background="@color/fondo_tresprov_1"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+          <ImageView
+              android:id="@+id/imageView5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:src="@drawable/ic_create_black_24dp" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:layout_marginTop="5dp"
+              android:text="Tipo de Tarifa"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@color/White" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_create_black_24dp" />
+            android:src="@drawable/ic_style_black_24dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Tipo de Tarifa"
+            android:text="Tarifa : "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/White" />
+            android:textColor="@color/Black"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/btarifa"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:entries="@array/tarifas"
+            android:spinnerMode="dropdown" />
       </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_local_offer_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Tipo de Plan : "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/Black"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/bplanes"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/planes"
+            android:spinnerMode="dropdown" />
+      </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-      <ImageView
-          android:id="@+id/imageView"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="10dp"
-          android:src="@drawable/ic_style_black_24dp" />
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="5dp"
-          android:text="Tarifa : "
-          android:textAppearance="?android:attr/textAppearanceMedium"
-          android:textColor="@color/Black"
-          android:textStyle="bold" />
-
-      <Spinner
-          android:id="@+id/btarifa"
-          android:layout_width="150dp"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="50dp"
-          android:entries="@array/tarifas"
-          android:spinnerMode="dropdown" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-      <ImageView
-          android:id="@+id/imageView4"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="10dp"
-          android:src="@drawable/ic_local_offer_black_24dp" />
-
-      <TextView
-          android:id="@+id/textView2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="5dp"
-          android:text="Tipo de Plan : "
-          android:textAppearance="?android:attr/textAppearanceMedium"
-          android:textColor="@color/Black"
-          android:textStyle="bold" />
-
-      <Spinner
-          android:id="@+id/bplanes"
-          android:layout_width="150dp"
-          android:layout_height="wrap_content"
-          android:entries="@array/planes"
-          android:spinnerMode="dropdown" />
-    </LinearLayout>
+    </android.support.v7.widget.CardView>
+  <android.support.v7.widget.CardView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:layout_marginBottom="5dp"
+      android:layout_marginTop="5dp"
+      android:elevation="8dp">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
-        android:background="@color/color1"
+        android:background="@color/fondo_tresprov_1"
         android:orientation="vertical">
 
       <LinearLayout
@@ -216,11 +241,25 @@
           android:visibility="invisible" />
     </LinearLayout>
 
+  </LinearLayout>
+  </android.support.v7.widget.CardView>
+  <android.support.v7.widget.CardView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="2dp"
+      android:layout_marginBottom="5dp"
+      android:layout_marginTop="5dp"
+      android:elevation="8dp">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
-        android:background="@color/color1"
+        android:background="@color/fondo_tresprov_1"
         android:orientation="vertical">
 
       <LinearLayout
@@ -301,12 +340,14 @@
             android:textColor="@color/BlueViolet" />
       </LinearLayout>
     </LinearLayout>
+  </LinearLayout>
+  </android.support.v7.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
-        android:background="@color/color1"
+        android:background="@color/fondo_tresprov_1"
         android:orientation="horizontal">
 
       <LinearLayout
@@ -368,7 +409,7 @@
       android:layout_height="40dp"
       android:layout_alignParentBottom="true"
       android:layout_marginTop="1dp"
-      android:background="@drawable/global_top_background"
+      android:background="@color/fondo_tresprov_1"
       android:gravity="right">
 
     <TextView
@@ -387,11 +428,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         android:text="IMPORTE"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/White"
-        android:textStyle="bold"
-        android:layout_marginRight="10dp" />
+        android:textStyle="bold" />
   </LinearLayout>
 
 </RelativeLayout>

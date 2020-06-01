@@ -27,6 +27,9 @@
  <color name="Cornsilk">#FFF8DC</color>
  <color name="Seashell">#FFF5EE</color>
  <color name="base_color">#287FE1</color>
+ <color name="fondo_tresprov_1">#008DDB</color>
+ <color name="fondo_tresprov_2">#006046</color>
+
 
  <color name="LavenderBlush">#FFF0F5</color>
  <color name="PapayaWhip">#FFEFD5</color>

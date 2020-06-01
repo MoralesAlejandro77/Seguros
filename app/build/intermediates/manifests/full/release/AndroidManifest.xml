@@ -68,7 +68,7 @@
             android:value="true" />
 
         <activity
-            android:name="com.seguros.presupuestos.SplashActivity"
+            android:name="com.seguros.presupuestos.SplashActivity1"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" >
             <intent-filter>
