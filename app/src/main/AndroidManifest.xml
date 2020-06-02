@@ -165,7 +165,7 @@
         <activity
             android:name=".SepelioCalc"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
         <activity
             android:name="com.seguros.Cocherias.BuscaxDni"
             android:screenOrientation="portrait"

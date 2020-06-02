@@ -3,8 +3,8 @@ package com.seguros.presupuestos;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+    public abstract class MaskWatcher {
 
-public abstract class MaskWatcher {
 
     public static TextWatcher insert(final String mask, final EditText et) {
         return new TextWatcher() {

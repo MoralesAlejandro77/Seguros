@@ -535,11 +535,11 @@ ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:162:9-164:52
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:163:13-40
 activity#com.seguros.presupuestos.SepelioCalc
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:165:9-168:70
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:165:9-168:72
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:167:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:168:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:168:13-69
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:166:13-40
 activity#com.seguros.Cocherias.BuscaxDni

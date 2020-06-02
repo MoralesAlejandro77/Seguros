@@ -36,6 +36,7 @@ public class SepelioCalc extends FragmentActivity {
         chk_luto      = (CheckBox)    findViewById(R.id.chk_luto);
         resultado  = "";
         total.setText("0,00");
+        this.setTitle("");
 
 
 
