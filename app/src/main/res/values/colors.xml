@@ -28,7 +28,9 @@
  <color name="Seashell">#FFF5EE</color>
  <color name="base_color">#287FE1</color>
  <color name="fondo_tresprov_1">#008DDB</color>
- <color name="fondo_tresprov_2">#006046</color>
+ <color name="fondo_tresprov_2">#0060AA</color>
+ <color name="fondo_tresprov_3">#FEFEFE</color>
+ <color name="fondo_tresprov_4">#1C1B17</color>
 
 
  <color name="LavenderBlush">#FFF0F5</color>

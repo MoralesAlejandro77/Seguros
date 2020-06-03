@@ -18,6 +18,7 @@ import com.seguros.presupuestos.LoginApp;
 import com.seguros.presupuestos.Menu;
 import com.seguros.presupuestos.MenuAsegurado;
 import com.seguros.presupuestos.MenuContactos;
+import com.seguros.presupuestos.Menu_asegurados_1;
 import com.seguros.presupuestos.Prelogin;
 import com.seguros.presupuestos.R;
 
@@ -59,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
         bcompania.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
+//                Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
+                Intent i = new Intent(getApplicationContext(), Menu_asegurados_1.class);
                 i.putExtra("ayuda", "3");
                 startActivity(i);
             }

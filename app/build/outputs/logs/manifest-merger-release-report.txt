@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
 MERGED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-core:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-core-15.0.2.aar\460c947c23105e16d6c54275242140e6\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\9ebeb6330b66183851f29cc4e7905b28\AndroidManifest.xml:17:1-24:12
@@ -55,9 +55,9 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\XENIX-ENVY1\.gradle
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\468049e943c22377c1d4edd2ca95aa69\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fa1bfbd43a050a7dc88eb8fa7fd41867\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-15.0.2.aar\6f257cd16394926ecda8b5692bd30839\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
-INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-258:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
+INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:2:1-254:12
 	package
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml
@@ -245,7 +245,7 @@ ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:20:5-65
 	android:name
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:20:22-62
 application
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:22:5-256:19
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:22:5-252:19
 MERGED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.firebase:firebase-core:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-core-15.0.2.aar\460c947c23105e16d6c54275242140e6\AndroidManifest.xml:7:5-20
@@ -301,407 +301,417 @@ MERGED from [com.google.android.gms:play-services-measurement-base:15.0.2] C:\Us
 	android:allowBackup
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:23:9-35
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:27:9-40
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:27:9-52
 	android:usesCleartextTraffic
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:28:9-44
-activity#com.seguros.presupuestos.TicketActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:29:9-30:61
+activity#com.seguros.presupuestos.Menu_asegurados_1
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:29:9-31:25
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:30:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:29:19-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:29:19-52
+activity#com.seguros.presupuestos.TicketActivity
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:32:9-34:52
+	android:screenOrientation
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:34:13-49
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:33:13-43
 activity#com.seguros.presupuestos.Activity_Premios
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:31:9-33:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:35:9-37:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:37:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:32:13-45
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:36:13-45
 activity#com.seguros.presupuestos.Prelogin
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:34:9-46
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:38:9-46
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:34:19-43
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:38:19-43
 uses-library#com.sec.android.app.multiwindow
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:35:9-37:40
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:39:9-41:40
 	android:required
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:37:13-37
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:36:13-59
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:40:13-59
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:42:9-44:56
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:46:9-48:56
 	android:resource
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:44:13-53
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:48:13-53
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:43:13-83
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:47:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:49:9-51:50
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:53:9-55:50
 	android:resource
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:51:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:55:13-47
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:50:13-84
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:54:13-84
 meta-data#com.google.firebase.messaging.default_notification_channel_id
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:52:9-54:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:56:9-58:52
 	android:value
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:54:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:58:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:53:13-89
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:57:13-89
 meta-data#com.sec.android.support.multiwindow
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:55:9-57:36
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:59:9-61:36
 	android:value
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:57:13-33
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:61:13-33
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:56:13-63
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:60:13-63
 activity#com.seguros.presupuestos.SplashActivity1
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:61:9-71:20
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:63:9-72:20
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:63:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:65:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:64:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:66:13-47
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:62:13-44
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:64:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:66:13-70:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:67:13-71:29
 action#android.intent.action.MAIN
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:67:17-69
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:68:17-69
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:67:25-66
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:68:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:69:17-77
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:70:17-77
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:69:27-74
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:70:27-74
 activity#com.seguros.presupuestos.Menu
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:72:9-75:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:73:9-77:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:75:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:77:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:74:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:75:13-47
+	android:theme
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:76:13-44
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:73:13-33
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:74:13-33
 activity#com.seguros.presupuestos.Activacion
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:76:9-79:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:78:9-81:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:79:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:81:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:78:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:80:13-47
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:77:13-39
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:79:13-39
 activity#com.seguros.presupuestos.Activacion2
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:80:9-83:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:82:9-85:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:83:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:85:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:82:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:84:13-47
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:81:13-40
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:83:13-40
 activity#com.seguros.presupuestos.LoginApp
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:84:9-91:20
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:86:9-93:20
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:87:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:89:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:86:13-39
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:88:13-39
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:85:13-37
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:87:13-37
 intent-filter#category:name:android.intent.category.MULTIWINDOW_LAUNCHER
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:88:13-90:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:90:13-92:29
 category#android.intent.category.MULTIWINDOW_LAUNCHER
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:89:17-89
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:91:17-89
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:89:27-86
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:91:27-86
 activity#com.seguros.presupuestos.Sepelio
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:92:9-95:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:94:9-97:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:95:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:97:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:94:13-55
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:96:13-55
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:93:13-36
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:95:13-36
 activity#com.seguros.Actualizacion.MenuActual
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:96:9-99:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:98:9-101:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:99:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:101:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:98:13-53
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:100:13-53
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:97:13-64
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:99:13-64
 activity#com.seguros.presupuestos.ListServicios
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:100:9-103:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:102:9-105:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:103:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:105:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:102:13-52
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:104:13-52
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:101:13-42
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:103:13-42
 activity#com.seguros.presupuestos.NuevoSepelio
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:104:9-108:70
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:106:9-110:70
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:107:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:109:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:106:13-60
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:108:13-60
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:108:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:110:13-67
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:105:13-41
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:107:13-41
 activity#com.seguros.presupuestos.NuevoVida
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:109:9-113:70
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:111:9-115:70
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:112:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:114:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:111:13-55
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:113:13-55
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:113:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:115:13-67
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:110:13-38
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:112:13-38
 activity#com.seguros.pdf.GenerarPDFActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:114:9-118:70
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:116:9-120:70
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:117:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:119:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:116:13-50
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:118:13-50
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:118:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:120:13-67
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:115:13-62
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:117:13-62
 activity#com.seguros.pdf.GenerarPDFActivitySep
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:119:9-123:70
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:121:9-125:70
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:122:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:124:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:121:13-50
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:123:13-50
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:123:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:125:13-67
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:120:13-65
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:122:13-65
 activity#com.seguros.presupuestos.MenuContactos
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:124:9-127:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:126:9-129:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:127:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:129:13-49
 	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:126:13-44
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:128:13-44
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:125:13-42
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:127:13-42
 service#com.seguros.presupuestos.Publicaciones
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:129:9-132:53
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:131:9-134:53
 	android:process
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:132:13-50
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:134:13-50
 	android:enabled
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:131:13-35
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:133:13-35
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:130:13-42
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:132:13-42
 receiver#com.seguros.presupuestos.VerificarWifi
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:134:9-138:20
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:136:9-140:20
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:134:19-48
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:136:19-48
 intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:135:13-137:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:137:13-139:29
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:136:17-79
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:138:17-79
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:136:25-76
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:138:25-76
 activity#com.seguros.presupuestos.ActivityAyuda
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:140:9-143:59
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:142:9-145:59
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:142:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:144:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:143:13-56
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:145:13-56
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:141:13-42
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:143:13-42
 activity#com.seguros.presupuestos.ActivityVendedor
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:144:9-148:57
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:146:9-150:57
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:146:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:148:13-49
 	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:148:13-54
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:150:13-54
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:147:13-44
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:149:13-44
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:145:13-45
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:147:13-45
 activity#com.seguros.presupuestos.ListaVendedores
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:149:9-151:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:151:9-153:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:151:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:153:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:150:13-44
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:152:13-44
 activity#com.seguros.MainActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:152:9-161:20
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:154:9-163:20
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:154:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:156:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:153:13-52
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:155:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.MULTIWINDOW_LAUNCHER
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:155:13-160:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:157:13-162:29
 activity#com.seguros.presupuestos.Adicionales
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:162:9-164:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:164:9-166:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:164:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:166:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:163:13-40
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:165:13-40
 activity#com.seguros.presupuestos.SepelioCalc
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:165:9-168:72
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:167:9-170:72
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:167:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:169:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:168:13-69
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:170:13-69
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:166:13-40
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:168:13-40
 activity#com.seguros.Cocherias.BuscaxDni
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:169:9-172:72
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:171:9-174:72
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:171:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:173:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:172:13-69
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:174:13-69
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:170:13-59
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:172:13-59
 activity#com.seguros.Cocherias.FamiliaActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:173:9-176:72
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:175:9-178:72
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:175:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:177:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:176:13-69
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:178:13-69
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:174:13-65
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:176:13-65
 activity#com.seguros.Cocherias.DatosAsegurados
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:177:9-179:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:179:9-181:52
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:179:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:181:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:178:13-65
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:180:13-65
 activity#com.seguros.presupuestos.MenuAsegurado
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:180:9-182:52
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:182:9-185:46
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:182:13-49
-	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:181:13-42
-activity#com.seguros.Cocherias.BuscarAsegurado
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:183:9-187:59
-	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:186:13-49
-	android:label
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:185:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:184:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:187:13-56
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:185:13-44
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:184:13-65
-activity#com.seguros.presupuestos.Calendario
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:188:9-190:52
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:183:13-42
+activity#com.seguros.Cocherias.BuscarAsegurado
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:186:9-190:59
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:190:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:189:13-49
+	android:label
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:188:13-47
+	android:theme
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:190:13-56
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:189:13-39
-activity#com.seguros.presupuestos.OtrosServicios
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:191:9-194:57
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:187:13-65
+activity#com.seguros.presupuestos.Calendario
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:191:9-193:52
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:193:13-49
-	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:194:13-54
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:192:13-43
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:192:13-39
+activity#com.seguros.presupuestos.OtrosServicios
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:194:9-197:57
+	android:screenOrientation
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:196:13-49
+	android:windowSoftInputMode
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:197:13-54
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:195:13-43
 activity#com.seguros.presupuestos.Login_Asegurado
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:195:9-198:57
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:198:9-201:57
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:197:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:200:13-49
 	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:198:13-54
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:201:13-54
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:196:13-44
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:199:13-44
 activity#com.seguros.presupuestos.Registro_Asegurado
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:199:9-202:57
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:202:9-205:57
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:201:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:204:13-49
 	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:202:13-54
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:205:13-54
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:200:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:203:13-47
 activity#com.seguros.presupuestos.Modifica_Asegurado
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:203:9-206:57
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:206:9-209:57
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:205:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:208:13-49
 	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:206:13-54
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:209:13-54
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:204:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:207:13-47
 activity#com.seguros.presupuestos.Modifica_CBU
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:207:9-210:57
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:210:9-213:57
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:209:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:212:13-49
 	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:210:13-54
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:213:13-54
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:208:13-41
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:211:13-41
 activity#com.seguros.presupuestos.InfoPushActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:211:9-213:52
-	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:213:13-49
-	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:212:13-45
-activity#com.seguros.presupuestos.Clave_adm
 ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:214:9-216:52
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:216:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:215:13-38
-activity#com.seguros.presupuestos.Blanqueo_Asegurado
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:217:9-220:57
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:215:13-45
+activity#com.seguros.presupuestos.Clave_adm
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:217:9-219:52
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:219:13-49
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:218:13-38
+activity#com.seguros.presupuestos.Blanqueo_Asegurado
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:220:9-223:57
+	android:screenOrientation
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:222:13-49
 	android:windowSoftInputMode
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:220:13-54
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:223:13-54
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:218:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:221:13-47
 activity#com.seguros.presupuestos.MostrarInfo
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:221:9-224:70
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:224:9-227:70
 	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:223:13-49
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:226:13-49
 	android:theme
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:224:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:227:13-67
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:222:13-40
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:225:13-40
 activity#com.seguros.presupuestos.MenuAdmin
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:225:9-227:52
-	android:screenOrientation
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:227:13-49
-	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:226:13-38
-activity#com.seguros.presupuestos.ListaAsegurados
 ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:228:9-230:52
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:230:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:229:13-44
-activity#com.seguros.presupuestos.Consulta_Asegurado
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:229:13-38
+activity#com.seguros.presupuestos.ListaAsegurados
 ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:231:9-233:52
 	android:screenOrientation
 		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:233:13-49
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:232:13-47
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:232:13-44
+activity#com.seguros.presupuestos.Consulta_Asegurado
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:234:9-236:52
+	android:screenOrientation
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:236:13-49
+	android:name
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:235:13-47
 activity#com.seguros.Scanner.SimpleScannerActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:234:9-236:16
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:237:9-78
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:235:13-69
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:237:19-75
 activity#com.seguros.Scanner.BaseScannerActivity
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:237:9-239:15
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:238:9-76
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:238:13-67
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:238:19-73
 service#com.seguros.fcm.CustomFirebaseMessagingService
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:244:9-250:19
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:240:9-246:19
 	android:exported
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:246:13-37
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:242:13-37
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:245:13-74
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:241:13-74
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:247:13-249:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:243:13-245:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:248:17-78
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:244:17-78
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:248:25-75
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:244:25-75
 service#com.seguros.fcm.CustomFirebaseInstanceIDService
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:251:9-255:19
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:247:9-251:19
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:251:18-80
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:247:18-80
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:252:13-254:29
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:248:13-250:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:253:17-80
+ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:249:17-80
 	android:name
-		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:253:25-77
+		ADDED from C:\proyectos\Seguros\app\src\main\AndroidManifest.xml:249:25-77
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:15.0.2] C:\Users\XENIX-ENVY1\.gradle\caches\transforms-1\files-1.1\firebase-messaging-15.0.2.aar\a79d486fc2d17bc2f0153a3ecdbaf8ef\AndroidManifest.xml:28:9-34:19
 	android:exported

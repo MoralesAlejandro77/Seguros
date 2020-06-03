@@ -1,207 +1,154 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_tresprov_1">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/fondo_tresprov_1"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
 
-        <ProgressBar
-            android:id="@+id/progressBar2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:indeterminate="false"
-            android:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/logo1" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="5dp"
-            android:text="@string/version"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/Yellow"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="fill_parent"
+    <Button
+        android:id="@+id/bpreguntas"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/White">
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/boton_preguntas"
+        android:elevation="2dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/bloginaseg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/boton_login"
+        android:elegantTextHeight="false"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="vertical">
+    <Button
+        android:id="@+id/bcompania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/boton_compania"
+        android:elevation="2dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/bpreguntas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"        />
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-                    <Button
-                        android:id="@+id/bloginaseg"
-                        android:layout_width="300dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/boton_foreground"
-                        android:drawableLeft="@mipmap/ic_datosp"
-                        android:elegantTextHeight="false"
-                        android:elevation="2dp"
-                        android:text="Asegurado "
-                        android:textAlignment="center"
-                        android:textColor="@android:color/white"
-                        android:textSize="16dp"
-                        android:textStyle="bold|italic" />
+        <Button
+            android:id="@+id/bpromotores"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/boton_promotores"
+            android:minWidth="80dip"
+            android:padding="3dp"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"            />
+
+        <Button
+            android:id="@+id/bprestadores"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/boton_prestadores"
+            android:minWidth="80dip"
+            android:padding="3dp"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bcontactos"
+            app:layout_constraintStart_toEndOf="@+id/bpromotores"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <Button
+            android:id="@+id/bcontactos"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/boton_contacto"
+            android:minWidth="80dip"
+            android:padding="3dp"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:indeterminate="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloginaseg" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
+        app:srcCompat="@drawable/fondo_app2" />
+</android.support.constraint.ConstraintLayout>
 
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/bcompania"
-                        android:layout_width="300dp"
-                        android:layout_height="70dp"
-                        android:alpha="95"
-                        android:background="@drawable/boton_foreground"
-                        android:drawableLeft="@mipmap/ic_edificio"
-                        android:elevation="2dp"
-                        android:text="COMPAÑIA"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/white"
-                        android:textSize="16dp"
-                        android:textStyle="bold|italic" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/bpreguntas"
-                        android:layout_width="300dp"
-                        android:layout_height="70dp"
-                        android:alpha="95"
-                        android:background="@drawable/boton_foreground"
-                        android:drawableLeft="@mipmap/ic_preguntas1"
-                        android:elevation="2dp"
-                        android:text="PREGUNTAS FRECUENTES"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/white"
-                        android:textSize="16dp"
-                        android:textStyle="bold|italic" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="5dp"
-                android:background="#25676767"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:padding="5dp">
-
-                <Button
-                    android:id="@+id/bpromotores"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:alpha="95"
-                    android:background="#D0C2BFBF"
-                    android:drawableTop="@mipmap/ic_usuarios"
-                    android:minWidth="80dip"
-                    android:padding="3dp"
-                    android:text="Promotores"
-                    android:textSize="10sp" />
-
-                <Button
-                    android:id="@+id/bcontactos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:alpha="95"
-                    android:background="#D0C2BFBF"
-                    android:drawableTop="@mipmap/ic_contactenos"
-                    android:minWidth="80dip"
-                    android:padding="3dp"
-                    android:text="Contactenos"
-                    android:textSize="10sp" />
-
-                <Button
-                    android:id="@+id/bprestadores"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:alpha="95"
-                    android:background="#D0C2BFBF"
-                    android:drawableTop="@mipmap/ic_usuarios"
-                    android:minWidth="80dip"
-                    android:padding="3dp"
-                    android:text="Prestadores"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/tresprov"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:orientation="vertical" />
-
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>

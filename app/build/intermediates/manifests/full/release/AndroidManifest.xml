@@ -34,8 +34,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.seguros.presupuestos.Menu_asegurados_1"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.presupuestos.TicketActivity"
             android:screenOrientation="portrait" />
@@ -80,7 +83,8 @@
         <activity
             android:name="com.seguros.presupuestos.Menu"
             android:label="@string/Nombre_app"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.seguros.presupuestos.Activacion"
             android:label="Activar Aplicacion"
@@ -187,7 +191,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.presupuestos.MenuAsegurado"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.seguros.Cocherias.BuscarAsegurado"
             android:label="@string/Nombre_app"
