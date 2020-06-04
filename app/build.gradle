@@ -27,8 +27,8 @@ android {
         applicationId "com.seguros.presupuestos"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 17
-        versionName "4.09"
+        versionCode 18
+        versionName "4.10"
     }
     buildTypes {
         release {
@@ -65,7 +65,7 @@ dependencies {
 
     implementation 'me.dm7.barcodescanner:zxing:1.9.8'
 
-    //  implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
-    //  implementation 'com.google.zxing:core:3.2.0'
+  //  implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+  //  implementation 'com.google.zxing:core:3.2.0'
 }
 apply plugin: 'com.google.gms.google-services'

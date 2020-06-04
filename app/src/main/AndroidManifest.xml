@@ -26,9 +26,10 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Menu_asegurados_1"
-            android:screenOrientation="portrait"
-            ></activity>
+       
+        <activity
+            android:name=".Menu_asegurados_1"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".TicketActivity"
             android:screenOrientation="portrait" />
@@ -73,8 +74,8 @@
         <activity
             android:name=".Menu"
             android:label="@string/Nombre_app"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activacion"
             android:label="Activar Aplicacion"
@@ -182,7 +183,7 @@
         <activity
             android:name=".MenuAsegurado"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.seguros.Cocherias.BuscarAsegurado"
             android:label="@string/Nombre_app"

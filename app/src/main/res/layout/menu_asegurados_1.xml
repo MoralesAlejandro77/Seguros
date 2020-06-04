@@ -13,31 +13,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
         android:background="@drawable/boton_cambiardatos"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
-        android:focusable="true"        />
+        android:elevation="2dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toTopOf="@+id/opcion_contactenos"
+        app:layout_constraintEnd_toStartOf="@+id/opcion_solicitudes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opcion_pago_online" />
 
     <Button
         android:id="@+id/opcion_solicitudes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/boton_solicitudes"
-        android:elevation="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@+id/opcion_cambiardatos"
-        app:layout_constraintTop_toTopOf="parent"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
-        android:focusable="true"/>
+        android:elevation="2dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toTopOf="@+id/opcion_cerrarsesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/opcion_cambiardatos"
+        app:layout_constraintTop_toBottomOf="@+id/opcion_contrato" />
 
     <Button
         android:id="@+id/opcion_pago_online"
@@ -45,15 +46,16 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/boton_pagoonline"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/opcion_contactenos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/opcion_cambiardatos"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
+        android:elevation="2dp"
         android:focusable="true"
-        />
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toStartOf="@+id/opcion_contrato"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/opcion_contrato"
@@ -62,17 +64,16 @@
 
 
         android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/boton_contratarseg"
+        android:clickable="true"
         android:elevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/opcion_cerrarsesion"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/opcion_pago_online"
-        app:layout_constraintTop_toBottomOf="@+id/opcion_solicitudes"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:focusable="true"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/opcion_cerrarsesion"
@@ -82,14 +83,13 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/boton_cerrarsesion"
+        android:clickable="true"
         android:elevation="2dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/opcion_contactenos"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:focusable="true"
-        />
+        app:layout_constraintStart_toEndOf="@+id/opcion_contactenos" />
 
     <Button
         android:id="@+id/opcion_contactenos"
@@ -98,12 +98,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/boton_contactenos"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
+        android:elevation="2dp"
         android:focusable="true"
-        />
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/opcion_cerrarsesion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

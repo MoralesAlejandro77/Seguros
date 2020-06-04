@@ -11,4 +11,8 @@
     <string name="version">Version 4.09</string>
     <string name="title_activity_buscar_asegurado">BuscarAsegurado</string>
     <string name="canal_notify">tresprovinciassa</string>
+    <string name="title_activity_menuppal">"Menu "</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
