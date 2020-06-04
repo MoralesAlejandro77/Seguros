@@ -55,6 +55,7 @@ public class MenuAsegurado extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+				i.putExtra("tipo"  , "1");
 				i.putExtra("titulo", "SOLICITUD DE MIS PRODUCTORES");
 				startActivity(i);
 			}
@@ -64,6 +65,7 @@ public class MenuAsegurado extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+				i.putExtra("tipo"  , "2");
 				i.putExtra("titulo", "SOLICITUD DE PAGOS Y VENCIMIENTOS");
 				startActivity(i);			}
 		});
@@ -105,6 +107,7 @@ public class MenuAsegurado extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+				i.putExtra("tipo"  , "3");
                 i.putExtra("titulo", "SOLICITUD DE POLIZA");
                 startActivity(i);
             }
@@ -113,6 +116,7 @@ public class MenuAsegurado extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+				i.putExtra("tipo"  , "4");
                 i.putExtra("titulo", "SOLICITUD PAGO AL DIA");
                 startActivity(i);
             }
@@ -143,6 +147,7 @@ public class MenuAsegurado extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+				i.putExtra("tipo"  , "5");
 				i.putExtra("titulo", "SOLICITUD DE CONTRATAR SEGURO");
 				startActivity(i);			}
 		});

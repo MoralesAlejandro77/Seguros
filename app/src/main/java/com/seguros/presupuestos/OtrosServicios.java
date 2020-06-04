@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,9 @@ ProgressBar progressBar;
 Button bgrabar;
 EditText comentario;
 int Aplicacion_activa;
+ImageView imagenfondo;
+
+String tipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +44,27 @@ int Aplicacion_activa;
         comentario      = (EditText) findViewById(R.id.comentario);
         bgrabar         = (Button) findViewById(R.id.benviar);
         progressBar     = (ProgressBar)findViewById(R.id.progressBar);
+        imagenfondo     = (ImageView) findViewById(R.id.imagenfondo);
+
 
         titulo.setText(this.getIntent().getExtras().getString("titulo"));
+        tipo = this.getIntent().getExtras().getString("tipo");
+
+        if (tipo.equals("1")) // mis productores
+           imagenfondo.setImageResource(R.drawable.fondo_solicitud_product);
+
+        if (tipo.equals("2")) // pagos y vencimientos
+            imagenfondo.setImageResource(R.drawable.fondo_vencimientos);
+
+        if (tipo.equals("3")) // solicitud de poliza
+            imagenfondo.setImageResource(R.drawable.fondo_solicitud_poliza);
+
+        if (tipo.equals("4")) // pago al dia
+            imagenfondo.setImageResource(R.drawable.fondo_pago_dia);
+
+        if (tipo.equals("5")) // contratar seguro
+            imagenfondo.setImageResource(R.drawable.fondo_contratar_seguro);
+
         progressBar.setVisibility(View.GONE);
 
         bgrabar.setOnClickListener(new View.OnClickListener() {

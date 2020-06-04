@@ -44,6 +44,8 @@ public class Menu_asegurados_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+                i.putExtra("tipo"  , "5");
+
                 i.putExtra("titulo", "SOLICITUD DE CONTRATAR SEGURO");
                 startActivity(i);			}
         });

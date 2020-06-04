@@ -495,7 +495,11 @@
                         android:id="@+id/bgrabar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/boton_modificar1" />
+                        android:background="@drawable/boton_modificar1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        />
                 </LinearLayout>
 
             </LinearLayout>
