@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+
+		<item
+        android:id="@+id/mn_scanners"
+        android:title="Scanner de Tickets"
+        android:icon="@drawable/ic_edita2"
+		android:showAsAction="withText|always"/>
+
+
+
+</menu>
