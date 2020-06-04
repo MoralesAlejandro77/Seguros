@@ -30,7 +30,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
             android:baselineAligned="false"
-            android:text="Lista de Asegurados"
+            android:text="Lista de Asegurados "
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/White" />
 
