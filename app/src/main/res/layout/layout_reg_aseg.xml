@@ -3,27 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/fondo_tresprov_2"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/tresprov"
-        android:gravity="center_horizontal">
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="149dp"
-            android:layout_height="50dp"
-            android:background="@drawable/logo1" />
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="3dp">
+        android:layout_height="match_parent">
 
 
         <LinearLayout
@@ -34,8 +19,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="#25676767"
+                android:layout_marginRight="20dp"
                 android:orientation="vertical">
 
 
@@ -52,14 +36,15 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:text="TIPO DE DOC. "
-                        android:textColor="@color/Black" />
+                        android:textColor="@color/White" />
 
                     <Spinner
                         android:id="@+id/tipo_doc"
                         android:layout_width="190dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/tamano_campo"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
+                        android:background="@color/fondo_tresprov_1"
                         android:entries="@array/tipodoc"
                         android:spinnerMode="dropdown" />
 
@@ -74,14 +59,16 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/nro_doc"
                             android:layout_width="290dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Numero de Documento"
                             android:inputType="number"
@@ -100,17 +87,19 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
 
                             android:id="@+id/apellido"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
-                            android:hint="Apellido"
+                            android:hint="Apellido / s"
                             android:inputType="textPersonName|textEmailAddress|textCapCharacters"
                             android:textAllCaps="true"
                             android:textColor="@color/Black"
@@ -129,17 +118,19 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
 
                             android:id="@+id/nombres"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
-                            android:hint="Nombres"
+                            android:hint="Nombres / s"
                             android:inputType="textPersonName|textCapCharacters"
                             android:textAllCaps="true"
                             android:textColor="@color/Black"
@@ -163,7 +154,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:text="SEXO  "
-                        android:textColor="@color/Black" />
+                        android:textColor="@color/White" />
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -176,14 +167,16 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:checked="true"
-                            android:text="Masculino" />
+                            android:text="Masculino"
+                            android:textColor="@color/White" />
 
                         <RadioButton
                             android:id="@+id/sexo_fem"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:text="Femenino" />
+                            android:text="Femenino"
+                            android:textColor="@color/White" />
 
                     </RadioGroup>
 
@@ -202,25 +195,26 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="10dp"
                         android:text="FECHA NAC. "
-                        android:textColor="@color/Black" />
+                        android:textColor="@color/White" />
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <EditText
 
                             android:id="@+id/fechanac"
                             android:layout_width="140dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="dd/mm/aaaa"
-                            android:textColor="@color/Black"
                             android:inputType="date"
 
-                            />
+                            android:textColor="@color/Black" />
 
 
                     </android.support.design.widget.TextInputLayout>
@@ -228,9 +222,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@android:drawable/ic_menu_today" />
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/almanaque" />
 
                 </LinearLayout>
 
@@ -242,16 +235,18 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="98dp"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
 
                         <android.support.design.widget.TextInputEditText
 
                             android:id="@+id/caract"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Carct."
                             android:inputType="number"
@@ -263,16 +258,18 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
 
                         <android.support.design.widget.TextInputEditText
 
                             android:id="@+id/celular"
                             android:layout_width="180dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Celular "
                             android:inputType="phone"
@@ -291,7 +288,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
@@ -301,14 +298,15 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:text="COMPAÑIA "
-                        android:textColor="@color/Black" />
+                        android:textColor="@color/White" />
 
                     <Spinner
                         android:id="@+id/companias"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/tamano_campo"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
+                        android:background="@color/fondo_tresprov_1"
                         android:entries="@array/companias"
                         android:spinnerMode="dropdown" />
                 </LinearLayout>
@@ -322,15 +320,17 @@
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
 
                             android:id="@+id/correo1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Correo Electronico"
                             android:inputType="textWebEmailAddress"
@@ -339,12 +339,6 @@
 
 
                     </android.support.design.widget.TextInputLayout>
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:background="@android:drawable/ic_dialog_email" />
 
                 </LinearLayout>
 
@@ -356,15 +350,17 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
 
                             android:id="@+id/correo2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Repetir Correo Electronico"
                             android:inputType="textWebEmailAddress"
@@ -379,29 +375,26 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/password1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Ingrese Password"
-                            android:inputType="textPassword" />
+                            android:inputType="textPassword"
+                            android:textColor="@color/Black" />
                     </android.support.design.widget.TextInputLayout>
-
-                    <ImageView
-                        android:id="@+id/imageView28"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:background="@android:drawable/ic_lock_lock" />
 
 
                 </LinearLayout>
@@ -409,20 +402,24 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/password2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="20dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
                             android:hint="Repetir Password"
-                            android:inputType="textPassword" />
+                            android:inputType="textPassword"
+                            android:textColor="@color/Black" />
                     </android.support.design.widget.TextInputLayout>
 
 
@@ -447,14 +444,14 @@
 
                     <Button
                         android:id="@+id/bgrabar"
-                        android:layout_width="160dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:alpha="95"
-                        android:background="@drawable/boton_foreground"
-                        android:drawableLeft="@mipmap/ic_send"
-                        android:padding="4dp"
-                        android:text="REGISTRARSE"
-                        android:textColor="@android:color/white" />
+                        android:background="@drawable/boton_registrar"
+                        android:clickable="true"
+                        android:elevation="2dp"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        />
                 </LinearLayout>
 
             </LinearLayout>

@@ -45,7 +45,7 @@ public class Login_Asegurado extends AppCompatActivity {
 ProgressBar progressBar;
 Spinner tipo_doc;
 EditText nro_doc, password;
-Button blogin, bpromotores, bcontactos, bprestadores, botreg;
+Button blogin,  bcontactos,  botreg;
 int Aplicacion_activa;
 int resultado = 0;
 String usuario;
@@ -60,15 +60,13 @@ TextView olvidarclave;
         tipo_doc      = (Spinner)findViewById(R.id.tipo_doc);
         nro_doc       = (EditText) findViewById(R.id.nro_doc);
         password      = (EditText) findViewById(R.id.password);
-        olvidarclave  = (TextView) findViewById(R.id.olvidarclave);
+        olvidarclave  = (Button) findViewById(R.id.olvidarclave);
 
 
 
         blogin        = (Button) findViewById(R.id.blogin);
-        bpromotores   = (Button) findViewById(R.id.bpromotores);
         bcontactos    = (Button) findViewById(R.id.bcontactos);
-        bprestadores  = (Button) findViewById(R.id.bprestadores);
-     //   botreg        = (Button) findViewById(R.id.botreg);
+        botreg        = (Button) findViewById(R.id.bregistro);
 
 
         this.setTitle("");
@@ -76,18 +74,7 @@ TextView olvidarclave;
         resultado = 0;
         version_and = Librerias.getAndroidVersion_new(getApplicationContext());
 
-        bpromotores.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AccesoSistema();
-            }
-        });
-        bprestadores.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AccesoEmpresas();
-            }
-        });
+
 
         bcontactos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,13 +85,13 @@ TextView olvidarclave;
             }
         });
 
-     /*   botreg.setOnClickListener(new View.OnClickListener() {
+        botreg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Registrar_asegurado();
 
             }
-        });*/
+        });
 
 
 
@@ -278,7 +265,7 @@ TextView olvidarclave;
 
                     Librerias.mostrar_error(Login_Asegurado.this,1, "Ud. ha sido identificado con Exito!!!! " + usuario);
                     finish();
-                    Intent i = new Intent(getApplicationContext(),MenuAsegurado.class);
+                    Intent i = new Intent(getApplicationContext(),Menu_asegurados_1.class);
                     startActivity(i);
 
 

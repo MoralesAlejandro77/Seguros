@@ -115,7 +115,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio2_orig/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio2_orig/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_fast_rewind_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -138,7 +138,7 @@
                                     <map>
                                       <entry key="backgroundColor" value="0060aa" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="outputName" value="ic_persona" />
+                                      <entry key="outputName" value="ic_previews" />
                                     </map>
                                   </option>
                                 </PersistentState>

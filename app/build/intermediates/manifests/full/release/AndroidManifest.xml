@@ -40,6 +40,9 @@
             android:name="com.seguros.presupuestos.Menu_asegurados_1"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.seguros.presupuestos.Menu_asegurados_2"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.seguros.presupuestos.TicketActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -96,7 +99,8 @@
         <activity
             android:name="com.seguros.presupuestos.LoginApp"
             android:label="Login User"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" >
             <intent-filter>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
@@ -246,6 +250,14 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.seguros.Scanner.SimpleScannerActivity" />
         <activity android:name="com.seguros.Scanner.BaseScannerActivity" />
+        <activity
+            android:name="com.seguros.presupuestos.Menu_solicitudes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" />
+        <activity
+            android:name="com.seguros.presupuestos.Menu_cambiar_datos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" />
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"

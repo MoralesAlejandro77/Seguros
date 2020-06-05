@@ -15,6 +15,7 @@ import com.seguros.Datos.Datos;
 import com.seguros.presupuestos.ActivityAyuda;
 import com.seguros.presupuestos.Librerias;
 import com.seguros.presupuestos.LoginApp;
+import com.seguros.presupuestos.Login_Asegurado;
 import com.seguros.presupuestos.Menu;
 import com.seguros.presupuestos.MenuAsegurado;
 import com.seguros.presupuestos.MenuContactos;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         createNotificationChannel();
         if (Librerias.Esta_registrado_asegurado(getApplicationContext()))
         {
-            Intent i = new Intent(getApplicationContext(), MenuAsegurado.class);
+//            Intent i = new Intent(getApplicationContext(), MenuAsegurado.class);
+            Intent i = new Intent(getApplicationContext(), Menu_asegurados_1.class);
             startActivity(i);
             finish();
         }
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         bloginaseg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Prelogin.class);
+                Intent i = new Intent(getApplicationContext(), Login_Asegurado.class);
                 startActivity(i);
             }
         });
@@ -61,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
         bcompania.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
-                Intent i = new Intent(getApplicationContext(), Menu_asegurados_1.class);
+                Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
                 i.putExtra("ayuda", "3");
                 startActivity(i);
             }

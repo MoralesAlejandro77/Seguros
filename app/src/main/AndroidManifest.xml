@@ -31,6 +31,10 @@
             android:name=".Menu_asegurados_1"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Menu_asegurados_2"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".TicketActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -87,6 +91,7 @@
         <activity
             android:name=".LoginApp"
             android:label="Login User"
+            android:theme="@style/AppDialogTheme"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
@@ -128,6 +133,8 @@
             android:name=".MenuContactos"
             android:label="Contactenos...."
             android:screenOrientation="portrait" />
+
+
 
         <service
             android:name=".Publicaciones"
@@ -237,6 +244,16 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.seguros.Scanner.SimpleScannerActivity" />
         <activity android:name="com.seguros.Scanner.BaseScannerActivity" />
+
+        <activity
+            android:name=".Menu_solicitudes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" />
+
+        <activity
+            android:name=".Menu_cambiar_datos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" />
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"

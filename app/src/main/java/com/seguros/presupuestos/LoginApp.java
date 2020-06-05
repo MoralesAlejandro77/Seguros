@@ -2,6 +2,7 @@
 package com.seguros.presupuestos;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -36,7 +38,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginApp extends FragmentActivity  {
+public class LoginApp extends FragmentActivity {
 	private static final int MY_PERMISSIONS_REQUEST_INTERNET = 101;
 	private static final int MY_PERMISSIONS_REQUEST_CONTACTS = 102;
 	EditText pass, id;

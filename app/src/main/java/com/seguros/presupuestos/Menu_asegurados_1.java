@@ -5,16 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.seguros.MainActivity;
 
 public class Menu_asegurados_1 extends AppCompatActivity {
 
-    Button opcion_contactenos, opcion_preguntas, opcion_cambiardatos,
-            opcion_cambiarpago, opcion_productores, opcion_pagoenlinea,
-            opcion_vencimientos, opcion_solicitudes,opcion_compania, opcion_pagodia,
-            opcion_contrato, opcion_premio, opcion_pago_online, opcion_cerrarsesion;
+    Button opcion_contactenos,  opcion_cambiardatos,
+           opcion_solicitudes,
+            opcion_contrato,  opcion_pago_online, opcion_cerrarsesion;
+
+    ImageView siguiente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class Menu_asegurados_1 extends AppCompatActivity {
         opcion_solicitudes     = (Button)findViewById(R.id.opcion_solicitudes);
         opcion_cerrarsesion    = (Button)findViewById(R.id.opcion_cerrarsesion);
         opcion_contactenos     = (Button)findViewById(R.id.opcion_contactenos);
+        siguiente              = (ImageView) findViewById(R.id.siguiente);
 
 
         this.setTitle("");
@@ -35,6 +38,14 @@ public class Menu_asegurados_1 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),ActivityAyuda.class);
                 i.putExtra("ayuda", "9");
+                startActivity(i);
+            }
+        });
+
+        siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Menu_asegurados_2.class);
                 startActivity(i);
             }
         });
@@ -53,7 +64,7 @@ public class Menu_asegurados_1 extends AppCompatActivity {
         opcion_cambiardatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),Modifica_Asegurado.class);
+                Intent i = new Intent(getApplicationContext(),Menu_cambiar_datos.class);
                 startActivity(i);
             }
         });
@@ -62,6 +73,14 @@ public class Menu_asegurados_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),MenuContactos.class);
+
+                startActivity(i);
+            }
+        });
+        opcion_solicitudes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Menu_solicitudes.class);
 
                 startActivity(i);
             }

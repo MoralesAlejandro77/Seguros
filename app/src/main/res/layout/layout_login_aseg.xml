@@ -4,23 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White"
+    android:background="@color/fondo_tresprov_1"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/tresprov"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="155dp"
-            android:layout_height="55dp"
-            android:background="@drawable/logo1" />
-
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,18 +17,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <android.support.v7.widget.CardView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:elevation="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="#25676767"
                 android:orientation="vertical"
                 android:padding="2dp">
 
@@ -61,14 +39,15 @@
                         android:layout_marginLeft="6dp"
                         android:layout_marginTop="5dp"
                         android:text="TIPO DE DOC. "
-                        android:textColor="@color/Black" />
+                        android:textColor="@color/White" />
 
                     <Spinner
                         android:id="@+id/tipo_doc"
                         android:layout_width="160dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/tamano_campo"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="5dp"
+                        android:background="@color/fondo_tresprov_2"
                         android:entries="@array/tipodoc"
                         android:spinnerMode="dropdown" />
 
@@ -87,29 +66,23 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="15dp"
-                        android:text="NÚMERO DE DOC. "
-                        android:textColor="@color/Black" />
-
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/nro_doc"
-                            android:layout_width="160dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="11dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/tamano_campo"
+                            android:layout_marginLeft="15dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_2"
                             android:ems="10"
-                            android:hint="Numero de Doc."
+                            android:hint="N° de Documento"
                             android:inputType="number"
-                            android:textColor="@color/Black" />
+                            android:textColor="@color/White"
+                            android:textColorHint="@color/White" />
 
                         <requestFocus />
                     </android.support.design.widget.TextInputLayout>
@@ -119,32 +92,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="15dp"
-                        android:text="PASSWORD : "
-                        android:textColor="@color/Black" />
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:passwordToggleEnabled="true"
-                        >
+                        android:textColorHint="@color/hint"
+                        app:passwordToggleEnabled="true">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/password"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="45dp"
-                            android:layout_marginRight="10dp"
+                            android:layout_height="@dimen/tamano_campo"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/fondo_tresprov_2"
                             android:ems="10"
-                            android:hint="Ingrese Password"
-                            android:inputType="textPassword" />
+                            android:hint=" Password"
+                            android:inputType="textPassword"
+                            android:textColor="@color/White" />
                     </android.support.design.widget.TextInputLayout>
 
 
@@ -153,108 +119,111 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/olvidarclave"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:autoLink="none"
-                        android:linksClickable="true"
-                        android:text="Olvide mi Clave"
-                        android:textColor="#1E88E5"
-                        android:textStyle="bold|italic" />
-
-                    <ImageView
-                        android:id="@+id/imageView30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="@android:drawable/ic_menu_help" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/blogin"
-                        android:layout_width="160dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:alpha="95"
-                        android:background="@drawable/boton_foreground"
-                        android:drawableLeft="@mipmap/ic_key2"
-                        android:text="LOGIN"
-                        android:textColor="@android:color/white" />
+                        android:background="@drawable/boton_login3"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/olvidarclave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton_olvideclave"
+                        android:clickable="true"
+                        android:focusable="true"
+
+                        android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bregistro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton_registrar"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+
+                        />
                 </LinearLayout>
 
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="#25676767"
                 android:gravity="center_horizontal|center_vertical"
                 android:orientation="horizontal"
                 android:padding="5dp">
 
                 <Button
                     android:id="@+id/bpromotores"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
-                    android:alpha="95"
-                    android:background="#D0C2BFBF"
-                    android:drawableTop="@mipmap/ic_usuarios"
-                    android:minWidth="80dip"
-                    android:padding="3dp"
-                    android:text="Promotores"
-                    android:textSize="10sp" />
+                    android:background="@drawable/boton_condiciones"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless" />
 
                 <Button
                     android:id="@+id/bcontactos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
-                    android:alpha="95"
-                    android:background="#D0C2BFBF"
-                    android:drawableTop="@mipmap/ic_contactenos"
-                    android:minWidth="80dip"
-                    android:padding="3dp"
-                    android:text="Contactenos"
-                    android:textSize="10sp" />
+                    android:background="@drawable/boton_contactenos2"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
 
                 <Button
                     android:id="@+id/bprestadores"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
-                    android:alpha="95"
-                    android:background="#D0C2BFBF"
-                    android:drawableTop="@mipmap/ic_usuarios"
-                    android:minWidth="80dip"
-                    android:padding="3dp"
-                    android:text="Prestadores"
-                    android:textSize="10sp" />
+                    android:background="@drawable/boton_privacidad"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"                    />
             </LinearLayout>
 
 

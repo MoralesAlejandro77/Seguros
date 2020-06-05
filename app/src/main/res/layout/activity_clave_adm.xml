@@ -4,23 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White"
+    android:background="@color/fondo_tresprov_1"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/tresprov"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imageView37"
-            android:layout_width="155dp"
-            android:layout_height="55dp"
-            android:background="@drawable/logo1" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -43,7 +28,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
-                    android:background="#25676767"
                     android:orientation="horizontal">
 
                     <Spinner
@@ -57,7 +41,8 @@
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/nro_doc"
@@ -68,7 +53,7 @@
                             android:ems="10"
                             android:hint="Numero de Doc."
                             android:inputType="number"
-                            android:textColor="@color/Black" />
+                            android:textColor="@color/White" />
 
                         <requestFocus />
                     </android.support.design.widget.TextInputLayout>
@@ -79,7 +64,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
-                    android:background="#25676767"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -87,21 +71,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:background="@android:drawable/ic_menu_help" />
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="5dp"
-                            android:background="#DFE6EE"
                             android:text="Usted ha olvidado su Clave ?"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@color/Black"
+                            android:textColor="@color/White"
                             android:textStyle="bold|italic" />
 
                     </LinearLayout>
@@ -121,28 +98,25 @@
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textColor="@color/Black"
                             android:textSize="16sp"
-                            android:textStyle="italic" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:background="#25676767"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <Button
                             android:id="@+id/bblanqueo"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:alpha="95"
-                            android:background="@drawable/boton_foreground"
-                            android:drawableLeft="@mipmap/ic_send"
-                            android:text="SOLICITAR CODIGO VERIFICACION"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp" />
+                            android:background="@drawable/boton_solicitudver"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackgroundBorderless" />
 
                         <ProgressBar
                             android:id="@+id/progressBar3"
@@ -159,7 +133,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                    android:background="#25676767"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -168,23 +141,15 @@
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/imageView31"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:background="@android:drawable/ic_menu_sort_alphabetically" />
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginRight="5dp"
-                            android:background="#DFE6EE"
                             android:text="Usted ya tiene su Codigo de Verificación ?"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@color/Black"
+                            android:textColor="@color/White"
                             android:textStyle="bold|italic" />
 
                     </LinearLayout>
@@ -204,28 +169,25 @@
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textColor="@color/Black"
                             android:textSize="16sp"
-                            android:textStyle="italic" />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:background="#25676767"
                         android:gravity="center_horizontal"
                         android:orientation="horizontal">
 
                         <Button
                             android:id="@+id/breingreso"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:alpha="95"
-                            android:background="@drawable/boton_foreground"
-                            android:drawableLeft="@mipmap/ic_key2"
-                            android:text="BLANQUEO DE CLAVE"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp" />
+                            android:background="@drawable/boton_verificar"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackgroundBorderless" />
                     </LinearLayout>
 
                 </LinearLayout>
