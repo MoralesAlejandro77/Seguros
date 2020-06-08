@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="Nombre_app">TRES PROVINCIAS Seguros de Personas S.A.</string>
@@ -8,7 +8,7 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="action_settings">Configuracion</string>
-    <string name="version">Version 4.09</string>
+    <string name="version">Version 4.10</string>
     <string name="title_activity_buscar_asegurado">BuscarAsegurado</string>
     <string name="canal_notify">tresprovinciassa</string>
     <string name="title_activity_menuppal">"Menu "</string>

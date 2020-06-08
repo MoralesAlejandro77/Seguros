@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_tresprov_1"
+    android:background="@color/fondo_tresprov_2"
     android:orientation="vertical">
 
     <LinearLayout
@@ -27,31 +27,40 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo de Documento"
+                        android:textColor="@color/White" />
 
                     <Spinner
                         android:id="@+id/tipo_doc"
                         android:layout_width="140dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/tamano_campo"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp"
+                        android:background="@color/fondo_tresprov_1"
                         android:entries="@array/tipodoc"
                         android:spinnerMode="dropdown" />
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:textColorHint="@color/hint">
 
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/nro_doc"
-                            android:layout_width="170dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/tamano_campo"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="10dp"
+                            android:background="@color/fondo_tresprov_1"
                             android:ems="10"
-                            android:hint="Numero de Doc."
+                            android:hint="N° de Documento"
                             android:inputType="number"
                             android:textColor="@color/White" />
 

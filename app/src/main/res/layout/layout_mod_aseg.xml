@@ -263,6 +263,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/fondo_tresprov_1"
                         android:entries="@array/companias"
+                        android:popupBackground="@color/White"
                         android:spinnerMode="dropdown" />
                 </LinearLayout>
 

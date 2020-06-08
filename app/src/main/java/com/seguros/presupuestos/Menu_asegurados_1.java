@@ -28,7 +28,7 @@ public class Menu_asegurados_1 extends AppCompatActivity {
         opcion_solicitudes     = (Button)findViewById(R.id.opcion_solicitudes);
         opcion_cerrarsesion    = (Button)findViewById(R.id.opcion_cerrarsesion);
         opcion_contactenos     = (Button)findViewById(R.id.opcion_contactenos);
-        siguiente              = (ImageView) findViewById(R.id.siguiente);
+    //    siguiente              = (ImageView) findViewById(R.id.siguiente);
 
 
         this.setTitle("");
@@ -42,13 +42,13 @@ public class Menu_asegurados_1 extends AppCompatActivity {
             }
         });
 
-        siguiente.setOnClickListener(new View.OnClickListener() {
+   /*     siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),Menu_asegurados_2.class);
                 startActivity(i);
             }
-        });
+        });*/
 
 
         opcion_contrato.setOnClickListener(new View.OnClickListener() {

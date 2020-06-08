@@ -11,23 +11,25 @@ import com.seguros.MainActivity;
 
 public class Menu_solicitudes extends Activity {
 
-    Button opcion_solicitud_premio_total, opcion_solicitud_poliza, opcion_solicitud_pago_dia;
+    Button opcion_misproductores, opcion_solicitud_poliza, opcion_solicitud_pago_dia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_solicitudes);
 
-        opcion_solicitud_premio_total  = (Button)findViewById(R.id.opcion_solicitud_premio_total);
+        opcion_misproductores          = (Button)findViewById(R.id.opcion_misproductores);
         opcion_solicitud_poliza        = (Button)findViewById(R.id.opcion_solicitud_poliza);
         opcion_solicitud_pago_dia      = (Button)findViewById(R.id.opcion_solicitud_pago_dia);
 
 
         this.setTitle("");
 
-        opcion_solicitud_premio_total.setOnClickListener(new View.OnClickListener() {
+        opcion_misproductores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),Activity_Premios.class);
+                Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
+                i.putExtra("tipo"  , "1");
+                i.putExtra("titulo", "SOLICITUD DE MIS PRODUCTORES");
                 startActivity(i);
             }
         });

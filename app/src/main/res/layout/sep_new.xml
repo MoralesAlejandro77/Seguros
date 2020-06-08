@@ -15,7 +15,7 @@
 			android:layout_width="fill_parent"
 			android:layout_height="80dp"
 			android:layout_gravity="center_horizontal"
-			android:background="@color/tresprov">
+			android:background="@color/fondo_tresprov_1">
 
 			<ImageView
 				android:id="@+id/imageView23"
@@ -29,7 +29,7 @@
 			android:layout_width="fill_parent"
 			android:layout_height="match_parent"
 			android:layout_gravity="center_horizontal"
-			android:background="@drawable/notifications_bar_pressed">
+			android:background="@color/fondo_tresprov_2">
 
 			<ImageView
 				android:id="@+id/imageView1"
@@ -98,13 +98,15 @@
 					android:layout_height="wrap_content"
 					android:layout_marginLeft="120dp"
 					android:text="Edad: "
-					android:textColor="@color/Black" />
+					android:textColor="@color/Black"
+					android:textStyle="bold" />
 
 				<EditText
 					android:id="@+id/edad_titular"
 					android:layout_width="70dp"
 					android:layout_height="wrap_content"
 					android:layout_marginLeft="10dp"
+					android:gravity="right"
 					android:inputType="number"
 					android:text="0"
 					android:textAppearance="?android:attr/textAppearanceMedium"

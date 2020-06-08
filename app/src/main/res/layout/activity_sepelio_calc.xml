@@ -48,6 +48,7 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_weight="1"
+						android:background="@color/fondo_tresprov_1"
 						android:visibility="invisible" />
 
 				</LinearLayout>
@@ -58,7 +59,7 @@
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="5dp"
-				android:background="#25676767"
+				android:background="@color/fondo_tresprov_2"
 				android:orientation="vertical">
 
 				<LinearLayout
@@ -91,7 +92,7 @@
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="5dp"
 						android:layout_marginTop="8dp"
-						android:background="@color/White"
+						android:background="@color/fondo_tresprov_1"
 						android:textAppearance="?android:attr/textAppearanceMedium"
 						android:textSize="14sp"
 						android:textStyle="bold"
@@ -115,6 +116,7 @@
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="5dp"
 						android:layout_marginTop="8dp"
+						android:gravity="right"
 						android:text="00,00"
 						android:textAppearance="?android:attr/textAppearanceMedium"
 						android:textColor="@color/Black"
@@ -614,7 +616,7 @@
 					android:layout_height="match_parent"
 					android:layout_alignParentBottom="true"
 					android:layout_marginTop="1dp"
-					android:background="#25676767"
+					android:background="@color/fondo_tresprov_1"
 					android:gravity="center_horizontal">
 
 					<Button

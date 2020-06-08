@@ -24,6 +24,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="5dp"
+        android:background="@color/fondo_tresprov_2"
         android:orientation="vertical">
 
       <LinearLayout
@@ -62,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Nro. de Doc. : "
-            android:textColor="@android:color/black"
+            android:textColor="@color/White"
             android:textStyle="bold" />
 
         <TextView
@@ -71,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="0"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/White" />
       </LinearLayout>
 
       <LinearLayout
@@ -84,15 +85,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Nombre Benef : "
-            android:textColor="@android:color/black"
+            android:textColor="@color/White"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
-            android:textColor="@color/DarkBlue" />
+            android:textColor="@color/White" />
       </LinearLayout>
 
       <LinearLayout
@@ -106,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Fecha de Nac. : "
-            android:textColor="@android:color/black"
+            android:textColor="@color/White"
             android:textStyle="bold" />
 
         <TextView
@@ -115,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/White" />
 
         <TextView
 
@@ -123,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:text="Edad : "
-            android:textColor="@android:color/black"
+            android:textColor="@color/White"
             android:textStyle="bold" />
 
         <TextView
@@ -131,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/White" />
       </LinearLayout>
 
       <LinearLayout
@@ -145,16 +146,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Beneficiario : "
-            android:textColor="@android:color/black"
+            android:textColor="@color/White"
             android:textStyle="bold" />
 
         <TextView
 
             android:id="@+id/beneficiario"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
-            android:textColor="@color/verde" />
+            android:textColor="@color/White" />
 
       </LinearLayout>
 
@@ -170,7 +171,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Grupo Familiar "
-            android:textColor="@color/Black" />
+            android:textColor="@color/White" />
 
         <ImageButton
             android:id="@+id/bfamilia"
@@ -188,7 +189,7 @@
       android:layout_width="match_parent"
       android:layout_height="40dp"
       android:layout_marginLeft="10dp"
-      android:layout_marginRight="10dp"
+      android:layout_marginRight="5dp"
       android:background="@android:color/holo_blue_dark"
       android:orientation="horizontal">
 

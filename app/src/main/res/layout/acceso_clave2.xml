@@ -16,22 +16,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@color/tresprov">
-
-            <ImageView
-                android:id="@+id/imageView19"
-                android:layout_width="302dp"
-                android:layout_height="73dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/logo1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="2dp"
+            android:background="@color/fondo_tresprov_2"
             android:orientation="vertical">
 
             <LinearLayout
@@ -69,19 +55,19 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/ic_key2"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/ic_key2" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginTop="20dp"
                     android:baselineAligned="false"
                     android:text="Clave de Acceso"
-                    android:textColor="@color/Black"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="10dp"/>
+                    android:textColor="@color/White"
+                    android:textStyle="bold" />
 
                 <ProgressBar
                     android:id="@+id/progressBar1"
@@ -100,7 +86,8 @@
                 <EditText
                     android:id="@+id/txtpass"
                     android:layout_width="210dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/tamano_campo"
+                    android:background="@color/fondo_tresprov_1"
                     android:baselineAligned="false"
                     android:ems="10"
                     android:inputType="textPassword">
@@ -111,7 +98,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
 
                     <Button
                         android:id="@+id/button1"

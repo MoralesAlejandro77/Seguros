@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@color/tresprov">
+        android:background="@color/fondo_tresprov_2">
 
         <ImageView
             android:id="@+id/imageView1"

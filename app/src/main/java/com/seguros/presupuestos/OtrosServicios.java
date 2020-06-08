@@ -1,5 +1,6 @@
 package com.seguros.presupuestos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -144,8 +145,11 @@ String tipo;
                 if (Aplicacion_activa == 1) // Exitoso
                 {
 
-                    Librerias.mostrar_error(OtrosServicios.this,1, "Su solicitud esta siendo procesada!!, nos pondremos en contacto a la brevedad!!");
+//                    Librerias.mostrar_error(OtrosServicios.this,1, "Su solicitud esta siendo procesada!!, nos pondremos en contacto a la brevedad!!");
                     finish();
+                    Intent i = new Intent(getApplicationContext(),Solicitud_ok.class);
+                    startActivity(i);
+
 
                 }
                 else

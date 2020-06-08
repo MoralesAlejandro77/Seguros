@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:background="@color/fondo_tresprov_1"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
                 android:hint="Numero Ticket"
-                android:textColor="#3949AB"
+                android:textColor="@color/White"
                 android:textStyle="normal|italic"
                 app:layout_constraintEnd_toEndOf="@+id/bcamara"
                 app:layout_constraintStart_toStartOf="parent"

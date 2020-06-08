@@ -8,14 +8,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/tresprov"
-        android:gravity="center_horizontal">
+        android:background="@color/fondo_tresprov_2">
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="149dp"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/logo1" />
+            android:background="@drawable/logo_mediano" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Datos Asegurado"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -42,8 +50,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:elevation="8dp">
 
                     <LinearLayout
@@ -127,12 +135,13 @@
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
+
                 <android.support.v7.widget.CardView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:elevation="8dp">
 
                     <LinearLayout
@@ -441,12 +450,13 @@
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
+
                 <android.support.v7.widget.CardView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:elevation="8dp">
 
 
@@ -542,13 +552,14 @@
                         </LinearLayout>
 
                     </LinearLayout>
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
+
                 <android.support.v7.widget.CardView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:elevation="8dp">
 
 
@@ -687,8 +698,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    android:gravity="center_horizontal"
                     android:background="#25676767"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <ProgressBar
