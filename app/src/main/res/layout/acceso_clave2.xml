@@ -79,7 +79,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="160dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -96,18 +96,18 @@
                 </EditText>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="50dp"
+                    android:gravity="center_horizontal">
 
                     <Button
                         android:id="@+id/button1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/boton_foreground"
+                        android:background="@color/fondo_tresprov_1"
                         android:drawableLeft="@mipmap/ic_send"
-                        android:text="Acceso Panel ADM."
+                        android:text="Acceso Panel ADM.    "
                         android:textColor="@color/White" />
 
                 </LinearLayout>

@@ -85,7 +85,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activacion2"
-            android:label="Activar Aplicacion"
+            android:label="Panel Administracion"
+            android:theme="@style/AppDialogTheme"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LoginApp"

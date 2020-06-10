@@ -380,12 +380,12 @@
             android:textStyle="bold" />
       </LinearLayout>
 
-      <Button
+      <ImageButton
           android:id="@+id/bagregar"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginLeft="20dp"
-          android:background="@drawable/index"
+          android:src="@drawable/index"
           android:onClick="nuevosepelio" />
 
       <CheckBox

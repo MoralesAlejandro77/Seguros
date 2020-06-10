@@ -88,21 +88,23 @@
 
 					<TextView
 						android:id="@+id/calcedad"
-						android:layout_width="50dp"
+						android:layout_width="40dp"
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="5dp"
 						android:layout_marginTop="8dp"
 						android:background="@color/fondo_tresprov_1"
+						android:gravity="right"
+						android:text="0"
 						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:textColor="@color/AntiqueWhite"
 						android:textSize="14sp"
-						android:textStyle="bold"
 						tools:enabled="false" />
 
 					<TextView
 						android:id="@+id/textView15"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:layout_marginLeft="20dp"
+						android:layout_marginLeft="10dp"
 						android:layout_marginTop="8dp"
 						android:text="Total :"
 						android:textAppearance="?android:attr/textAppearanceMedium"
@@ -112,14 +114,14 @@
 
 					<TextView
 						android:id="@+id/idtotal"
-						android:layout_width="103dp"
+						android:layout_width="70dp"
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="5dp"
 						android:layout_marginTop="8dp"
 						android:gravity="right"
-						android:text="00,00"
+						android:text="0,00"
 						android:textAppearance="?android:attr/textAppearanceMedium"
-						android:textColor="@color/Black"
+						android:textColor="@color/White"
 						android:textSize="14sp"
 						android:textStyle="bold" />
 

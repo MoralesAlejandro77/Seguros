@@ -158,10 +158,12 @@ ProgressBar progressBar;
             }
             catch (Exception e)
             {
+                Librerias.mostrar_error(Clave_adm.this,2,"SE HA PRODUCIDO UN ERROR  " + e.toString());
                 e.printStackTrace();
             }
 
         } catch (JSONException e) {
+            Librerias.mostrar_error(Clave_adm.this,2,"SE HA PRODUCIDO UN ERROR  " + e.toString());
             e.printStackTrace();
         }
         progressBar.setVisibility(View.GONE);
@@ -177,7 +179,7 @@ ProgressBar progressBar;
             if (Librerias.Esta_registrado_asegurado(getApplicationContext()))
             {
                 finish();
-                Intent i = new Intent(getApplicationContext(), MenuAsegurado.class);
+                Intent i = new Intent(getApplicationContext(), Menu_asegurados_1.class);
                 startActivity(i);
             }
 

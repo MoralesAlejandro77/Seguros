@@ -8,10 +8,11 @@
 
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@color/fondo_tresprov_2">
+        android:background="@color/fondo_tresprov_1"
+        android:padding="6dp">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -51,7 +52,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/fondo_tresprov_1"
+            android:background="@color/fondo_tresprov_2"
             android:orientation="vertical">
 
             <LinearLayout
@@ -77,11 +78,13 @@
                     <EditText
                         android:id="@+id/id"
                         android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="@dimen/tamano_campo"
+                        android:layout_marginLeft="18dp"
+                        android:background="@color/fondo_tresprov_1"
                         android:ems="10"
                         android:hint="Legajo"
-                        android:inputType="number">
+                        android:inputType="number"
+                        android:textColorHint="@color/hint">
 
                         <requestFocus />
                     </EditText>
@@ -116,12 +119,14 @@
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/txtpass"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/tamano_campo"
                         android:layout_marginLeft="25dp"
                         android:layout_marginRight="10dp"
+                        android:background="@color/fondo_tresprov_1"
                         android:ems="10"
                         android:hint="Ingrese Password"
                         android:inputType="textPassword"
+                        android:textColorHint="@color/hint"
                         android:textSize="16sp" />
                 </android.support.design.widget.TextInputLayout>
 
