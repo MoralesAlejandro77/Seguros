@@ -209,15 +209,22 @@ try {
 		  }
 /*******************************************************************************************************/
 public static String unico_ID(Context c) {
-	final TelephonyManager tm = (TelephonyManager) c.getSystemService(Context.TELEPHONY_SERVICE);
+	String idunico = "";
+	try {
+		final TelephonyManager tm = (TelephonyManager) c.getSystemService(Context.TELEPHONY_SERVICE);
 
-  final String tmDevice, tmSerial, androidId;
-  tmDevice = "" + tm.getDeviceId();
-  tmSerial = "" + tm.getSimSerialNumber();
-  androidId = "" + android.provider.Settings.Secure.getString(c.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+		final String tmDevice, tmSerial, androidId;
+		tmDevice = "" + tm.getDeviceId();
+		tmSerial = "" + tm.getSimSerialNumber();
+		androidId = "" + android.provider.Settings.Secure.getString(c.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
 
-  UUID deviceUuid = new UUID(androidId.hashCode(), ((long)tmDevice.hashCode() << 32) | tmSerial.hashCode());
-  return deviceUuid.toString();	
+		UUID deviceUuid = new UUID(androidId.hashCode(), ((long)tmDevice.hashCode() << 32) | tmSerial.hashCode());
+
+		idunico = deviceUuid.toString();
+	} catch (Exception e) {
+		Log.d("unico_ID", "Error!!");
+	}
+  return idunico;
 }
 /*******************************************************************************************************/
 public static String getAndroidVersion() {

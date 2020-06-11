@@ -95,8 +95,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.presupuestos.Activacion2"
-            android:label="Activar Aplicacion"
-            android:screenOrientation="portrait" />
+            android:label="Panel Administracion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.LoginApp"
             android:label="Login User"
