@@ -3,6 +3,7 @@ package com.seguros.presupuestos;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +46,7 @@ public class Login_Asegurado extends AppCompatActivity {
 ProgressBar progressBar;
 Spinner tipo_doc;
 EditText nro_doc, password;
-Button blogin,  bcontactos,  botreg;
+Button blogin,  bcontactos,  botreg, bprivacidad, bterminos;
 int Aplicacion_activa;
 int resultado = 0;
 String usuario;
@@ -67,6 +68,8 @@ TextView olvidarclave;
         blogin        = (Button) findViewById(R.id.blogin);
         bcontactos    = (Button) findViewById(R.id.bcontactos);
         botreg        = (Button) findViewById(R.id.bregistro);
+        bprivacidad   = (Button) findViewById(R.id.bprivacidad);
+        bterminos     = (Button) findViewById(R.id.bterminos);
 
 
         this.setTitle("");
@@ -89,6 +92,31 @@ TextView olvidarclave;
             @Override
             public void onClick(View v) {
                 Registrar_asegurado();
+
+            }
+        });
+
+        bprivacidad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/politicas.pdf";
+
+                Uri uri =  Uri.parse( url);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(browserIntent);
+
+            }
+        });
+
+        bterminos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/terminos.pdf";
+
+                Uri uri =  Uri.parse( url);
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(browserIntent);
 
             }
         });
