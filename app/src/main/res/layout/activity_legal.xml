@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fondo_tresprov_2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#25676767"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ptitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_horizontal"
+                android:text="Terminos y Condiciones"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/White"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Esta Aplicación   pertenece a “TRES PROVINCIAS SEGUROS DE PERSONAS SA”  (en adelante LA EMPRESA),  su acceso y utilización está sujeta a la aceptación y cumplimiento de los términos y condiciones que se exponen a continuación:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text=" I. ACEPTACIÓN DE LOS TÉRMINOS Y CONDICIONES DE USO. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Estos términos y condiciones de uso son acordados por usted y LA EMPRESA. Los mismos rigen el acceso y uso de TresProv Movil, lo cual incluye todo contenido, funcionalidad y servicios ofrecidos en LA EMPRESA a través de ella, ya sea como invitado o usuario registrado. Por favor, lea los Términos y Condiciones de Uso cuidadosamente antes de comenzar a usar la Aplicación. Al usarla, usted acepta y acuerda obligarse y observar estas Condiciones y Términos de Uso y nuestra Política de Privacidad. Si no desea aceptar estos Términos y Condiciones de Uso o la Política de Privacidad, por favor no acceda ni use la Aplicación. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="II. AMBITO DE APLICACIÓN. RESPONSABILIDAD "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Los “Términos legales y condiciones de uso” se aplican sólo a esta Aplicación, el acceso, por parte de los usuarios,  a vínculos de cualquier otro sitio, página o Aplicación,  quedará bajo su exclusiva responsabilidad y LA EMPRESA no asume responsabilidad alguna por los daños que pueda causar dicha vinculación."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="LA EMPRESA se reserva el derecho de modificar en forma unilateral, sin mediar previo aviso, ni comunicación al usuario, estos Términos y Condiciones, el diseño, la presentación o su configuración, los servicios ofrecidos, los requisitos de registro o de utilización de la Aplicación, sin que ello genere derecho a reclamo o indemnización alguna en favor del usuario. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="En cualquiera de estos casos, las modificaciones regirán a partir de su publicación en la Aplicación, por lo que le sugerimos visitar periódicamente y leer atentamente los Términos Legales y Condiciones de Uso."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Expresamente LA EMPRESA manifiesta que no asume responsabilidad por los errores, fallas o imposibilidad de acceso a los sitios, paginas  o Aplicación  en razón de hipervínculos u otras funciones de enlace incluidos y si se proporcionan vínculos con sitios de software para descargar será sólo para la utilidad de los usuarios y no asumiremos ninguna responsabilidad por las consecuencias asociadas a la descarga de software."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="El usuario se obliga a usar la Aplicación de conformidad con estos Términos y Condiciones, en forma diligente, correcta y lícita, conforme con la moral y las buenas costumbres. El usuario responderá por los daños y perjuicios de toda naturaleza que LA EMPRESA pueda sufrir, directa o indirectamente, como consecuencia del incumplimiento de cualquiera de las obligaciones derivadas de estos Términos y Condiciones. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="El  usuario reconoce y acepta que ni LA EMPRESA, ni los directores, empleados o representantes de cualquiera de ellos, es responsable por daños que surjan o resulten del uso de esta Aplicación, incluyendo cualquier error, omisión, interrupción, falla, eliminación de archivos o correos electrónicos (e-mails), defectos, virus, y/o demoras en la operación o transmisión y/o de cualquier otro tipo. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Las personas que encontrándose fuera de este país accedan a la Aplicación, deberán requerir asesoramiento profesional independiente sobre la posibilidad de acceder a la misma desde el lugar en que se encuentren."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:baselineAligned="false"
+                        android:text="La página puede ser utilizada por el usuario en forma totalmente libre y gratuita."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="III. CALIDAD"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mediante el uso de esta Aplicación, el usuario reconoce y acepta que LA EMPRESA no controla ni garantiza la ausencia de virus en el contenido de los sitios enlazados, ni la ausencia de otros  elementos que pudieran producir alteraciones en sus sistemas informáticos o en los documentos electrónicos y archivos almacenados en los archivos informáticos del usuario. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="IV. PROPIEDAD INTELECTUAL"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="La Aplicación y la totalidad de sus contenidos, características y funcionalidad (lo que incluye, entre otros, toda la información, software, texto, modo de disposición, imágenes, video y audio, y el diseño, selección y organización de todo ello) pertenecen a LA EMPRESA, sus licenciantes, u otros proveedores de dichos materiales y están protegidos por las leyes argentinas y normas internacionales sobre derechos de autor, marcas, patentes, secretos industriales y demás leyes sobre derechos de propiedad intelectual u otros derechos patrimoniales. Estos Términos y Condiciones de Uso le permiten, al usuario, usar la Aplicación solo para fines personales, no comerciales. El usuario no puede reproducir, distribuir, modificar, crear obras derivadas, exhibir o exponer al público, repetir publicaciones, descargar, almacenar ni transmitir el material de nuestra Aplicación, modificar las copias de ningún material de esta Aplicación, utilizar ilustraciones, fotografías, secuencias de video o audio o cualquier tipo de gráficos en forma separada del texto que los acompaña, borrar o modificar los signos de derechos de autor, marca u otros signos de derechos de propiedad intelectual de las copias de los materiales de esta Aplicación,  no puede acceder ni usar con fines comerciales ninguna parte de la Aplicación ni los servicios o materiales disponibles a través de ella.  Si usted imprime, copia, modifica, descarga o de algún otro modo utiliza o proporciona a otra persona acceso a alguna parte de la Aplicación en violación de los Términos y Condiciones de Uso, su derecho a usar la misma finalizará inmediatamente y, a opción nuestra, se le requerirá que devuelva o destruya las copias del material que usted hubiera obtenido. No se le transfieren derechos personales o reales ni de ningún tipo sobre la Aplicación o sus contenidos, y todos los derechos no expresamente otorgados quedan reservados por LA EMPRESA. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="IV. JURISDICCIÓN Y LEGISLACIÓN APLICABLE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="El usuario acepta que todo conflicto de intereses o diferencia que pueda surgir como consecuencia del uso del sito será resuelto de acuerdo con las leyes de la República Argentina y será sometido a la jurisdicción y competencia de los Tribunales Ordinarios de la Primer Circunscripción Judicial de Provincia de Mendoza, República Argentina."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#25676767"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:alpha="95"
+                        android:background="@drawable/boton_foreground"
+                        android:drawableLeft="@drawable/ic_accept"
+                        android:text="  aceptar  " />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

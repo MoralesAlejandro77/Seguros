@@ -1600,6 +1600,10 @@
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_legal.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\activity_legal.xml"
+    },
+    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_terminos.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-mdpi\\ic_terminos.png"
     },
@@ -2570,6 +2574,10 @@
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_fila_flia.xml.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\fila_flia.xml"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_legal2.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\activity_legal2.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable_mtrl_tabs_default_indicator.xml.flat",

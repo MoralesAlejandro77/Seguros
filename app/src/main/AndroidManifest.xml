@@ -26,7 +26,15 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Solicitud_ok"></activity>
+
+        <activity
+            android:name=".LegalActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".Solicitud_ok"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Menu_asegurados_1"
             android:screenOrientation="portrait" />
@@ -86,8 +94,8 @@
         <activity
             android:name=".Activacion2"
             android:label="Panel Administracion"
-            android:theme="@style/AppDialogTheme"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDialogTheme" />
         <activity
             android:name=".LoginApp"
             android:label="Login User"

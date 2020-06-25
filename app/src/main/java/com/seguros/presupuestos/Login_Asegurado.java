@@ -99,11 +99,15 @@ TextView olvidarclave;
         bprivacidad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/politicas.pdf";
+             /*   String url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/politicas.pdf";
 
                 Uri uri =  Uri.parse( url);
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(browserIntent);
+                startActivity(browserIntent);*/
+                Intent intent = new Intent(getApplicationContext(),LegalActivity.class);
+                intent.putExtra("tipo", "2");
+                startActivity(intent);
+
 
             }
         });
@@ -111,12 +115,16 @@ TextView olvidarclave;
         bterminos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/terminos.pdf";
-
+              /*  String url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/terminos.pdf";
                 Uri uri =  Uri.parse( url);
-
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(browserIntent);
+                startActivity(browserIntent);*/
+
+                Intent intent = new Intent(getApplicationContext(),LegalActivity.class);
+                intent.putExtra("tipo", "1");
+                startActivity(intent);
+
+
 
             }
         });

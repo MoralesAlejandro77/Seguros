@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fondo_tresprov_2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#25676767"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ptitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_horizontal"
+                android:text="Políticas de confidencialidad y protección de datos personales"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/White"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="I. POLITICA DE PRIVACIDAD"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA  es titular de la Aplicación TresProv Móvil y responsable de los archivos generados con los datos de carácter personal suministrados por los usuarios a través de la misma."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Todos los datos personales recopilados con la utilización que Usted haga de los mismos se tratarán de conformidad con la “Política de Confidencialidad y Protección de Datos Personales” de  TRES PROVINCIAS SEGUROS DE PERSONAS SA."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA  garantiza la privacidad y confidencialidad de los Datos de Carácter Personal proporcionados por sus titulares (en adelante “el Titular de los Datos Personales”) de conformidad con lo establecido en el Artículo 43, párrafo tercero de la Constitución Nacional, en la Ley N° 25.326 de Protección de Datos Personales, en el Decreto N° 1558/2001 y en la Disposición 11/2006 de la Dirección Nacional de Protección de Datos Personales."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="La utilización de esta Aplicación  y/o la habilitación de una Cuenta de Usuario por el Titular de los Datos Personales importan la aceptación de la Política de Confidencialidad y Protección de Datos Personales. En caso de no estar de acuerdo con la misma, por favor, no use la misma o solicite la cancelación de su cuenta de usuario."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="II. ÁMBITO DE APLICACIÓN"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="1.	TRES PROVINCIAS SEGUROS DE PERSONAS SA podrá obtener información anónima acerca de las visitas a esta Aplicación. Se considera información anónima toda aquella que no pueda ser asociada a un usuario concreto e identificado, como por ejemplo la fecha y hora de acceso a la misma, las secciones consultadas, etc."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="2.	TRES PROVINCIAS SEGUROS DE PERSONAS SA se reserva el derecho de exigir la creación de una cuenta de usuario para acceder a determinados servicios y contenidos y de subordinar la habilitación de la misma al suministro de ciertos datos personales del usuario."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Los usuarios que opten por registrarse deberán brindar información exacta y completa acerca de sus datos personales."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Cuando sean aceptados como Usuarios registrados de esta Aplicación deberán elegir un nombre de usuario y una contraseña única, tomar las precauciones necesarias para que su nombre de usuario y su contraseña sean privados, no permitir que terceras personas utilicen su cuenta de usuario y desconectarse del sitio cuando haya terminado la sesión a fin de evitar el uso del mismo por personas no autorizadas. Son responsables por los daños y perjuicios que se puedan derivar del Incumplimiento de las obligaciones anteriores."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Los datos personales que se recabarán de los usuarios registrados son, únicamente, aquellos brindados libre y voluntariamente por el Titular de los Datos Personales al momento de la creación de la cuenta de usuario o posteriormente."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA no almacenará datos personales de los usuarios de la Aplicación  que no sea brindada de esa manera."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="A los fines de conservar una constancia por escrito o medio equivalente del consentimiento del titular de los datos personales antes de la habilitación de la cuenta de usuario se le exige que preste conformidad haciendo un clic en el botón que contiene la leyenda “Acepto la Política de Confidencialidad y Protección de Datos Personales” de  TRES PROVINCIAS SEGUROS DE PERSONAS SA."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="3.	Cualquier información, con excepción de datos o información personal, que los usuarios transmitan a TRES PROVINCIAS SEGUROS DE PERSONAS SA a través de esta Aplicación, correo electrónico o de otra manera, incluyendo datos, preguntas, comentarios o sugerencias, serán tratados como información no confidencial y se convertirán en propiedad de TRES PROVINCIAS SEGUROS DE PERSONAS SA. Esta información, con excepción de datos o información personal, se puede utilizar para cualquier propósito, lo que incluye: reproducción, solicitud, acceso, transmisión, publicación y difusión. TRES PROVINCIAS SEGUROS DE PERSONAS SA es libre de utilizar cualquier idea, concepto, conocimiento técnico, o técnica contenida en cualquier comunicación que usted envíe a TRES PROVINCIAS SEGUROS DE PERSONAS SA vía esta Aplicación o por cualquier otro medio para cualquier propósito, lo cual incluye el desarrollo y comercialización de productos."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="4.	TRES PROVINCIAS SEGUROS DE PERSONAS SA en ningún caso procederá al 	 de los llamados datos sensibles de los usuarios de la Aplicación. Se entenderá por datos sensibles aquellos datos personales que revelan el origen racial y étnico, las opiniones políticas, las convicciones religiosas, filosóficas o morales, la afiliación sindical o información referente a la salud o a la vida sexual de sus usuarios."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="IV. USO DE LA INFORMACIÓN Y TRATAMIENTO DE LOS DATOS PERSONALES"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA usará los datos recabados con la finalidad de mantener informados a los usuarios acerca de sus productos y servicios, para proporcionar en forma más eficaz los servicios que los usuarios soliciten, para evacuar en forma inmediata consultas sobre el estado de las pólizas contratadas con la Compañía, el estado de pago de las primas de los seguros, las características de la cobertura contratada, las personas designadas como beneficiarios en la póliza, los siniestros denunciados, la siniestralidad de las pólizas, para efectuar cotizaciones on line de seguros, para obtener la confirmación de la recepción de documentos, para enviar información de tarifas y recordatorios sobre servicios y productos de nuestra Compañía, organizar programas de fidelización de clientes y beneficios adicionales, etc."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="En el futuro, posiblemente utilicemos esta Aplicación para que los usuarios puedan imprimir el comprobante de pago de las primas, para enviar una versión digital de sus pólizas, etc. e incluso, para realizar operaciones de venta de los mismos."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA garantiza a los usuarios que no estuvieran de acuerdo con las finalidades para las cuales recaba los datos o con alguna de las finalidades para las cuales se utilizarán en el futuro, de las que serán debidamente informados, el derecho de obtener la supresión de los mismos de su base de datos."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA no revelará la información provista a ninguna organización externa, a menos que previamente posea la autorización del cliente y/o le sea requerida por ley o por resolución de autoridad competente."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="No obstante lo anterior, nos reservamos el derecho de compartir su información personal con el único objeto de desarrollar normalmente nuestras operaciones, con: terceros, si es necesario para la prestación de los servicios de seguros, como por ejemplo al proveedor de envío de correos, investigadores, etc.; cualquiera de las subsidiarias o empresas de TRES PROVINCIAS SEGUROS DE PERSONAS SA; autoridades gubernamentales, cuando sea solicitado por ellas en virtud de alguna norma legal, o cuando sea obligatorio para nosotros remitirla, en caso de que así también lo determine la ley."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA garantiza que no venderá, alquilará, transferirá ni cederá los datos personales de sus clientes o visitantes a terceros sin su expreso consentimiento."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="V. DERECHO DE ACCESO, RECTIFICACIÓN Y SUPRESIÓN DE LOS DATOS REGISTRADOS"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA  reconoce al Titular de los Datos Personales, previa acreditación de su identidad, el derecho a solicitar y a obtener información sobre sus datos personales incluidos en sus registros, dentro de los diez días hábiles desde la solicitud, de conformidad con lo establecido en el artículo 14, inciso 3 de la Ley 25.326 de protección de Datos Personales."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA garantiza también al Titular de los Datos Personales el derecho a obtener la rectificación, actualización y, cuando corresponda, la supresión de los datos personales de los que sea titular, que estén incluidos en su banco de datos y garantiza la rectificación, supresión o actualización de los mismos en el plazo máximo de cinco días hábiles de recibido el reclamo del titular de los datos o advertido el error o falsedad."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="En cumplimiento de la disposición 10/2008 de la Dirección Nacional de Protección de Datos Personales se hace saber que:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="El Titular de los Datos Personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita y en intervalos no inferiores a seis meses, salvo que acredite un interés legítimo al efecto, conforme con lo establecido en el articulo 14, inciso 3 de la Ley N° 25.326."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Los derechos de acceso y rectificación de datos, se deberán ejercer a través de: Carta Documento dirigida a TRES PROVINCIAS SEGUROS DE PERSONAS SA . –Asesoría Letrada-  …..(domicilio), o de correo electrónico dirigido a ….."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="En caso de incumplimiento de esta obligación por parte de TRES PROVINCIAS SEGUROS DE PERSONAS SA dentro del término mencionado habilita el ejercicio de la acción de protección de los datos personales o de hábeas data prevista en la Ley 25.326 de Protección de Datos Personales."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="La Dirección Nacional de Protección de Datos Personales, Órgano de Control de la Ley No 25.326 tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA podrá denegar el acceso, rectificación o la supresión de los datos personales registrados únicamente por las causas previstas en la Ley de protección de Datos Personales. "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text='Para mayor información remitirse a la Dirección Nacional de Datos Personales: www.jus.gov.ar/datos-personales.aspx, "Ejerza sus derechos".'
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="VI. NIVEL DE SEGURIDAD Y RESPONSABILIDAD"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="TRES PROVINCIAS SEGUROS DE PERSONAS SA se compromete a realizar sus mejores esfuerzos considerando la tecnología disponible a efectos de proteger y mantener a salvo y conforme a niveles de protección adecuados la información personal que Usted ingrese. Para ello ha adoptado medidas seguridad que protegen dicha información."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Sin perjuicio de todo lo expuesto, teniendo en cuenta que las medidas de seguridad en Internet no son inexpugnables, no puede garantizarse seguridad absoluta, por lo que TRES PROVINCIAS SEGUROS DE PERSONAS SA no se responsabiliza de cualquier daño y/o perjuicio y/o beneficios dejados de percibir por el Titular de los Datos Personales o cualquier otro tercero que se vea perjudicado en ese sentido."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="VII. JURISDICCIÓN Y LEGISLACIÓN APLICABLE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="El presente acuerdo sobre el tratamiento de los datos personales de los usuarios de la Aplicación de TRES PROVINCIAS SEGUROS DE PERSONAS SA se rige por las leyes de la República Argentina."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:text="Cualquier disputa o reclamo que surja con relación al mismo, incluyendo cualquier disputa sobre la validez, interpretación, exigibilidad o incumplimiento serán exclusivamente resueltas por los Tribunales Ordinarios de la Primera Circunscripción Judicial de la Provincia de Mendoza."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/White"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#25676767"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:alpha="95"
+                        android:background="@drawable/boton_foreground"
+                        android:drawableLeft="@drawable/ic_accept"
+                        android:text="  aceptar  " />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
