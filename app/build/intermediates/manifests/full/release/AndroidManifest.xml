@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seguros.presupuestos"
-    android:versionCode="20"
-    android:versionName="4.12" >
+    android:versionCode="22"
+    android:versionName="4.14" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -103,12 +103,12 @@
             android:name="com.seguros.presupuestos.Activacion2"
             android:label="Panel Administracion"
             android:screenOrientation="portrait"
-            android:theme="@style/AppDialogTheme" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.LoginApp"
             android:label="Login User"
             android:screenOrientation="portrait"
-            android:theme="@style/AppDialogTheme" >
+            android:theme="@style/CustomDialogTheme" >
             <intent-filter>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
@@ -129,22 +129,22 @@
             android:name="com.seguros.presupuestos.NuevoSepelio"
             android:label="Nuevo Integrante Seguro Sepelio"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.NuevoVida"
             android:label="Integrantes Seguro de Vida"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.pdf.GenerarPDFActivity"
             android:label="Compartir Presupuesto"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.pdf.GenerarPDFActivitySep"
             android:label="Compartir Presupuesto"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.MenuContactos"
             android:label="Contactenos...."
@@ -189,15 +189,15 @@
         <activity
             android:name="com.seguros.presupuestos.SepelioCalc"
             android:screenOrientation="portrait"
-            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.Cocherias.BuscaxDni"
             android:screenOrientation="portrait"
-            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.Cocherias.FamiliaActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.Cocherias.DatosAsegurados"
             android:screenOrientation="portrait" />
@@ -246,7 +246,7 @@
         <activity
             android:name="com.seguros.presupuestos.MostrarInfo"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.MenuAdmin"
             android:screenOrientation="portrait" />
@@ -261,11 +261,11 @@
         <activity
             android:name="com.seguros.presupuestos.Menu_solicitudes"
             android:screenOrientation="portrait"
-            android:theme="@style/AppDialogTheme" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.Menu_cambiar_datos"
             android:screenOrientation="portrait"
-            android:theme="@style/AppDialogTheme" />
+            android:theme="@style/CustomDialogTheme" />
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"

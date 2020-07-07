@@ -16,6 +16,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -70,6 +71,7 @@ int sexo, sexo_cony;
 int edad, edad_cony;
 boolean tieneconyugue;
 ImageButton botonedicion, bcompartir;
+int INDICE_50000 = 0;
 //******************************************************************************************************************************* 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -113,8 +115,10 @@ ImageButton botonedicion, bcompartir;
     	
 		spinnerCapital = new ArrayAdapter<String>(ListServicios.this,   android.R.layout.simple_spinner_item, Datos.Obtener_Capital(ListServicios.this));
 		spinnerCapital.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
-    	
-        if (savedInstanceState != null) {
+
+
+
+		if (savedInstanceState != null) {
      	   recuperar_datos(savedInstanceState);
         }
     	
@@ -127,6 +131,7 @@ ImageButton botonedicion, bcompartir;
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
+				    verifica_edad();
 	        		calcular_prima();
 			}
 
@@ -185,7 +190,37 @@ ImageButton botonedicion, bcompartir;
 			ActualizarPreios();
 		}
 }
-protected void seleccionar_todos(boolean valor) {
+//*********************************************************
+	private void verifica_edad() {
+		String text = capital.getSelectedItem().toString().replace(".", "");
+		float valor_capital = Float.valueOf(text);
+		if (valor_capital > 49999)
+		{
+			int edad;
+			try {
+				edad      = Integer.valueOf(edad_titular.getText().toString());
+
+			} catch (Exception e) {
+				edad = 0;
+			}
+
+
+			INDICE_50000 = 0;
+			DatosBDTablas db = new DatosBDTablas(getApplicationContext());
+			db.open();
+			INDICE_50000 = db.Consultar_Capital_indice50000();
+			db.close();
+
+			if ((edad >= 74) && (edad <=80) && (INDICE_50000 > 0)){
+				capital.setSelection(INDICE_50000);
+
+			}
+
+		}
+
+	}
+//*******************************************************
+	protected void seleccionar_todos(boolean valor) {
 	for (int i = 0; i < valores_select.length; i++) {
 		if (i > 0)
 			valores_select[i] = valor;
@@ -281,6 +316,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data){
     	setear_sexo();
     	edad_titular.setText(String.valueOf(edad));
     	edad_conyugue.setText(String.valueOf(edad_cony));
+		verifica_edad();
     	calcular_prima();		
        }
     

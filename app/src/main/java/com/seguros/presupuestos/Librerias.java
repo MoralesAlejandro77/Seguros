@@ -176,6 +176,7 @@ public static Cuentas LeerCuentas(Context c) {
 int cantidad = 0;
 Cuentas   cuentas     = new Cuentas();
 cantidad = 0;
+/*
 try {
 	Account[] accounts = AccountManager.get(c).getAccounts();
 
@@ -204,13 +205,13 @@ try {
 		  	
 		  } catch (Exception e) {
 			  Log.d("login", "Error!!");
-		  }
+		  }*/
 		  return cuentas;
 		  }
 /*******************************************************************************************************/
 public static String unico_ID(Context c) {
 	String idunico = "";
-	try {
+/*	try {
 		final TelephonyManager tm = (TelephonyManager) c.getSystemService(Context.TELEPHONY_SERVICE);
 
 		final String tmDevice, tmSerial, androidId;
@@ -223,7 +224,7 @@ public static String unico_ID(Context c) {
 		idunico = deviceUuid.toString();
 	} catch (Exception e) {
 		Log.d("unico_ID", "Error!!");
-	}
+	}*/
   return idunico;
 }
 /*******************************************************************************************************/

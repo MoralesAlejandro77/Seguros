@@ -38,7 +38,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginApp extends FragmentActivity {
+public class LoginApp extends Activity {
 	private static final int MY_PERMISSIONS_REQUEST_INTERNET = 101;
 	private static final int MY_PERMISSIONS_REQUEST_CONTACTS = 102;
 	EditText pass, id;
@@ -252,15 +252,18 @@ protected void Verifica_clave() {
 	}
 	/*************************************************************************************************************/
 	public Map<String,String> preparar_Parametros() {
-		Cuentas cuentas = new Cuentas();
+	/*	Cuentas cuentas = new Cuentas();
 		cuentas = Librerias.LeerCuentas(LoginApp.this);
-		String idunico = Librerias.unico_ID(LoginApp.this);
+		String nombrecuenta =  cuentas.getNombre();
+		String idunico      = Librerias.unico_ID(LoginApp.this);*/
+		String idunico      = "";
+		String nombrecuenta =  "";
 
 		Map<String,String> params = new HashMap<String, String>();
 		params.put("clave"      , pass.getText().toString());
 		params.put("id"         , id.getText().toString());
 		params.put("idunico"    , idunico);
-		params.put("cuenta"     , cuentas.getNombre());
+		params.put("cuenta"     , nombrecuenta);
 		params.put("version"    , Librerias.getAndroidVersion());
 		params.put("tag"        ,"3P197792S");
 		params.put("app"        , getString(R.string.version));

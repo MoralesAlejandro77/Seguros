@@ -28,15 +28,12 @@ import org.json.JSONObject;
 		
 		if (Librerias.verificaConexion(Publicaciones.this))
 		{
-	//		  if (Datos.Esta_Activada(getApplicationContext()))
-	//		  {
 				  if (Datos.Esta_Logueada(getApplicationContext()))
 				  {
-					  if (Datos.Registro_Log(Publicaciones.this))
-						  registrar_log();
+				//	  if (Datos.Registro_Log(Publicaciones.this))
+				//		  registrar_log();
 				  }
-		//	  }
-			
+
 		}
 		
 	    stopSelf();

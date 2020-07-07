@@ -27,8 +27,8 @@ android {
         applicationId "com.seguros.presupuestos"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 20
-        versionName "4.12"
+        versionCode 22
+        versionName "4.14"
     }
     buildTypes {
         release {
