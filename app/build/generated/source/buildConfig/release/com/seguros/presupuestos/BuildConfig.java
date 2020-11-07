@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.seguros.presupuestos";
   public static final String BUILD_TYPE = "release";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 22;
-  public static final String VERSION_NAME = "4.14";
+  public static final int VERSION_CODE = 24;
+  public static final String VERSION_NAME = "4.16";
 }

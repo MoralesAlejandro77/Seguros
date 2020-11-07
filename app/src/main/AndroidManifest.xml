@@ -26,15 +26,17 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".Activity_modPrecios"></activity>
+        <activity
+            android:name=".ActivityPrecios"
+            android:label="@string/title_activity_precios"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
         <activity
             android:name=".LegalActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".Solicitud_ok"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Solicitud_ok"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Menu_asegurados_1"
             android:screenOrientation="portrait" />
@@ -185,11 +187,11 @@
         <activity
             android:name="com.seguros.Cocherias.BuscaxDni"
             android:screenOrientation="portrait"
-             android:theme="@style/CustomDialogTheme" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.Cocherias.FamiliaActivity"
             android:screenOrientation="portrait"
-             android:theme="@style/CustomDialogTheme" />
+            android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.Cocherias.DatosAsegurados"
             android:screenOrientation="portrait" />

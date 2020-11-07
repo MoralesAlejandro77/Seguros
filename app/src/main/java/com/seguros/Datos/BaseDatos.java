@@ -19,19 +19,21 @@ import android.util.Log;
 public class BaseDatos extends SQLiteOpenHelper {
 //**************************************************************************************************    
 public static final String TAG = "IDATOS";   
-public static final String packageName      = "Android.Seguros.Datos";
-public static final int DATABASE_VERSION    = 9;
-public static final String DATABASE_NAME    = "BDSeguros";
-public static final String TABLA_SERVICIOS  = "Servicios";
-public static final String TABLA_PRIMAS     = "Primas";
-public static final String TABLA_PLANES     = "Planes";
-public static final String TABLA_PLANES_TMP = "tmpPlanes";
-public static final String TABLA_PARAMETROS = "parametros";
-public static final String TABLA_CONTROL    = "control";
-public static final String TABLA_GASTOS     = "gastos";
-public static final String TABLA_CAPITAL    = "capital";
-public static final String TABLA_LOG        = "log";
-public static final String TABLA_TARIFAS    = "Tarifas";
+public static final String packageName          = "Android.Seguros.Datos";
+public static final int DATABASE_VERSION        = 10;
+public static final String DATABASE_NAME        = "BDSeguros";
+public static final String TABLA_SERVICIOS      = "Servicios";
+public static final String TABLA_PRIMAS         = "Primas";
+public static final String TABLA_PLANES         = "Planes";
+public static final String TABLA_PLANES_TMP     = "tmpPlanes";
+public static final String TABLA_PARAMETROS     = "parametros";
+public static final String TABLA_CONTROL        = "control";
+public static final String TABLA_GASTOS         = "gastos";
+public static final String TABLA_CAPITAL        = "capital";
+public static final String TABLA_LOG            = "log";
+public static final String TABLA_TARIFAS        = "Tarifas";
+//public static final String TABLA_Complejidad    = "Complejidad";
+
 private Context contexto;
 //**************************************************************************************************    
 public static final String crearTablaServicios = "create table if not exists "  
@@ -73,6 +75,14 @@ public static final String crearTablaLog = "create table if not exists "
     public static final String crearTablaTarifas = "create table if not exists "
             + " Tarifas (codigo integer primary key, descripcion text,  tipo integer );";
 //**************************************************************************************************
+    /*
+public static final String crearTablaComplejidad = "create table if not exists "
+        + " Planes (codigo integer, descripcion text,  sexo integer, edadi integer, edadf integer,"
+        + " valor real, valor2 real , primary key (codigo, sexo, edadi));";
+
+     */
+//**************************************************************************************************
+
 
   public BaseDatos(Context contexto) {
                 super(contexto, DATABASE_NAME, null, DATABASE_VERSION);
@@ -90,6 +100,8 @@ public static final String crearTablaLog = "create table if not exists "
             db.execSQL(crearTablaCapital);
             db.execSQL(crearTablaLog);
             db.execSQL(crearTablaTarifas);
+//            db.execSQL(crearTablaComplejidad);
+
 
         }   
 //**************************************************************************************************    
@@ -107,9 +119,18 @@ public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
                 db.execSQL("DROP TABLE IF EXISTS " + TABLA_GASTOS);
                 db.execSQL("DROP TABLE IF EXISTS " + TABLA_CAPITAL);
                 db.execSQL("DROP TABLE IF EXISTS " + TABLA_LOG);
-                db.execSQL("DROP TABLE IF EXISTS " + TABLA_TARIFAS)*/
-                db.execSQL(crearTablaTarifas);
-                onCreate(db);
+                db.execSQL("DROP TABLE IF EXISTS " + TABLA_TARIFAS)
+                db.execSQL("DROP TABLE IF EXISTS " + TABLA_Complejidad)
+                */
+
+        switch(oldVersion) {
+        case 9:
+            // db.execSQL(DATABASE_CREATE_color);
+            // we want both updates, so no break statement here...
+        case 10:
+     //       db.execSQL(crearTablaComplejidad);
+        }
+        onCreate(db);
         }
 //********************************************************************************  
 

@@ -81,6 +81,8 @@ public Cursor ConsultarServicios() {
 		CargarCapital();
 		CargarTarifas();
 		AgregarClave("");
+	//	CargarComplejidad();
+
 	//	AgregarLog();
 	   }
 	Cursor registros = db.query(BaseDatos.TABLA_SERVICIOS, new String[] {
@@ -170,6 +172,7 @@ public void CargarServicios()
 	AgregarServicio( 9, "Adicional por Nacimiento"         , 1 ,  50,     0,  64, false, 3, 12);
 	AgregarServicio(10, "Renta diaria por Internacion"     , 1 ,   1,     0,  64, false, 3, 12);
 	AgregarServicio(11, "Ultimos Gastos"                   , 2 , 100, 10000, 300, false, 3, 12);
+   // AgregarServicio(13, "Alta Complejidad Medica"          , 1 , 100,     0, 65, false, 1, 1000);
 
 	
 }
@@ -206,7 +209,14 @@ new String[] {"codigo", "edad", "edad_max", "porc"}, "codigo = " + id + " and ed
 return registro;
 }
 //**************************************************************************************
-/**** Carga de Tablas predefinidas de Calculo *****/	
+
+public int Borrar_Prima(int codigo)
+{
+    return db.delete(BaseDatos.TABLA_PRIMAS, "codigo = " + codigo , null);
+}
+//**************************************************************************************
+
+// /**** Carga de Tablas predefinidas de Calculo *****/
 
 public void CargarPrimas() 
 {
@@ -492,7 +502,18 @@ public void CargarPrimas()
 	AgregarPrima(	12	,	78 	,	78 	,	0.103558714160738	);
 	AgregarPrima(	12	,	79 	,	79 	,	0.111102710843777	);
 	AgregarPrima(	12	,	80 	,	80 	,	0.119361777794474	);
-	
+/*
+
+    AgregarPrima(13,	1,	  25	,	 12  );
+    AgregarPrima(13,	26,	  30	,	 14  );
+    AgregarPrima(13,	31,	  35	,	 16  );
+    AgregarPrima(13,	36,	  40	,	 18  );
+    AgregarPrima(13,	41,	  45	,	 21  );
+    AgregarPrima(13,	46,	  50	,	 24  );
+    AgregarPrima(13,	51,	  55	,	 28  );
+    AgregarPrima(13,	56,	  60	,	 33  );
+    AgregarPrima(13,	61,	  65	,	 40  );
+*/
 }
 //**************************************************************************************
 public int obtenerCantidadPrimas() throws SQLException {
@@ -596,7 +617,7 @@ new String[] {"codigo", "fechainst", "fechavigencia", "activado"}, "codigo = " +
 return resultado;
 }
 //**************************************************************************************
-public void CargarPlanes() 
+public void CargarPlanes()
 {
 /*	AgregarPlanes(String plan, int servicio, int edadi, int edadf, float valor)  */
 /** PLANES SEPELIO **/	
@@ -1012,6 +1033,60 @@ public int Consultar_Capital_indice50000() throws SQLException {
 	return indice;
 }
 //**************************************************************************************
+	/*
+public long AgregarComplejidad(int codigo, int sexo, int edadi, int edadf, double importe)
+	{
+		ContentValues registro = new ContentValues();
+		registro.put("codigo"    , codigo);
+		registro.put("sexo"      , sexo);
+		registro.put("edadi"     , edadi);
+		registro.put("edadf"     , edadf);
+		registro.put("valor"     , importe);
+		return db.insert(BaseDatos.TABLA_Complejidad, null, registro);
+	}
+	//**************************************************************************************
+	public Cursor ConsultarComplejidad() {
+		Cursor registros = db.query(BaseDatos.TABLA_PRIMAS, new String[] {
+				"codigo", "sexo", "edadi", "edadf", "valor"}, null, null, null, null, null);
+		return registros;
+	}
+	//**************************************************************************************
+public Cursor obtenerComplejidad(int codigo, int edad, int sexo) throws SQLException {
+	Cursor registro = db.query(true, BaseDatos.TABLA_PLANES,
+			new String[] {"codigo", "sexo", "edadi", "edadf","valor"}, "codigo = " + codigo +" and sexo = " + sexo + " and edadi <= " + edad + " and " + edad + " <= edadf  ", null, null, null, null, null);
+	if (registro != null)
+	{
+		registro.moveToFirst();
+	}
+	return registro;
+}
+//**************************************************************************************
+public void CargarComplejidad()
+{
+	AgregarComplejidad(13,0,	1,	  25	,	 12  );
+	AgregarComplejidad(13,0,	26,	  30	,	 14  );
+	AgregarComplejidad(13,0,	31,	  35	,	 16  );
+	AgregarComplejidad(13,0,	36,	  40	,	 18  );
+	AgregarComplejidad(13,0,	41,	  45	,	 21  );
+	AgregarComplejidad(13,0,	46,	  50	,	 24  );
+	AgregarComplejidad(13,0,	51,	  55	,	 28  );
+	AgregarComplejidad(13,0,	56,	  60	,	 33  );
+	AgregarComplejidad(13,0,	61,	  65	,	 40  );
+
+    AgregarPrima(13,	1,	  25	,	 12  );
+    AgregarPrima(13,	26,	  30	,	 14  );
+    AgregarPrima(13,	31,	  35	,	 16  );
+    AgregarPrima(13,	36,	  40	,	 18  );
+    AgregarPrima(13,	41,	  45	,	 21  );
+    AgregarPrima(13,	46,	  50	,	 24  );
+    AgregarPrima(13,	51,	  55	,	 28  );
+    AgregarPrima(13,	56,	  60	,	 33  );
+    AgregarPrima(13,	61,	  65	,	 40  );
+
+}*/
+//**************************************************************************************
+
+
 
 
 }

@@ -59,6 +59,10 @@ public class UserFunctions {
 	public static String loginURL25   = URL_SERVER + "LeerAsegurado2.php";
 	public static String loginURL26   = URL_SERVER + "ModAsegurado3.php";
     public static String URL_TOKEN    = URL_SERVER + "token.php";
+	public static String loginURL27   = URL_SERVER + "PreciosItems.php";
+	public static String loginURL28   = URL_SERVER + "ListPlanes.php";
+
+	public static String loginURL29   = URL_SERVER + "ModPrecios.php";
 
 	// constructor
 	public UserFunctions(){

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seguros.presupuestos"
-    android:versionCode="22"
-    android:versionName="4.14" >
+    android:versionCode="24"
+    android:versionName="4.16" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -36,10 +36,14 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.seguros.presupuestos.Activity_modPrecios" />
+        <activity
+            android:name="com.seguros.presupuestos.ActivityPrecios"
+            android:label="@string/title_activity_precios"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
         <activity
             android:name="com.seguros.presupuestos.LegalActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.presupuestos.Solicitud_ok"
             android:screenOrientation="portrait" />

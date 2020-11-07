@@ -39,6 +39,8 @@ public class MenuActual extends FragmentActivity {
     Button boton_vida;
     ArrayList<DatosSepelio> Vecdatos;
     ArrayList<DatosVida> VecdatosVida;
+    ArrayList<DatosTablaIndices> VecTablaIndices;
+
     TextView fechaactsep, vigenciasep, vigenciavida, fechaactvida;
     int Aplicacion_activa;
 
@@ -382,6 +384,7 @@ public class MenuActual extends FragmentActivity {
                     @Override
                     public void onResponse(String response) {
                         finalizar_Control(response, producto);
+                        ObtenerTablaItems();
                     }
                 },
                 new Response.ErrorListener() {
@@ -541,7 +544,8 @@ public class MenuActual extends FragmentActivity {
                 {
                     Actualizar_valores_Vida(MenuActual.this);
                     leer_ultima_act_Vida();
-                    Toast.makeText(getApplicationContext(), "La Tabla de Vida ha sido Actualizada con Exito!, " + VecdatosVida.size() + " filas afectadas en la actualizacion!", Toast.LENGTH_LONG).show() ;
+                    Toast.makeText(getApplicationContext(), "La Tabla de Vida ha sido Actualizada con Exito!, " + VecdatosVida.size() + " filas afectadas en la actualizacion! " , Toast.LENGTH_LONG).show() ;
+                 //   boton_vida.setText(response);
                     Librerias.Grabar_act_vida(getApplicationContext());
                     ObtenerGastos();
                 }
@@ -845,6 +849,159 @@ private void ObtenerGastos() {
         }
         return cantidad;
     }
+    //*******************************************************************************************************************************
+    private void ObtenerTablaItems() {
+
+        preparar();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL27,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar_items(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        boton_vida.setEnabled(true);
+
+                    }
+                }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = preparar_Parametros("tablaindices", "1");
+                return params;
+            }
+
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+    /*************************************************************************************************************/
+    public void finalizar_items(String response) {
+        boolean errores = false;
+        String producto = "1";
+        try {
+            VecTablaIndices = Leer_items_Tabla(response);
+            Actualizar_items();
+
+            try {
+                if (Aplicacion_activa == 1) // Exitoso
+                {
+                    Toast.makeText(getApplicationContext(), "La Tabla de Indices fue Actualizada con Exito!, " + VecTablaIndices.size()  + " filas afectadas en la actualizacion!", Toast.LENGTH_LONG).show();
+
+                } else {
+                    Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : ");
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : " + e.toString());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : " + e.toString());
+        }
+        progressBar.setVisibility(View.GONE);
+        boton_vida.setEnabled(true);
+
+    }
+
+    private void Actualizar_items() {
+        DatosBDTablas db = new DatosBDTablas(MenuActual.this);
+        db.open();
+
+        int codigoint = 0;
+        int valor = 0;
+        for (int i = 0; i < VecTablaIndices.size(); i++) {
+            valor = Integer.valueOf(VecTablaIndices.get(i).getCodigoint());
+            if ((codigoint != valor) && (valor > 0))
+                db.Borrar_Prima(valor);
+            codigoint = valor;
+        }
+
+
+        int codi  = 0;
+        int edadi = 0;
+        int edadf = 0;
+        float importe = 0;
+
+        for (int i = 0; i < VecTablaIndices.size(); i++) {
+            codi  = Integer.valueOf(VecTablaIndices.get(i).getCodigoint());
+            edadi = Integer.valueOf(VecTablaIndices.get(i).getEdadi());
+            edadf = Integer.valueOf(VecTablaIndices.get(i).getEdadf());
+            importe = Float.valueOf(VecTablaIndices.get(i).getValor());
+            db.AgregarPrima(codi,	edadi,	  edadf	,	 importe  );
+        }
+
+        db.close();
+
+
+
+    }
+
+    //*******************************************************************************************************************************
+    public ArrayList<DatosTablaIndices> Leer_items_Tabla(String response) {
+        ArrayList<DatosTablaIndices> MiLista = new ArrayList<DatosTablaIndices>();
+        Aplicacion_activa = 0;
+        int cantidad = 0;
+        JSONArray arreglo = null;
+        try {
+            arreglo = new JSONArray(response);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        if (arreglo == null)
+        {
+            Toast.makeText(getBaseContext(),"No es posible consultar los Datos!" ,Toast.LENGTH_LONG).show();
+            MiLista = null;
+        }
+        else
+        {
+
+            cantidad = arreglo.length();
+            int j = 0;
+
+            if (cantidad > 0) {
+                Aplicacion_activa = 1;
+                do {
+                    MiLista.add(new DatosTablaIndices());
+                    try
+                    {
+                        JSONObject json = new JSONObject(arreglo.getJSONObject(j).toString());
+                        MiLista.get(j).setCodigo(json.getString("codigo"));
+                        MiLista.get(j).setDescripcion(json.getString("descripcion"));
+                        MiLista.get(j).setEdadi(json.getString("edadi"));
+                        MiLista.get(j).setEdadf(json.getString("edadf"));
+                        MiLista.get(j).setValor(json.getString("valor"));
+                        MiLista.get(j).setCodigoint(json.getString("codigoint"));
+                        MiLista.get(j).setSexo(json.getString("sexo"));
+
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                        break;
+                    }
+                    j++;
+                } while(j<cantidad);
+            }
+
+        }
+        return MiLista;
+    }
+
+//*******************************************************************************************************************************
 
 /*************************************************************************************************************/
 

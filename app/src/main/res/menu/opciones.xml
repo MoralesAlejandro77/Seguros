@@ -15,6 +15,10 @@
 		android:title="Administración"
 		android:showAsAction="ifRoom|withText"/>
 
+	<item
+		android:id="@+id/mn_precios"
+		android:title="Gestion de Precios"
+		android:showAsAction="ifRoom|withText"/>
 
 
 	<item

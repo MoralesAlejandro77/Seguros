@@ -16,12 +16,12 @@
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-hdpi\\ic_empresa.png"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable_boton_solicitud_poliza.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable\\boton_solicitud_poliza.png"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_pagos.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_pagos.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable_boton_solicitud_poliza.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable\\boton_solicitud_poliza.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_pagos.png.flat",
@@ -204,12 +204,12 @@
         "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-hdpi\\ic_edita2.png"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_perm_contact_calendar_black_24dp.png.flat",
@@ -220,12 +220,12 @@
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\da11b806da01543b9caaeb62e272c26f\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_segsepelio.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable-xhdpi\\segsepelio.png"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_action_bar_title_item.xml.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_segsepelio.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable-xhdpi\\segsepelio.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_poliza.png.flat",
@@ -272,28 +272,28 @@
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\color_abc_background_cache_hint_selector_material_dark.xml.flat",
-        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_favorito.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xhdpi\\ic_favorito.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\color_abc_background_cache_hint_selector_material_dark.xml.flat",
+        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout-land_acceso_clave2.xml.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout-land\\acceso_clave2.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_share.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_share.png"
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_design_bottom_navigation_item.xml.flat",
+        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi_logotres.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable-xxxhdpi\\logotres.png"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_design_bottom_navigation_item.xml.flat",
-        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\layout\\design_bottom_navigation_item.xml"
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_share.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_share.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_alert_dialog_material.xml.flat",
@@ -328,40 +328,40 @@
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\drawable\\ic_mtrl_chip_checked_circle.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable_boton_mediospago.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable\\boton_mediospago.png"
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_ic_edita1.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_edita1.png"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable_boton_mediospago.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable\\boton_mediospago.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_rating_star_on_tiny.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable-hdpi\\rating_star_on_tiny.png"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_vto2.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-mdpi\\ic_vto2.png"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout-v26_abc_screen_toolbar.xml.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\layout-v26\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_ic_vto2.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-mdpi\\ic_vto2.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\color_mtrl_chip_text_color.xml.flat",
-        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\color\\mtrl_chip_text_color.xml"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_default.xml.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\color_mtrl_chip_text_color.xml.flat",
+        "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\9ebeb6330b66183851f29cc4e7905b28\\res\\color\\mtrl_chip_text_color.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_segvida.png.flat",
@@ -372,12 +372,12 @@
         "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v21\\ic_compania.xml"
     },
     {
-        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_personas_background.png.flat",
-        "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\personas_background.png"
-    },
-    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable_fondo_solicitud_poliza.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\drawable\\fondo_solicitud_poliza.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_personas_background.png.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-xhdpi\\personas_background.png"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\color_abc_secondary_text_material_light.xml.flat",
@@ -1936,6 +1936,10 @@
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\d1fb58a9eb935e842bbb3c5f767e3f7d\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_lista_precios.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\lista_precios.xml"
+    },
+    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_notifi2.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\mipmap-xhdpi\\ic_notifi2.png"
     },
@@ -2754,6 +2758,10 @@
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_keyboard_black_24dp.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\ic_keyboard_black_24dp.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_precios.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\activity_precios.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_notificacion1.png.flat",
@@ -3888,6 +3896,10 @@
         "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout-land\\activity_calendario.xml"
     },
     {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_content_activity_precios.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\content_activity_precios.xml"
+    },
+    {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\XENIX-ENVY1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\d0c8cc01a66d074d80693ebd88bab048\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
@@ -4354,6 +4366,10 @@
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_personas_background.png.flat",
         "source": "C:\\proyectos\\Seguros\\app\\build\\generated\\res\\pngs\\release\\drawable-mdpi\\personas_background.png"
+    },
+    {
+        "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_mod_precios.xml.flat",
+        "source": "C:\\proyectos\\Seguros\\app\\src\\main\\res\\layout\\activity_mod_precios.xml"
     },
     {
         "merged": "C:\\proyectos\\Seguros\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_user_help2.png.flat",

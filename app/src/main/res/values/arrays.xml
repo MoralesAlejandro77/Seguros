@@ -35,11 +35,26 @@
 <item >PLAN G</item>
 </string-array>
 
+<string-array name="planes2">
+<item >TODOS </item>
+<item >PLAN A</item>
+<item >PLAN B</item>
+<item >PLAN C</item>
+<item >PLAN G</item>
+</string-array>
+
 
 <string-array name="tarifas">
         <item >03</item>
         <item >29</item>
 </string-array>
+
+<string-array name="tarifas2">
+        <item >TODAS</item>
+        <item >03</item>
+        <item >29</item>
+</string-array>
+
 
 <string-array name="tipodoc">
         <item >DNI</item>

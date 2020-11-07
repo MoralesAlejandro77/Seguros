@@ -56,6 +56,9 @@ public class Menu extends AppCompatActivity {
 	        case R.id.mn_act:
 	        	actualizarvalores();
 	            return true;
+			case R.id.mn_precios:
+				Modificar_ListaPrecios();
+				return true;
 			case R.id.mn_adm:
 				adm();
 				return true;
@@ -65,6 +68,11 @@ public class Menu extends AppCompatActivity {
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
+	}
+
+	private void Modificar_ListaPrecios() {
+		Intent i = new Intent(Menu.this,ActivityPrecios.class);
+		startActivity(i);
 	}
 
 	private void cerrar_sesion() {
