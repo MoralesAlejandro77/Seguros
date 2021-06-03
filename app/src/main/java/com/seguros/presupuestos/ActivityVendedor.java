@@ -40,7 +40,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ActivityVendedor extends FragmentActivity  {
+public class
+ActivityVendedor extends FragmentActivity  {
 	EditText pass, id, nombre;
 	ImageButton botongrab,botoneli;
 	int opcion;
@@ -49,7 +50,7 @@ public class ActivityVendedor extends FragmentActivity  {
 	String usuario = "";
 	int resultado = 0;
 	int accion    = 0;
-	CheckBox estado,nvendedor,ncocheria,nadmin;
+	CheckBox estado,nvendedor,ncocheria,nadmin, nadministra;
 	ListView listdisp;
 	ArrayList<VendedorD> arraydir;
 //******************************************************************************************************************************* 
@@ -63,6 +64,8 @@ public class ActivityVendedor extends FragmentActivity  {
 		nvendedor     = (CheckBox)findViewById(R.id.nvendedor);
 		ncocheria     = (CheckBox)findViewById(R.id.ncocheria);
 		nadmin        = (CheckBox)findViewById(R.id.nadmin);
+		nadministra   = (CheckBox)findViewById(R.id.nadministra);
+
 
         pass          = (EditText)findViewById(R.id.txtpass);
         botongrab     = (ImageButton) findViewById(R.id.bgraba);
@@ -127,18 +130,32 @@ public class ActivityVendedor extends FragmentActivity  {
 			nvendedor.setChecked(false);
 			ncocheria.setChecked(false);
 			nadmin.setChecked(false);
+			nadministra.setChecked(false);
+
+
 			if (perfil == 1)
 				nvendedor.setChecked(true);
+
 			if (perfil == 2)
 				ncocheria.setChecked(true);
+
+			if (perfil == 3)
+				nadmin.setChecked(true);
 
 			if (perfil == 4){
 				nvendedor.setChecked(true);
 				ncocheria.setChecked(true);
 			}
 
-			if (perfil == 3)
-				nadmin.setChecked(true);
+			if (perfil == 5)
+				nadministra.setChecked(true);
+
+			if (perfil == 6){
+				nvendedor.setChecked(true);
+				nadministra.setChecked(true);
+			}
+
+
 			estado.setChecked(true);
 
 			try
@@ -299,8 +316,8 @@ public void mostrar_error(int tipo, String mensaje) {
 	}
 	/*************************************************************************************************************/
 	public Map<String,String> preparar_Parametros() {
-		Cuentas cuentas = new Cuentas();
-		cuentas        = Librerias.LeerCuentas(ActivityVendedor.this);
+	//	Cuentas cuentas = new Cuentas();
+	//	cuentas        = Librerias.LeerCuentas(ActivityVendedor.this);
 		String idunico = Librerias.unico_ID(ActivityVendedor.this);
 
 		int esta = 1;
@@ -314,12 +331,18 @@ public void mostrar_error(int tipo, String mensaje) {
 		if (ncocheria.isChecked())
 			perfil = 2;
 
-
 		if ((nvendedor.isChecked())&&(ncocheria.isChecked()))
 			perfil = 4;
 
+		if (nadministra.isChecked())
+			perfil = 5;
+
+		if ((nvendedor.isChecked())&&(nadministra.isChecked()))
+			perfil = 6;
+
 		if (nadmin.isChecked())
 			perfil = 3;
+
 
 
 		Map<String,String> params = new HashMap<String, String>();
@@ -332,7 +355,7 @@ public void mostrar_error(int tipo, String mensaje) {
 		params.put("id"         , id.getText().toString());
 		params.put("nombre"     , nombre.getText().toString());
 		params.put("idunico"    , idunico);
-		params.put("cuenta"     , cuentas.getNombre());
+		params.put("cuenta"     , "");
 		params.put("version"    , getString(R.string.version));
 		params.put("tag"        ,"3P197792S");
 		params.put("accion"     , String.valueOf(accion));

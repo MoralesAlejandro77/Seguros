@@ -50,6 +50,7 @@ public class ActivityPrecios extends AppCompatActivity {
     RecyclerAdapterNovedades adapter;
     Spinner planes, btarifa;
     String xtarifa, xplanes;
+    ImageButton bagregar;
 
 
     @Override
@@ -62,6 +63,8 @@ public class ActivityPrecios extends AppCompatActivity {
         barra          = (ProgressBar) findViewById(R.id.barra2);
         btarifa        = (Spinner)findViewById(R.id.btarifa);
         planes         = (Spinner)findViewById(R.id.bplanes);
+        bagregar       = (ImageButton) findViewById(R.id.bagregar);
+
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -132,6 +135,14 @@ public class ActivityPrecios extends AppCompatActivity {
             }
         });
 
+        bagregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ActivityPrecios.this,Activity_AltaPrecios.class);
+                startActivityForResult(i,200);
+
+            }
+        });
 
     }
     /*************************************************************************************************************/
@@ -187,6 +198,8 @@ public class ActivityPrecios extends AppCompatActivity {
         params.put("tag"     ,"getv");
         params.put("plan"    ,xplanes);
         params.put("tarifa"  ,xtarifa);
+        params.put("dni"     ,Librerias.Leer_dni(getApplicationContext()));
+
 
         Aplicacion_activa = 0;
         return params;
@@ -196,6 +209,7 @@ public class ActivityPrecios extends AppCompatActivity {
 
         try {
 
+      //      arraydir.clear();
             arraydir = getItems_ListPrecios(response);
 
 

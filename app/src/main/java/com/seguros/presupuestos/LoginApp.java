@@ -289,6 +289,7 @@ protected void Verifica_clave() {
 				Aplicacion_activa = 3;
 
 
+
 			try
 			{
 				DatosBDTablas db = new DatosBDTablas(getApplicationContext());

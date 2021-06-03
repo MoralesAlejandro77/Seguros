@@ -26,9 +26,9 @@ android {
     defaultConfig {
         applicationId "com.seguros.presupuestos"
         minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 24
-        versionName "4.16"
+        targetSdkVersion 29
+        versionCode 28
+        versionName "4.17"
     }
     buildTypes {
         release {

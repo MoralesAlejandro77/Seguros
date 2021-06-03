@@ -14,13 +14,6 @@
             android:background="@color/tresprov"
             android:gravity="center_horizontal">
 
-            <ImageView
-                android:id="@+id/imageView25"
-                android:layout_width="143dp"
-                android:layout_height="49dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/logo1" />
         </LinearLayout>
 
         <LinearLayout
@@ -44,6 +37,14 @@
                 android:text="Datos Vendedor"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/White" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="143dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/logo1" />
 
         </LinearLayout>
 
@@ -184,7 +185,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textView16"
@@ -196,35 +197,59 @@
                         android:textColor="@color/Black"
                         android:textStyle="bold" />
 
-                    <CheckBox
-                        android:id="@+id/nvendedor"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:checked="false"
-                        android:text="Vendedor"
-                        android:textColor="@color/Green"
-                        android:textStyle="italic" />
+                        android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/ncocheria"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:checked="false"
-                        android:text="Cocheria"
-                        android:textColor="@color/Blue"
-                        android:textStyle="italic" />
+                        <CheckBox
+                            android:id="@+id/nvendedor"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:checked="false"
+                            android:text="Vendedor"
+                            android:textColor="@color/Green"
+                            android:textStyle="italic" />
 
-                    <CheckBox
-                        android:id="@+id/nadmin"
-                        android:layout_width="wrap_content"
+                        <CheckBox
+                            android:id="@+id/ncocheria"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:checked="false"
+                            android:text="Cocheria"
+                            android:textColor="@color/Blue"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:checked="false"
-                        android:text="Admin"
-                        android:textColor="@color/BlueViolet"
-                        android:textStyle="italic" />
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/nadmin"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:checked="false"
+                            android:text="Admin"
+                            android:textColor="@color/BlueViolet"
+                            android:textStyle="italic" />
+
+                        <CheckBox
+                            android:id="@+id/nadministra"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:checked="false"
+                            android:text="Administracion"
+                            android:textColor="@color/Brown"
+                            android:textStyle="italic" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

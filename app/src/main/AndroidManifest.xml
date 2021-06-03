@@ -26,7 +26,12 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity_modPrecios"></activity>
+        <activity android:name=".Activity_AltaPrecios"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity_modPrecios"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity_modPrecios2"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".ActivityPrecios"
             android:label="@string/title_activity_precios"

@@ -71,7 +71,7 @@ int sexo, sexo_cony;
 int edad, edad_cony;
 boolean tieneconyugue;
 ImageButton botonedicion, bcompartir;
-int INDICE_50000 = 0;
+int INDICE_60000 = 0;
 //******************************************************************************************************************************* 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -205,14 +205,14 @@ int INDICE_50000 = 0;
 			}
 
 
-			INDICE_50000 = 0;
+			INDICE_60000 = 0;
 			DatosBDTablas db = new DatosBDTablas(getApplicationContext());
 			db.open();
-			INDICE_50000 = db.Consultar_Capital_indice50000();
+			INDICE_60000 = db.Consultar_Capital_indice60000();
 			db.close();
 
-			if ((edad >= 74) && (edad <=80) && (INDICE_50000 > 0)){
-				capital.setSelection(INDICE_50000);
+			if ((edad >= 74) && (edad <=80) && (INDICE_60000 > 0)){
+				capital.setSelection(INDICE_60000);
 
 			}
 

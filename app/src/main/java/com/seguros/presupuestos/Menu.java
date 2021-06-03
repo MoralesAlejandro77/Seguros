@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.seguros.Actualizacion.MenuActual;
 import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
+import com.seguros.presupuestos.Librerias;
 
 public class Menu extends AppCompatActivity {
 	ProgressBar progressBar;
@@ -71,8 +72,22 @@ public class Menu extends AppCompatActivity {
 	}
 
 	private void Modificar_ListaPrecios() {
-		Intent i = new Intent(Menu.this,ActivityPrecios.class);
-		startActivity(i);
+ //   Toast.makeText(getApplicationContext(),Librerias.Leer_Perfil(getApplicationContext()),Toast.LENGTH_LONG).show();
+		if (Datos.Es_Actualiz_precios(getApplicationContext()))
+		{
+
+			Intent i = new Intent(Menu.this,ActivityPrecios.class);
+			startActivity(i);
+
+		}
+		else
+		{
+			Intent i = new Intent(getApplicationContext(),LoginApp.class);
+			i.putExtra("producto", "600");
+			i.putExtra("actual", "0");
+			i.putExtra("tipoacceso", "2");
+			startActivityForResult(i, 600);
+		}
 	}
 
 	private void cerrar_sesion() {

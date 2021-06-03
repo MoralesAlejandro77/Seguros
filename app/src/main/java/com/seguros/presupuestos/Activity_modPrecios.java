@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -34,6 +36,7 @@ public class Activity_modPrecios extends AppCompatActivity {
     EditText sepelio, parcela, luto;
     ImageButton bedit;
     ProgressBar progressBar;
+    ImageButton bactu, banular;
     int Aplicacion_activa;
 
     @Override
@@ -48,9 +51,11 @@ public class Activity_modPrecios extends AppCompatActivity {
         sepelio  = (EditText) findViewById(R.id.vsepelio);
         parcela  = (EditText) findViewById(R.id.vparcela);
         luto     = (EditText) findViewById(R.id.vluto);
-        progressBar     = (ProgressBar)findViewById(R.id.progressBar6);
+        progressBar  = (ProgressBar)findViewById(R.id.progressBar6);
 
         bedit     = (ImageButton) findViewById(R.id.bedit);
+        bactu     = (ImageButton) findViewById(R.id.bactu);
+        banular   = (ImageButton) findViewById(R.id.banular);
 
         progressBar.setVisibility(View.GONE);
         tarifa.setText(this.getIntent().getExtras().getString("tarifa"));
@@ -75,8 +80,105 @@ public class Activity_modPrecios extends AppCompatActivity {
             }
         });
 
+        bactu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(Activity_modPrecios.this,Activity_modPrecios2.class);
+                i.putExtra("tarifa"    ,tarifa.getText().toString());
+                i.putExtra("plan"      ,plan.getText().toString());
+                i.putExtra("edadi"     ,edadi.getText().toString());
+                i.putExtra("edadf"     ,edadf.getText().toString());
+                i.putExtra("sepelio"   ,sepelio.getText().toString());
+                i.putExtra("parcela"   ,parcela.getText().toString());
+                i.putExtra("luto"      ,luto.getText().toString());
+                startActivityForResult(i,200);
+
+            }
+        });
+
+        banular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Librerias.verificaConexion(getApplicationContext()))
+                {
+                    Eliminar_Precios();
+                }
+                else
+                    Toast.makeText(getBaseContext(),"No es posible establecer la conexion con el Servidor!" ,Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+
+    }
+//*********************************
+public boolean onCreateOptionsMenu(android.view.Menu menu) {
+    // Inflate the menu; this adds items to the action bar if it is present.
+    getMenuInflater().inflate(R.menu.opc_precios, menu);
+    return true;
+}
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mn_eli:
+                Eliminar_items();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
+    private void Eliminar_items() {
+        if (Librerias.verificaConexion(getApplicationContext()))
+        {
+            Eliminar_Precios();
+        }
+        else
+            Toast.makeText(getBaseContext(),"No es posible establecer la conexion con el Servidor!" ,Toast.LENGTH_LONG).show();
+
+    }
+
+    //*******************************************************************************************
+    private void Eliminar_Precios() {
+        preparar();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL32,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar2(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        bedit.setEnabled(true);
+                    }
+                }){
+
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = preparar_Parametros();
+                return params;
+            }
+
+        };
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+
+
+    //*******************************************************************************************
     private void Actualizar_Precios() {
         preparar();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL29,
@@ -179,5 +281,49 @@ public void preparar() {
     }
 
 //****************************
+public void finalizar2(String response) {
+    Aplicacion_activa = 0;
+
+    try {
+        JSONArray jsonObject = new JSONArray(response);
+        JSONObject valor     = new JSONObject(jsonObject.get(0).toString());
+        Aplicacion_activa    = valor.getInt("status");
+
+        try
+        {
+            if (Aplicacion_activa == 1) // Exitoso
+            {
+                Librerias.mostrar_error(Activity_modPrecios.this,1, "La actualizacion de datos fue realizada Exitosamente!!!!");
+
+                Intent resultData = new Intent();
+                resultData.putExtra("listo", "ok");
+                setResult(200,resultData);
+                finish();
+
+            }
+            else
+            {
+                Librerias.mostrar_error(Activity_modPrecios.this,2,"SE HA PRODUCIDO UN ERROR : " );
+            }
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            Librerias.mostrar_error(Activity_modPrecios.this,2,"ERROR : " + e.toString());
+
+        }
+
+    } catch (JSONException e) {
+        e.printStackTrace();
+        Librerias.mostrar_error(Activity_modPrecios.this,2,"ERROR : " + e.toString());
+
+    }
+    progressBar.setVisibility(View.GONE);
+    bedit.setEnabled(true);
+
+}
+
 
 }

@@ -398,10 +398,28 @@ public static boolean Esta_Logueadaemp(Context c) {
 	{
 		e.printStackTrace();
 	}
-    if (perfil > 0)
-    	resultado = true;
+	if (perfil == 2 || perfil == 3) //empresa o admin
+		resultado = true;
 	return resultado;
 }
+	//*******************************************************************************************************************************
+	public static boolean Es_Actualiz_precios(Context c) {
+		boolean resultado = false;
+		int perfil = 0;
+		try {
+			perfil = Integer.valueOf(Librerias.Leer_Perfil(c));
+
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		if ((perfil == 3) || (perfil == 5) || (perfil == 6))
+			resultado = true;
+
+		return resultado;
+	}
+
 	//*******************************************************************************************************************************
 	public static String Obtener_id_login(Context c) {
 		String resultado = "";
