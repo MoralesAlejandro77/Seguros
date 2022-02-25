@@ -42,7 +42,7 @@ public class LoginApp extends Activity {
 	private static final int MY_PERMISSIONS_REQUEST_INTERNET = 101;
 	private static final int MY_PERMISSIONS_REQUEST_CONTACTS = 102;
 	EditText pass, id;
-	Button boton;
+	Button boton, botonb;
 	int opcion;
 	ProgressBar progressBar;
 	int Aplicacion_activa;
@@ -60,6 +60,8 @@ public class LoginApp extends Activity {
         id            = (EditText)findViewById(R.id.id);
         pass          = (EditText)findViewById(R.id.txtpass);
         boton         = (Button)findViewById(R.id.button1);
+		botonb        = (Button)findViewById(R.id.bblanquear);
+
         progressBar   = (ProgressBar)findViewById(R.id.progressBar1);
 		progressBar.setVisibility(View.GONE);
 		try {
@@ -87,7 +89,15 @@ public class LoginApp extends Activity {
 					
 			}
 		});
-        
+
+		botonb.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Blanquear_clave();
+            }
+        });
+
+		
         pperfil = 0;
 		DatosBDTablas db = new DatosBDTablas(getApplicationContext());
 		db.open(); 		
@@ -342,6 +352,100 @@ protected void Verifica_clave() {
 		boton.setEnabled(true);
 
 	}
+//*******************************************************************************************************************************
+
+    /*************************************************************************************************************/
+    private void Blanquear_clave(){
+
+        preparar2();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL21,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar_blanqueo(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        botonb.setEnabled(true);
+                    }
+                }){
+
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = preparar_blanqueo();
+                return params;
+            }
+
+        };
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+    /*************************************************************************************************************/
+    public void preparar2() {
+        progressBar.setIndeterminate(true);
+        progressBar.setVisibility(View.VISIBLE);
+        Aplicacion_activa = 0;
+        botonb.setEnabled(false);
+    }
+    /*************************************************************************************************************/
+    public Map<String,String> preparar_blanqueo() {
+        Map<String,String> params = new HashMap<String, String>();
+        params.put("tag"           ,"3P197792S");
+   //     params.put("tipodoc"       , String.valueOf((int) tipo_doc.getSelectedItemId()));
+  //      params.put("dni"           ,  nro_doc.getText().toString());
+  //      params.put("version"     , version_and);
+        params.put("app"         , getString(R.string.version));
+        return params;
+    }
+    /*************************************************************************************************************/
+    public void finalizar_blanqueo(String response) {
+        Aplicacion_activa = 0;
+
+        try {
+            JSONArray jsonObject = new JSONArray(response);
+            JSONObject valor     = new JSONObject(jsonObject.get(0).toString());
+            Aplicacion_activa    = valor.getInt("status");
+
+            try
+            {
+                if (Aplicacion_activa == 1) // Exitoso
+                {
+
+                    Librerias.mostrar_error(LoginApp.this,1, "Le enviamos un correo con su CLAVE Provisoria!!");
+                    finish();
+
+                }
+                else
+                {
+                    Librerias.mostrar_error(LoginApp.this,2,"SE HA PRODUCIDO UN ERROR  ");
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                Librerias.mostrar_error(LoginApp.this,2,"SE HA PRODUCIDO UN ERROR  " + e.toString());
+                e.printStackTrace();
+            }
+
+        } catch (JSONException e) {
+            Librerias.mostrar_error(LoginApp.this,2,"SE HA PRODUCIDO UN ERROR  " + e.toString());
+            e.printStackTrace();
+        }
+        progressBar.setVisibility(View.GONE);
+        botonb.setEnabled(true);
+
+    }
 //*******************************************************************************************************************************
 
 }

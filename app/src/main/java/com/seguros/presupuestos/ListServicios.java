@@ -71,7 +71,8 @@ int sexo, sexo_cony;
 int edad, edad_cony;
 boolean tieneconyugue;
 ImageButton botonedicion, bcompartir;
-int INDICE_60000 = 0;
+int INDICE_80000 = 0;
+int limite_base  = 80000;
 //******************************************************************************************************************************* 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -194,7 +195,7 @@ int INDICE_60000 = 0;
 	private void verifica_edad() {
 		String text = capital.getSelectedItem().toString().replace(".", "");
 		float valor_capital = Float.valueOf(text);
-		if (valor_capital > 49999)
+		if (valor_capital > (limite_base - 1))
 		{
 			int edad;
 			try {
@@ -205,14 +206,14 @@ int INDICE_60000 = 0;
 			}
 
 
-			INDICE_60000 = 0;
+			INDICE_80000 = 0;
 			DatosBDTablas db = new DatosBDTablas(getApplicationContext());
 			db.open();
-			INDICE_60000 = db.Consultar_Capital_indice60000();
+			INDICE_80000 = db.Consultar_Capital_indice80000();
 			db.close();
 
-			if ((edad >= 74) && (edad <=80) && (INDICE_60000 > 0)){
-				capital.setSelection(INDICE_60000);
+			if ((edad >= 74) && (edad <=80) && (INDICE_80000 > 0)){
+				capital.setSelection(INDICE_80000);
 
 			}
 
