@@ -1,0 +1,4 @@
+#Wed Sep 28 01:34:53 ART 2022
+base.0=C\:\\proyectos\\Seguros\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
