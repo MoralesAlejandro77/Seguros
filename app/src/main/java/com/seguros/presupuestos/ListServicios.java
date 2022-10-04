@@ -71,8 +71,8 @@ int sexo, sexo_cony;
 int edad, edad_cony;
 boolean tieneconyugue;
 ImageButton botonedicion, bcompartir;
-int INDICE_80000 = 0;
-int limite_base  = 80000;
+int INDICE_150000 = 0;
+int limite_base  = 150000;
 //******************************************************************************************************************************* 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -206,14 +206,14 @@ int limite_base  = 80000;
 			}
 
 
-			INDICE_80000 = 0;
+            INDICE_150000 = 0;
 			DatosBDTablas db = new DatosBDTablas(getApplicationContext());
 			db.open();
-			INDICE_80000 = db.Consultar_Capital_indice80000();
+            INDICE_150000 = db.Consultar_Capital_indice150000();
 			db.close();
 
-			if ((edad >= 74) && (edad <=80) && (INDICE_80000 > 0)){
-				capital.setSelection(INDICE_80000);
+			if ((edad >= 74) && (edad <=80) && (INDICE_150000 > 0)){
+				capital.setSelection(INDICE_150000);
 
 			}
 
