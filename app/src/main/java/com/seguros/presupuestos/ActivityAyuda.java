@@ -16,7 +16,9 @@ public class ActivityAyuda extends AppCompatActivity {
         setContentView(R.layout.activity_activity_ayuda);
         webView = (WebView) findViewById(R.id.webView);
 
-        url = "https://tresprovinciassa.com.ar";
+//        url = "https://tresprovinciassa.com.ar";
+        url = "http://seguros.tresprovinciassa.com.ar";
+
 
         try {
             resultado = Integer.valueOf(this.getIntent().getExtras().getString("ayuda"));
@@ -50,12 +52,12 @@ public class ActivityAyuda extends AppCompatActivity {
         webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
         if (resultado == 7) {//fcm asegurados
-            url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/mensajes.html";
+            url = "http://seguros.tresprovinciassa.com.ar/asegurados/mensajes.html";
             webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         }
 
         if (resultado == 8) {//Log asegurados
-            url = "https://tresprovinciassa.com.ar/Seguros/ws/asegurados/logsAsegurados.php";
+            url = "http://seguros.tresprovinciassa.com.ar/asegurados/logsAsegurados.php";
             webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         }
 

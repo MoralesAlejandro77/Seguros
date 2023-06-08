@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seguros.presupuestos"
-    android:versionCode="35"
-    android:versionName="4.26" >
+    android:versionCode="38"
+    android:versionName="4.29" >
 
     <uses-sdk
         android:minSdkVersion="19"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="31" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -94,6 +94,7 @@
 
         <activity
             android:name="com.seguros.presupuestos.SplashActivity1"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" >
             <intent-filter>
@@ -118,6 +119,7 @@
             android:theme="@style/CustomDialogTheme" />
         <activity
             android:name="com.seguros.presupuestos.LoginApp"
+            android:exported="true"
             android:label="Login User"
             android:screenOrientation="portrait"
             android:theme="@style/CustomDialogTheme" >
@@ -167,7 +169,9 @@
             android:enabled="true"
             android:process=":ServiceVerifyState" />
 
-        <receiver android:name="com.seguros.presupuestos.VerificarWifi" >
+        <receiver
+            android:name="com.seguros.presupuestos.VerificarWifi"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
@@ -187,6 +191,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.MainActivity"
+            android:exported="true"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -281,12 +286,14 @@
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"
-            android:exported="false" >
+            android:exported="true" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.seguros.fcm.CustomFirebaseInstanceIDService" >
+        <service
+            android:name="com.seguros.fcm.CustomFirebaseInstanceIDService"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

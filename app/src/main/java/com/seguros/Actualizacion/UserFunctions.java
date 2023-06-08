@@ -28,7 +28,11 @@ public class UserFunctions {
 	private JSONParser jsonParser;
 //	private static String URL_SERVER = "http://www.sistemas77.com.ar/Seguros/";
 
-    public static String URL_SERVER = "https://tresprovinciassa.com.ar/Seguros/ws/";
+//    public static String URL_SERVER = "https://tresprovinciassa.com.ar/Seguros/ws/";
+	public static String URL_SERVER = "http://seguros.tresprovinciassa.com.ar/";
+
+
+
 //	public static String URL_SERVER = "http://190.210.98.74/Seguros/ws/";
 //	public static String URL_SERVER = "http://192.168.1.77:5680/Seguros/";
     public static String loginURL     = URL_SERVER + "PreciosSepelio.php";

@@ -82,7 +82,8 @@
         <activity
             android:name=".SplashActivity1"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -107,7 +108,8 @@
             android:name=".LoginApp"
             android:label="Login User"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomDialogTheme">
+            android:theme="@style/CustomDialogTheme"
+            android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
@@ -154,7 +156,8 @@
             android:enabled="true"
             android:process=":ServiceVerifyState" />
 
-        <receiver android:name=".VerificarWifi">
+        <receiver android:name=".VerificarWifi"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
@@ -174,7 +177,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.seguros.MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -268,12 +272,13 @@
 
         <service
             android:name="com.seguros.fcm.CustomFirebaseMessagingService"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.seguros.fcm.CustomFirebaseInstanceIDService">
+        <service android:name="com.seguros.fcm.CustomFirebaseInstanceIDService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

@@ -75,7 +75,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: __local_aars__:C.\proyectos\Seguros\app\libs\itextpdf-5.0.6.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:C.\proyectos\Seguros\app\libs\org.apache.http.legacy.jar:unspecified@jar" level="project" />
