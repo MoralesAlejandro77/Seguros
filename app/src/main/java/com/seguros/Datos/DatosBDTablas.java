@@ -1017,9 +1017,12 @@ public int EliminarTartifas() throws SQLException {
 	return registro;
 }
 //**************************************************************************************
-public int Consultar_Capital_indice200000() throws SQLException {
+public int Consultar_Capital_indice200000(int limite_base) throws SQLException {
 	float importe = 0;
-	int indice = 0;
+	int   indice = 0;
+
+
+
 	Cursor registros = db.query(BaseDatos.TABLA_CAPITAL, new String[] {
 			"codigo", "importe"}, null, null, null, null, null);
 	String[] gastos = new String[registros.getCount()];
@@ -1027,7 +1030,7 @@ public int Consultar_Capital_indice200000() throws SQLException {
 	for (int i = 0; i < registros.getCount(); i++) {
 		importe = registros.getFloat(1);
 		registros.moveToNext();
-		if (importe == 200000)
+		if (importe == limite_base)
 			indice = i;
 	}
 	return indice;

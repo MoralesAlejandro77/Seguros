@@ -46,6 +46,7 @@ import com.seguros.Datos.Datos;
 import com.seguros.Datos.DatosBDTablas;
 import com.seguros.pdf.GenerarPDFActivity;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 //*******************************************************************************************************************************
@@ -72,7 +73,7 @@ int edad, edad_cony;
 boolean tieneconyugue;
 ImageButton botonedicion, bcompartir;
 int INDICE_200000 = 0;
-int limite_base  = 200000;
+int limite_base   = 200000;
 //******************************************************************************************************************************* 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,7 +93,22 @@ int limite_base  = 200000;
 		botonedicion   = (ImageButton)findViewById(R.id.imageButton1);
 		bcompartir     = (ImageButton)findViewById(R.id.bcompartir);
 		bayuda         = (ImageButton)findViewById(R.id.bayuda);
-        
+
+
+		try {
+			String valor = Librerias.Leer_TOPE1(getApplicationContext());
+		//	Librerias.mostrar_error(ListServicios.this, 1, "valor : " + valor);
+			limite_base  = Integer.valueOf(valor);
+
+
+		//	Librerias.mostrar_error(ListServicios.this, 1, "limite_base : " + String.valueOf(limite_base));
+
+		} catch (Exception e) {
+			limite_base = 0;
+		}
+
+
+
         for (int i = 0; i < 50; i++) {
         	if (i==0)
             	valores_select[i] = true;
@@ -209,7 +225,9 @@ int limite_base  = 200000;
             INDICE_200000 = 0;
 			DatosBDTablas db = new DatosBDTablas(getApplicationContext());
 			db.open();
-            INDICE_200000 = db.Consultar_Capital_indice200000();
+
+
+            INDICE_200000 = db.Consultar_Capital_indice200000(limite_base);
 			db.close();
 
 			if ((edad >= 74) && (edad <=80) && (INDICE_200000 > 0)){

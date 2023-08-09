@@ -40,6 +40,7 @@ public class MenuActual extends FragmentActivity {
     ArrayList<DatosSepelio> Vecdatos;
     ArrayList<DatosVida> VecdatosVida;
     ArrayList<DatosTablaIndices> VecTablaIndices;
+    ArrayList<DatosParametros> VecTablaparam;
 
     TextView fechaactsep, vigenciasep, vigenciavida, fechaactvida;
     int Aplicacion_activa;
@@ -69,6 +70,7 @@ public class MenuActual extends FragmentActivity {
                 if (Librerias.verificaConexion(MenuActual.this)) {
                     Actualizar_precios_vida();
                     Actualizar_precios_sepelio();
+                    Actualizar_precios_tope();
 
                 } else
                     Toast.makeText(getBaseContext(), "No es posible establecer la conexion con el Servidor!", Toast.LENGTH_LONG).show();
@@ -132,7 +134,7 @@ public class MenuActual extends FragmentActivity {
         }
     }
 
-    //**********************************************************************************
+ //**********************************************************************************
     private void Actualizar_precios_sepelio() {
         if (Librerias.verificaConexion(MenuActual.this)) {
             Obtener_Datos_Sepelio();
@@ -149,8 +151,16 @@ public class MenuActual extends FragmentActivity {
             Toast.makeText(getBaseContext(), "No es posible establecer la conexion con el Servidor!", Toast.LENGTH_LONG).show();
 
     }
+//**********************************************************************************
+    private void Actualizar_precios_tope() {
+        if (Librerias.verificaConexion(MenuActual.this)) {
+            Obtener_Datos_Tope();
+        } else
+            Toast.makeText(getBaseContext(), "No es posible establecer la conexion con el Servidor!", Toast.LENGTH_LONG).show();
 
-    /*************************************************************************************************************/
+    }
+//**********************************************************************************
+
     private void Obtener_Datos_Sepelio() {
 
         preparar();
@@ -188,6 +198,44 @@ public class MenuActual extends FragmentActivity {
         requestQueue.add(stringRequest);
     }
 
+//**********************************************************************************
+
+    private void Obtener_Datos_Tope() {
+
+        preparar();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, UserFunctions.loginURL34,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        finalizar_tope(response);
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        boton_vida.setEnabled(true);
+
+                    }
+                }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = preparar_Parametros("sepelio", "2");
+                return params;
+            }
+
+        };
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
     /*************************************************************************************************************/
     public void preparar() {
         progressBar.setIndeterminate(true);
@@ -246,6 +294,41 @@ public class MenuActual extends FragmentActivity {
     }
 
     //*******************************************************************************************************************************
+    public void finalizar_tope(String response) {
+        boolean errores = false;
+        String producto = "2";
+
+        try {
+            VecTablaparam = Leer_items_tope(response);
+
+            try {
+                if (Aplicacion_activa == 1) // Exitoso
+                {
+                    Librerias.Grabar_Tope1(getApplicationContext(),VecTablaparam.get(0).getTope1());
+             ;
+
+
+                } else {
+                    Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : ");
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : " + e.toString());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Librerias.mostrar_error(MenuActual.this, 2, "SE HA PRODUCIDO UN ERROR : " + e.toString());
+        }
+        progressBar.setVisibility(View.GONE);
+        boton_vida.setEnabled(true);
+
+    }
+
+    //*******************************************************************************************************************************
+
     public ArrayList<DatosSepelio> Leer_items_sep(String response) {
         ArrayList<DatosSepelio> MiLista = new ArrayList<DatosSepelio>();
 
@@ -286,6 +369,49 @@ public class MenuActual extends FragmentActivity {
                     }
                     j++;
                 } while (j < cantidad);
+            }
+
+        }
+        return MiLista;
+    }
+
+    /*************************************************************************************************************/
+    public ArrayList<DatosParametros> Leer_items_tope(String response) {
+        ArrayList<DatosParametros> MiLista = new ArrayList<DatosParametros>();
+
+        Aplicacion_activa = 0;
+        JSONArray arreglo = null;
+        try {
+            arreglo = new JSONArray(response);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if (arreglo == null) {
+            Toast.makeText(getBaseContext(), "!No es posible consultar los Datos!", Toast.LENGTH_LONG).show();
+            MiLista = null;
+        } else {
+
+            int cantidad = 0;
+            cantidad = arreglo.length();
+            int j = 0;
+
+            if (cantidad > 0) {
+                Aplicacion_activa = 1;
+
+
+                    MiLista.add(new DatosParametros());
+                    try {
+                        JSONObject json = new JSONObject(arreglo.getJSONObject(0).toString());
+                        MiLista.get(0).setTope1(json.getString("tope1"));
+                 //       MiLista.get(0).setStatus(json.getString("status"));
+
+                    } catch (Exception e) {
+                        Toast.makeText(getBaseContext(), "error json : " + e.toString(), Toast.LENGTH_LONG).show();
+                        e.printStackTrace();
+
+                    }
+
             }
 
         }

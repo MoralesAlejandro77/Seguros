@@ -291,6 +291,13 @@ static public void Grabar_act_sep(Context c) {
 
 }
 /***************************************************************************************************************************/
+static public void Grabar_Tope1(Context c,String tope1) {
+    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(c);
+    sharedPreferences.edit().putString("tope1"     , tope1).apply();
+
+}
+
+    /***************************************************************************************************************************/
 static public boolean Esta_act_vida(Context c) {
 		SharedPreferences Preferences =
 				PreferenceManager.getDefaultSharedPreferences(c);
@@ -381,7 +388,13 @@ static public void Registrar_asegurado(Context c) {
 
 	//********************************************************************************
 
+    static public String Leer_TOPE1(Context c) {
+        SharedPreferences Preferences;
+        Preferences = PreferenceManager.getDefaultSharedPreferences(c);
+        return Preferences.getString("tope1","");
+    }
 
+    //********************************************************************************
 
 	static public boolean Esta_registrado_asegurado(Context c) {
 		SharedPreferences Preferences =

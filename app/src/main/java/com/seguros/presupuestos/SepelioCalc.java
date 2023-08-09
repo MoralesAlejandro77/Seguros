@@ -15,7 +15,7 @@ import com.seguros.Datos.DatosBDTablas;
 public class SepelioCalc extends FragmentActivity {
     TextView edad, total;
     String resultado;
-    RadioButton idplana, idplanc, idplang, idtarifa3, idtarifa29;
+    RadioButton idplana, idplanc, idplang, idtarifa3, idtarifa29, idtarifa158;
     Button idborrar,bok;
     CheckBox chk_parcela, chk_luto, gf;
     @Override
@@ -29,6 +29,8 @@ public class SepelioCalc extends FragmentActivity {
         idplang       = (RadioButton) findViewById(R.id.idplang);
         idtarifa3     = (RadioButton) findViewById(R.id.idtarifa3);
         idtarifa29    = (RadioButton) findViewById(R.id.idtarifa29);
+        idtarifa158   = (RadioButton) findViewById(R.id.idtarifa158);
+
         idborrar      = (Button)      findViewById(R.id.idbborrar);
         bok           = (Button)      findViewById(R.id.bok);
         gf            = (CheckBox)    findViewById(R.id.gf);
@@ -72,6 +74,10 @@ public class SepelioCalc extends FragmentActivity {
                 if (idtarifa29.isChecked())
                     t = "29";
 
+                if (idtarifa158.isChecked())
+                    t = "158";
+
+
                 Intent i = new Intent();
                 i.putExtra("tarifa", t);
                 i.putExtra("plan", p);
@@ -107,6 +113,9 @@ public class SepelioCalc extends FragmentActivity {
             idtarifa3.setChecked(true);
         if (tarifa.equals("29")  )
             idtarifa29.setChecked(true);
+
+        if (tarifa.equals("158")  )
+            idtarifa158.setChecked(true);
 
 /**************************************************************/
         idplana.setChecked(false);
@@ -164,6 +173,9 @@ public void calcular_valor(View v) {
         int ttarifa = 3;
         if (idtarifa29.isChecked())
             ttarifa = 29;
+
+        if (idtarifa158.isChecked())
+            ttarifa = 158;
 
         String p = "A";
         if (idplanc.isChecked())
@@ -230,10 +242,17 @@ public void calcular_valor(View v) {
             case R.id.idtarifa3:
                 idtarifa3.setChecked(true);
                 idtarifa29.setChecked(false);
+                idtarifa158.setChecked(false);
                 break;
             case R.id.idtarifa29:
                 idtarifa3.setChecked(false);
                 idtarifa29.setChecked(true);
+                idtarifa158.setChecked(false);
+                break;
+            case R.id.idtarifa158:
+                idtarifa3.setChecked(false);
+                idtarifa29.setChecked(false);
+                idtarifa158.setChecked(true);
                 break;
 
         }

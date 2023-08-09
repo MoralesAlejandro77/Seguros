@@ -375,6 +375,17 @@
 									android:layout_weight="1"
 									android:orientation="vertical">
 
+									<CheckBox
+										android:id="@+id/gf"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_marginLeft="20dp"
+										android:layout_marginRight="5dp"
+										android:layout_weight="1"
+										android:checked="false"
+										android:onClick="calcular_valor"
+										android:text="Grupo fam."
+										android:textSize="12sp" />
 								</LinearLayout>
 
 							</LinearLayout>
@@ -460,16 +471,16 @@
 									android:elevation="2dp"
 									android:orientation="vertical">
 
-									<CheckBox
-										android:id="@+id/gf"
-										android:layout_width="wrap_content"
+									<RadioButton
+
+										android:id="@+id/idtarifa158"
+										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
-										android:layout_marginLeft="20dp"
-										android:layout_marginRight="5dp"
-										android:layout_weight="1"
-										android:checked="false"
-										android:onClick="calcular_valor"
-										android:text="Grupo fam."
+										android:layout_gravity="center_horizontal"
+										android:layout_marginTop="3dp"
+										android:onClick="tarifas"
+										android:text="Tarifa 158"
+										android:textColor="@color/DarkRed"
 										android:textSize="12sp" />
 								</LinearLayout>
 							</LinearLayout>

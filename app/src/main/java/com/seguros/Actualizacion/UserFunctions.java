@@ -71,6 +71,7 @@ public class UserFunctions {
 	public static String loginURL31   = URL_SERVER + "AltaPrecios.php";
 	public static String loginURL32   = URL_SERVER + "EliPrecios.php";
     public static String loginURL33   = URL_SERVER + "Blanqueov.php";
+    public static String loginURL34   = URL_SERVER + "consultaTopes.php";
 
 	// constructor
 	public UserFunctions(){

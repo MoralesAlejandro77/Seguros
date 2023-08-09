@@ -472,6 +472,8 @@ int codigoseleccionado;
 			btarifa.setSelection(0);
 			if (tarifa.equals("29"))
 				btarifa.setSelection(1);
+			if (tarifa.equals("158"))
+				btarifa.setSelection(2);
 
 			String t = btarifa.getSelectedItem().toString();
 			ttarifa = Integer.valueOf(t);

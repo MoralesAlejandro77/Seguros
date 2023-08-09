@@ -28,7 +28,8 @@ import java.util.Map;
 
 public class Menu_solicitudes extends Activity {
     ProgressBar progressBar;
-    Button opcion_misproductores, opcion_solicitud_poliza, opcion_solicitud_pago_dia;
+    Button  opcion_solicitud_poliza, opcion_solicitud_pago_dia;
+   // Button opcion_misproductores;
     int Aplicacion_activa;
     String Titulo;
 
@@ -37,7 +38,7 @@ public class Menu_solicitudes extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_solicitudes);
 
-        opcion_misproductores          = (Button)findViewById(R.id.opcion_misproductores);
+    //    opcion_misproductores          = (Button)findViewById(R.id.opcion_misproductores);
         opcion_solicitud_poliza        = (Button)findViewById(R.id.opcion_solicitud_poliza);
         opcion_solicitud_pago_dia      = (Button)findViewById(R.id.opcion_solicitud_pago_dia);
         progressBar                    = (ProgressBar) findViewById(R.id.progressBar4);
@@ -45,17 +46,17 @@ public class Menu_solicitudes extends Activity {
         this.setTitle("");
         progressBar.setVisibility(View.GONE);
         Titulo = "";
-        opcion_misproductores.setOnClickListener(new View.OnClickListener() {
+  /*      opcion_misproductores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             /*    Intent i = new Intent(getApplicationContext(),OtrosServicios.class);
                 i.putExtra("tipo"  , "1");
                 i.putExtra("titulo", "SOLICITUD DE MIS PRODUCTORES");
-                startActivity(i);*/
+                startActivity(i);*//*
                 Titulo = "SOLICITUD DE MIS PRODUCTORES";
                 Informa_Novedad();
             }
-        });
+        });*/
 
 
         opcion_solicitud_poliza.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +107,7 @@ public class Menu_solicitudes extends Activity {
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(),error.toString(), Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
-                        opcion_misproductores.setEnabled(true);
+                 //       opcion_misproductores.setEnabled(true);
                         opcion_solicitud_poliza.setEnabled(true);
                         opcion_solicitud_pago_dia.setEnabled(true);
                     }
@@ -135,7 +136,7 @@ public class Menu_solicitudes extends Activity {
         progressBar.setIndeterminate(true);
         progressBar.setVisibility(View.VISIBLE);
         Aplicacion_activa = 0;
-        opcion_misproductores.setEnabled(false);
+     //   opcion_misproductores.setEnabled(false);
         opcion_solicitud_poliza.setEnabled(false);
         opcion_solicitud_pago_dia.setEnabled(false);
     }
@@ -185,7 +186,7 @@ public class Menu_solicitudes extends Activity {
             e.printStackTrace();
         }
         progressBar.setVisibility(View.GONE);
-        opcion_misproductores.setEnabled(true);
+     //   opcion_misproductores.setEnabled(true);
         opcion_solicitud_poliza.setEnabled(true);
         opcion_solicitud_pago_dia.setEnabled(true);
 

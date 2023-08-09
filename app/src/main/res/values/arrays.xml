@@ -47,12 +47,14 @@
 <string-array name="tarifas">
         <item >03</item>
         <item >29</item>
+        <item >158</item>
 </string-array>
 
 <string-array name="tarifas2">
         <item >TODAS</item>
         <item >03</item>
         <item >29</item>
+        <item >158</item>
 </string-array>
 
 
