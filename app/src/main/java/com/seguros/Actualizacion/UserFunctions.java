@@ -51,7 +51,7 @@ public class UserFunctions {
     public static String loginURL13   = URL_SERVER + "BuscaDatosCocheria.php";
     public static String loginURL14   = URL_SERVER + "verifemp.php";
     public static String loginURL15   = URL_SERVER + "LoginAsegurado.php";
-	public static String loginURL16   = URL_SERVER + "RegAsegurado.php";
+	public static String loginURL16   = URL_SERVER + "RegAsegurado2.php";
     public static String loginURL17   = URL_SERVER + "LeerAsegurado.php";
     public static String loginURL18   = URL_SERVER + "ModAsegurado.php";
     public static String loginURL19   = URL_SERVER + "ModAsegurado2.php";
@@ -72,6 +72,8 @@ public class UserFunctions {
 	public static String loginURL32   = URL_SERVER + "EliPrecios.php";
     public static String loginURL33   = URL_SERVER + "Blanqueov.php";
     public static String loginURL34   = URL_SERVER + "consultaTopes.php";
+	public static String loginURL35   = URL_SERVER + "ModOtros.php";
+	public static String loginURL36   = URL_SERVER + "LeerOtros.php";
 
 	// constructor
 	public UserFunctions(){

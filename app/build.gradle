@@ -21,14 +21,14 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.seguros.presupuestos"
-        minSdkVersion 19
-        targetSdkVersion 31
-        versionCode 47
-        versionName "4.37"
+        minSdkVersion 22
+        targetSdkVersion 33
+        versionCode 50
+        versionName "4.38"
     }
     buildTypes {
         release {

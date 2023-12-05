@@ -425,6 +425,146 @@
 
                 </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="Cumplis con alguna de estas condiciones Tene en cuenta que esto es una declaracion jurada. Por favor completa con datos reales."
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/White"
+                        android:textStyle="bold|italic" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="¿Sos una persona politicamente expuesta?"
+                            android:textColor="@color/White" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="50dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/opcion1_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="No" />
+
+                            <RadioButton
+                                android:id="@+id/opcion1_si"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Si" />
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="¿Sos Sujeto obligado?"
+                            android:textColor="@color/White" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="50dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/opcion2_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="No" />
+
+                            <RadioButton
+                                android:id="@+id/opcion2_si"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Si" />
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="¿Estas alcanzado por la ley FATCA?"
+                            android:textColor="@color/White" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="50dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/opcion3_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="No" />
+
+                            <RadioButton
+                                android:id="@+id/opcion3_si"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Si" />
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -450,8 +590,7 @@
                         android:clickable="true"
                         android:elevation="2dp"
                         android:focusable="true"
-                        android:foreground="?attr/selectableItemBackgroundBorderless"
-                        />
+                        android:foreground="?attr/selectableItemBackgroundBorderless" />
                 </LinearLayout>
 
             </LinearLayout>

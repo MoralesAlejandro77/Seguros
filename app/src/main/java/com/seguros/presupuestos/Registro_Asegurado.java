@@ -33,6 +33,8 @@ public class Registro_Asegurado extends AppCompatActivity {
 ProgressBar progressBar;
 Spinner tipo_doc, companias;
 EditText nro_doc, password1, password2, apellido, nombres, fechanac, caract, celular, correo1, correo2;
+RadioButton opcion1_no, opcion1_si, opcion2_no, opcion2_si, opcion3_no, opcion3_si;
+
 Button bgrabar;
 TextView link;
 ImageView botreg;
@@ -63,6 +65,12 @@ String version_and;
         sexo_fem      = (RadioButton) findViewById(R.id.sexo_fem);
         bgrabar       = (Button) findViewById(R.id.bgrabar);
 
+        opcion1_no         = (RadioButton)findViewById(R.id.opcion1_no);
+        opcion1_si         = (RadioButton)findViewById(R.id.opcion1_si);
+        opcion2_no         = (RadioButton)findViewById(R.id.opcion2_no);
+        opcion2_si         = (RadioButton)findViewById(R.id.opcion2_si);
+        opcion3_no         = (RadioButton)findViewById(R.id.opcion3_no);
+        opcion3_si         = (RadioButton)findViewById(R.id.opcion3_si);
 
         this.setTitle("");
         progressBar.setVisibility(View.GONE);
@@ -288,6 +296,31 @@ String version_and;
     /*************************************************************************************************************/
     public Map<String,String> preparar_Parametros() {
 
+
+        String sopcion1, sopcion2, sopcion3;
+
+        sopcion1 = "";
+        sopcion2 = "";
+        sopcion3 = "";
+
+        if (opcion1_no.isChecked())
+            sopcion1 = "NO";
+
+        if (opcion1_si.isChecked())
+            sopcion1 = "SI";
+
+        if (opcion2_no.isChecked())
+            sopcion2 = "NO";
+
+        if (opcion2_si.isChecked())
+            sopcion2 = "SI";
+
+        if (opcion3_no.isChecked())
+            sopcion3 = "NO";
+
+        if (opcion3_si.isChecked())
+            sopcion3 = "SI";
+
         String sexo = "M";
         if (sexo_fem.isChecked())
             sexo = "F";
@@ -308,6 +341,10 @@ String version_and;
         params.put("version"     , version_and);
         params.put("tag"         ,"3P197792S");
         params.put("app"         , getString(R.string.version));
+        params.put("opcion1"     , sopcion1);
+        params.put("opcion2"     , sopcion2);
+        params.put("opcion3"     , sopcion3);
+
         return params;
     }
     /*************************************************************************************************************/

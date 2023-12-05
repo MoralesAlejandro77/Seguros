@@ -1,6 +1,7 @@
 package com.seguros.presupuestos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,7 +34,7 @@ TextView tipodoc, nro_doc, nombrecompleto;
 Spinner companias, provincias;
 EditText  caract, celular, caractp, telefono;
 EditText  departamento, localidad, cp, calle,  piso, depto;
-Button bgrabar;
+Button bgrabar, botrosd;
 
 String nombre, stipodoc, fechanac, tel_car_1, tel_numero_1, tel_car_2, tel_numero_2, compania_1, email, provincia, sdepartamento, slocalidad, scp, scalle, spiso, sdepto;
 
@@ -66,6 +67,8 @@ String usuario, estado, version_and;
         piso            = (EditText) findViewById(R.id.piso);
         depto           = (EditText) findViewById(R.id.depto);
         bgrabar         = (Button)   findViewById(R.id.bgrabar);
+        botrosd         = (Button)   findViewById(R.id.botrosd);
+
 
         progressBar.setVisibility(View.GONE);
         progressBar2.setVisibility(View.GONE);
@@ -76,13 +79,27 @@ String usuario, estado, version_and;
                 ModificarUSuario();
             }
         });
+
+        botrosd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Otrosdatos();
+            }
+        });
+
         estado    = "";
         resultado = 0;
         this.setTitle("");
         version_and = Librerias.getAndroidVersion_new(getApplicationContext());
         Consultar_datos();
     }
-//****************************************************************************************
+
+    private void Otrosdatos() {
+        Intent i = new Intent(getApplicationContext(),Modifica_Otros.class);
+        startActivity(i);
+    }
+
+    //****************************************************************************************
 private void Consultar_datos(){
     progressBar2.setIndeterminate(true);
     progressBar2.setVisibility(View.VISIBLE);
